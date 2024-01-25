@@ -1,4 +1,6 @@
-[gd_scene load_steps=2 format=3 uid="uid://c8nae2qlspxxc"]
+[gd_scene load_steps=3 format=3 uid="uid://c8nae2qlspxxc"]
+
+[ext_resource type="FontFile" uid="uid://d1j5veayfvfph" path="res://assets/fonts/mvboli.ttf" id="1_lo6p4"]
 
 [sub_resource type="StyleBoxFlat" id="StyleBoxFlat_tldp0"]
 bg_color = Color(0.929412, 0.376471, 0.596078, 1)
@@ -13,6 +15,7 @@ offset_top = 48.0
 offset_right = 913.0
 offset_bottom = 136.0
 theme_override_colors/font_color = Color(0, 0, 0, 1)
+theme_override_fonts/font = ExtResource("1_lo6p4")
 theme_override_font_sizes/font_size = 64
 text = "Love is Among Us!"
 
