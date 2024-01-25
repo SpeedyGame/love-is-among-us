@@ -21,7 +21,9 @@ Dialogic="*res://addons/dialogic/Other/DialogicGameHandler.gd"
 [dialogic]
 
 directories/dch_directory={}
-directories/dtl_directory={}
+directories/dtl_directory={
+"opening": "res://timelines/opening.dtl"
+}
 
 [editor]
 
