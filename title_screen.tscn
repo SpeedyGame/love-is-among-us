@@ -1,3 +1,37 @@
-[gd_scene format=3 uid="uid://c8nae2qlspxxc"]
+[gd_scene load_steps=2 format=3 uid="uid://c8nae2qlspxxc"]
 
-[node name="Node2D" type="Node2D"]
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_tldp0"]
+bg_color = Color(0.929412, 0.376471, 0.596078, 1)
+
+[node name="TitleScreen" type="Node2D"]
+
+[node name="UI" type="CanvasLayer" parent="."]
+
+[node name="GameTitle" type="Label" parent="UI"]
+offset_left = 352.0
+offset_top = 48.0
+offset_right = 913.0
+offset_bottom = 136.0
+theme_override_colors/font_color = Color(0, 0, 0, 1)
+theme_override_font_sizes/font_size = 64
+text = "Love is Among Us!"
+
+[node name="Start" type="Button" parent="UI"]
+anchors_preset = 7
+anchor_left = 0.5
+anchor_top = 1.0
+anchor_right = 0.5
+anchor_bottom = 1.0
+offset_left = -107.5
+offset_top = -172.0
+offset_right = 92.5
+offset_bottom = -72.0
+grow_horizontal = 2
+grow_vertical = 0
+theme_override_font_sizes/font_size = 50
+theme_override_styles/normal = SubResource("StyleBoxFlat_tldp0")
+text = "Start"
+
+[node name="Background" type="ColorRect" parent="."]
+offset_right = 1278.0
+offset_bottom = 720.0
