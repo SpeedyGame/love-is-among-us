@@ -1,0 +1,18 @@
+Spark: Hey everyone, Spark here.
+Spark: I ain’t much for introductions, but I’m the one that keeps the lights on around here.
+Spark: If you need me, I’ll either be here or out in electrical doing god-knows-what.
+Colonel: Hi, Colonel’s the name they gave me, whoever’s in charge anyway.
+Colonel: I’m just here to keep us moving and get paid.
+Colonel: Hope we can all have a good time together ‘till then.
+Tracker: Uh- I’m Tracker. I do stuff with files and navigation.
+Tracker: I just hope nothing screws up too bad, last trip was rough.
+Spark: Speaking of, what do we have the new guy do? Did we really need a fourth crewmate?
+Tracker: I think any help will be good, besides, if the boss thinks we need more people onboard, there must be a reason.
+Colonel: That and it helps to have a new face, or, mask, to talk to for the next few days.
+Colonel: Which reminds me, what’s your codename?
+[text_input text="What's your name?" var="PlayerName"]
+Spark: Well, good to know ya, {PlayerName}.
+Spark: Now you can help us out around the ship.
+Spark: Best way to learn is to do. You know where I’ll be.
+Colonel: Same here actually, if you wanna blow up some space rocks, meet me in weapons.
+Tracker: I’m off to work too, I’ll be doing computer stuff in navigation, any help is appreciated.
