@@ -1,6 +1,7 @@
-[gd_scene load_steps=3 format=3 uid="uid://c8nae2qlspxxc"]
+[gd_scene load_steps=4 format=3 uid="uid://c8nae2qlspxxc"]
 
 [ext_resource type="FontFile" uid="uid://d1j5veayfvfph" path="res://assets/fonts/mvboli.ttf" id="1_lo6p4"]
+[ext_resource type="Texture2D" uid="uid://f3etwlolsr6i" path="res://assets/Backgrounds/Space Background.png" id="2_crrpk"]
 
 [sub_resource type="StyleBoxFlat" id="StyleBoxFlat_tldp0"]
 bg_color = Color(0.929412, 0.376471, 0.596078, 1)
@@ -14,7 +15,7 @@ offset_left = 352.0
 offset_top = 48.0
 offset_right = 913.0
 offset_bottom = 136.0
-theme_override_colors/font_color = Color(0, 0, 0, 1)
+theme_override_colors/font_color = Color(1, 1, 1, 1)
 theme_override_fonts/font = ExtResource("1_lo6p4")
 theme_override_font_sizes/font_size = 64
 text = "Love is Among Us!"
@@ -38,3 +39,8 @@ text = "Start"
 [node name="Background" type="ColorRect" parent="."]
 offset_right = 1278.0
 offset_bottom = 720.0
+
+[node name="SpaceBackground" type="Sprite2D" parent="."]
+position = Vector2(641.5, 358.5)
+scale = Vector2(1.25098, 1.25521)
+texture = ExtResource("2_crrpk")
