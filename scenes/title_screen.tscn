@@ -1,7 +1,9 @@
 [gd_scene load_steps=4 format=3 uid="uid://c8nae2qlspxxc"]
 
+
 [ext_resource type="FontFile" uid="uid://d1j5veayfvfph" path="res://assets/fonts/mvboli.ttf" id="1_lo6p4"]
 [ext_resource type="Texture2D" uid="uid://f3etwlolsr6i" path="res://assets/Backgrounds/Space Background.png" id="2_crrpk"]
+
 
 [sub_resource type="StyleBoxFlat" id="StyleBoxFlat_tldp0"]
 bg_color = Color(0.929412, 0.376471, 0.596078, 1)
