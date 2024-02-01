@@ -1,6 +1,8 @@
 extends Node2D
 
 @export var opening_scene : PackedScene
+@export var transistioner : Transitioner
+
 # Called when the node enters the scene tree for the first time.
 func _ready():
 	pass # Replace with function body.
@@ -12,4 +14,5 @@ func _process(delta):
 
 
 func _on_start_pressed():
-	get_tree().change_scene_to_packed(opening_scene)
+	transistioner.set_next_animation(true)
+	# get_tree().change_scene_to_packed(opening_scene)
