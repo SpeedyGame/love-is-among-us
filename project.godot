@@ -27,7 +27,10 @@ directories/dch_directory={
 "Tracker": "res://dialogic_assets/characters/Tracker.dch"
 }
 directories/dtl_directory={
-"opening": "res://dialogic_assets/timelines/opening.dtl"
+"colonel_task1": "res://dialogic_assets/timelines/colonel_task1.dtl",
+"opening": "res://dialogic_assets/timelines/opening.dtl",
+"spark_task1": "res://dialogic_assets/timelines/spark_task1.dtl",
+"tracker_task1": "res://dialogic_assets/timelines/tracker_task1.dtl"
 }
 text/letter_speed=0.01
 text/initial_text_reveal_skippable=true
