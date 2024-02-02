@@ -1,4 +1,5 @@
 [background arg="res://assets/Backgrounds/electrical.jpg" fade="0.0"]
+join Spark 3
 Spark: Hey, how’s it going? Wanna give me a hand?
 - Yes
 	Spark: Great. *opens a panel, revealing (something related to whatever task we put here)* It’s not that hard.
