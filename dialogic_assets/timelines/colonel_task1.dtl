@@ -1,0 +1,39 @@
+[background arg="res://assets/Backgrounds/weapons.jpg" fade="0.0"]
+join Colonel 3
+Colonel: Heeeey, it’s the new guy! Ready to start?
+- Yes
+	Colonel: Great! *pulls down a large touchscreen with asteroids on it*
+	This is where the minigame will be inserted.
+	You can decide if you do well or not here.
+	- Easy money
+		Colonel: Nice shooting {PlayerName}. And thanks for the help too. (+1 fondness)
+		- Don't mention it, just doing my job.
+			Colonel: Come on back sometime if you want another round.
+			Colonel: And you do it well.
+			Colonel: The door is always open.
+			- Will do, see you tomorrow!
+				Colonel: Hell yeah!
+			- Maybe I need to give someone else a turn, either with me or the game.
+				Colonel: Yeah, gotta share the love I guess. See you around.
+		- I didn't know we had an arcade on board, lucky you get the fun job.
+			Colonel: For real! The boss really spoiled me with this one.
+			Colonel: It’s like Galaga, but everything on the screen is actually real!
+			- I'd love to come back sometime, if you don't mind.
+				Colonel: Please do! It’s nice to have someone to play my game with.
+			- That's because it's a camera, stupid.
+				Colonel: Okay… no need to call names, don’t know where that came from. (-1 fondness)
+				Colonel: Maybe dry out the wet blanket before you come in next time, okay?
+			- How do I get a setup like this?
+				Colonel: I guess just work here for long enough, the boss ends up giving everyone their own set of tasks and equipment eventually.
+				Colonel: Stick around long enough and maybe you can get weapons on whatever ship you end up on in the future.
+		- There's enough Cheeto dust on here to feed a village, and what's that smell? Have you showered recently.
+			Colonel: Listen, I don’t want any smoke for how my area is cleaned. You can talk when you get your own.
+			Colonel: And I can’t smell any worse than the suit you’ve got on. How about you take it somewhere else. (-1 fondness)
+	- That was tough
+		Colonel: You alright? Are the controls messing up again?
+		- It barely even works, I'd rather not do this again.
+			Colonel: Huh, weird *tries the controls and seems confused* I gotta work on that, sorry to waste your time.
+		- I'm just a little rusty with my aim, mind giving me a hand?
+			Colonel: Sure, you got this!  (insert tip on how to do the minigame, maybe then give another chance to do it well for the fondness)
+		- This has gotta be the worst game I've played in a while, to be honest.
+			Colonel: Dang, sorry you feel that way. It is a bit plain, but not that bad I thought. To each their own I guess.

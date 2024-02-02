@@ -1,0 +1,43 @@
+[background arg="res://assets/Backgrounds/electrical.jpg" fade="0.0"]
+join Spark 3
+Spark: Hey, how’s it going? Wanna give me a hand?
+- Yes
+	Spark: Great. *opens a panel, revealing (something related to whatever task we put here)* It’s not that hard.
+	This is where the minigame will be inserted.
+	You can decide if you do well or not here.
+	- Easy money
+		Spark: Huh, you really know what you're doing. Glad to have you around. (+1 fondness)
+		- I really do huh? I thought I was dumb as a rock. (sarcastic)
+			Spark: Be that way then, I guess. (-1 fondness)
+		- Thanks, glad to be here.
+			Spark: And good thing too, it’s gonna be a few days. Stop by again sometime will you?
+			- Will do!
+				Spark: Love to hear it!
+			- Maybe, I wanna help the others out too.
+				Spark: That's fair, see you later.
+			- Nah.
+				Spark: Okay, bye then.
+		- Eh, a baby could do half of this, you have a really easy ride here.
+			Spark: You think so? How about you do something around here to help me spruce up the place then, maybe tomorrow?
+			- The lights could use a better power supply, I’m in.
+				Spark: I thought the same thing, see you tomorrow!
+			- Me? You need more than me to fix up this dump.
+				Spark: Dump? I’ve done damn well with what I have, and it won’t take more than me to kick you out.(-1 fondness)
+			- I’ll see what I can do if I’m free.
+				Appreciate it, {PlayerName}.
+	- That was tough
+		Spark: You look like you're stuggling, need some help?
+		- They really don't pay me enough for this, was there supposed to be training or something?
+			Spark: This is the training, they just put you here to start.
+			Spark: Normally, you would have a specific job to do like us.
+			Spark: Think of it as more of a training run that you still get paid for.
+			- Makes sense, better to get experience with the real thing right away.
+				Spark: Yep, gotta start sometime.
+			- That's dumb, not even a warning to what I have to do?
+				Spark: Most of it was in the contract.
+				Spark: That, and you chose to come with me knowing what I do.
+		- If you could, I'm kinda new to all this.
+			Spark: Sure, (insert tip on how to do the minigame, maybe then give another chance to do it well for the fondness)
+		- Ah, I give up, didn't know I need to be an electrician for this job.
+			Spark: I guess that works, good luck with the others.
+		Spark: Come back sometime if you wanna give it another shot, I’ll be here.

@@ -2,18 +2,28 @@
 "@path": "res://addons/dialogic/Resources/character.gd",
 "@subpath": NodePath(""),
 "_translation_id": "",
-"color": Color(0.843137, 0.027451, 0.027451, 1),
+"color": Color(0.843137, 0.505882, 0.027451, 1),
 "custom_info": {
 "sound_mood_default": "",
 "sound_moods": {},
 "style": ""
 },
-"default_portrait": "",
+"default_portrait": "Neutral Spark",
 "description": "",
 "display_name": "Spark",
 "mirror": false,
 "nicknames": [""],
 "offset": Vector2(0, 0),
-"portraits": {},
+"portraits": {
+"Neutral Spark": {
+"export_overrides": {
+"image": "\"res://assets/sparky.png\""
+},
+"mirror": false,
+"offset": Vector2(0, 0),
+"scale": 1,
+"scene": ""
+}
+},
 "scale": 1.0
 }
