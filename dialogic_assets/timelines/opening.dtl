@@ -1,3 +1,4 @@
+[music path="res://assets/music/Late Night Radio.mp3" fade="0.0" volume="-12.0"]
 Spark: Hey everyone, Spark here.
 Spark: I ain’t much for introductions, but I’m the one that keeps the lights on around here.
 Spark: If you need me, I’ll either be here or out in electrical doing god-knows-what.
@@ -16,7 +17,7 @@ Spark: Now you can help us out around the ship.
 Spark: Best way to learn is to do. You know where I’ll be.
 Colonel: Same here actually, if you wanna blow up some space rocks, meet me in weapons.
 Tracker: I’m off to work too, I’ll be doing computer stuff in navigation, any help is appreciated.
-[clear time="1.0"]
+[clear time="1.0" music="false"]
 Who would you like to go with?
 - Spark
 	jump spark_task1/
