@@ -1,3 +1,4 @@
+[background arg="res://assets/Backgrounds/weapons.jpg" fade="0.0"]
 Colonel: Heeeey, it’s the new guy! Ready to start?
 - Yes
 	Colonel: Great! *pulls down a large touchscreen with asteroids on it*
@@ -6,8 +7,8 @@ Colonel: Heeeey, it’s the new guy! Ready to start?
 	- Easy money
 		Colonel: Nice shooting {PlayerName}. And thanks for the help too. (+1 fondness)
 		- Don't mention it, just doing my job.
-			Colonel: And you do it well.
 			Colonel: Come on back sometime if you want another round.
+			Colonel: And you do it well.
 			Colonel: The door is always open.
 			- Will do, see you tomorrow!
 				Colonel: Hell yeah!
