@@ -24,7 +24,7 @@ Spark: Hey, how’s it going? Wanna give me a hand?
 			- Me? You need more than me to fix up this dump.
 				Spark: Dump? I’ve done damn well with what I have, and it won’t take more than me to kick you out.(-1 fondness)
 			- I’ll see what I can do if I’m free.
-				Appreciate it, {PlayerName}.
+				Spark: Appreciate it, {PlayerName}.
 	- That was tough
 		Spark: You look like you're stuggling, need some help?
 		- They really don't pay me enough for this, was there supposed to be training or something?
