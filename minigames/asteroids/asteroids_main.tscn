@@ -1,0 +1,9 @@
+[gd_scene format=3 uid="uid://p61guvano00v"]
+
+[node name="Main" type="Node2D"]
+editor_description = "Breaking down the tasks:
+-Randomly generated objects moving right to left at a random position
+-Clickable objects with a set number
+-Incrementable score from clickable objects
+-Ends after all asteroids have been deployed
+-Score can be accessed by Dialogic"
