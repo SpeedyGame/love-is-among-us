@@ -37,4 +37,12 @@ shape = SubResource("RectangleShape2D_kv1jb")
 position = Vector2(2.86102e-06, -1.90735e-06)
 scale = Vector2(3.9, 3.9)
 
+[node name="Clickable" type="Button" parent="."]
+visibility_layer = 0
+offset_left = -39.0
+offset_top = -39.0
+offset_right = 39.0
+offset_bottom = 39.0
+
 [connection signal="screen_exited" from="VisibleOnScreenNotifier2D" to="." method="_on_visible_on_screen_notifier_2d_screen_exited"]
+[connection signal="pressed" from="Clickable" to="." method="_on_clickable_pressed"]

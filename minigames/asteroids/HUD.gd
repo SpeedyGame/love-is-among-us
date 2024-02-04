@@ -3,8 +3,8 @@ extends CanvasLayer
 signal start_game
 # Called when the node enters the scene tree for the first time.
 func _ready():
-	pass # Replace with function body.
-
+	$ScoreLabel.hide()
+	$AsteroidsDestroyed.hide()
 
 # Called every frame. 'delta' is the elapsed time since the previous frame.
 func _process(delta):
@@ -16,8 +16,10 @@ func show_message(text):
 	$MessageTimer.start()
 	
 func show_game_over():
-	show_message("Game Over")
-	await $MessageTimer.timeout
+	$Message.text = "Game Over"
+	$Message.show()
+	#show_message("Game Over")
+	#await $MessageTimer.timeout
 	
 func update_score(score):
 	$ScoreLabel.text = str(score)

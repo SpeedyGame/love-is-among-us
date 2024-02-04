@@ -1,4 +1,4 @@
-[gd_scene load_steps=9 format=3 uid="uid://p61guvano00v"]
+[gd_scene load_steps=10 format=3 uid="uid://p61guvano00v"]
 
 [ext_resource type="Script" path="res://minigames/asteroids/asteroids_main.gd" id="1_0tlme"]
 [ext_resource type="PackedScene" uid="uid://bmmtdih2clyf4" path="res://minigames/asteroids/asteroid.tscn" id="2_ujlv4"]
@@ -18,6 +18,8 @@ point_count = 4
 [sub_resource type="SystemFont" id="SystemFont_sxdb4"]
 
 [sub_resource type="SystemFont" id="SystemFont_ndfiu"]
+
+[sub_resource type="SystemFont" id="SystemFont_0bqtf"]
 
 [node name="Main" type="Node2D"]
 editor_description = "Breaking down the tasks:
@@ -67,10 +69,10 @@ position = Vector2(832, 0)
 script = ExtResource("3_dwo0o")
 
 [node name="ScoreLabel" type="Label" parent="HUD"]
-offset_left = 551.0
-offset_top = -7.0
-offset_right = 591.0
-offset_bottom = 48.0
+offset_left = 696.0
+offset_top = 2.0
+offset_right = 736.0
+offset_bottom = 58.0
 theme_override_fonts/font = SubResource("SystemFont_vttf6")
 theme_override_font_sizes/font_size = 40
 text = "4"
@@ -110,6 +112,14 @@ text = "Start"
 [node name="MessageTimer" type="Timer" parent="HUD"]
 wait_time = 2.0
 one_shot = true
+
+[node name="AsteroidsDestroyed" type="RichTextLabel" parent="HUD"]
+offset_left = 286.0
+offset_right = 702.0
+offset_bottom = 56.0
+theme_override_fonts/normal_font = SubResource("SystemFont_0bqtf")
+theme_override_font_sizes/normal_font_size = 40
+text = "Asteroids Destroyed: "
 
 [connection signal="body_exited" from="ColorRect/Area2D" to="." method="_on_area_2d_body_exited"]
 [connection signal="timeout" from="AsteroidTimer" to="." method="_on_asteroid_timer_timeout"]
