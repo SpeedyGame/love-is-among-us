@@ -3,6 +3,10 @@ join Colonel 3
 Colonel: Heeeey, it’s the new guy! Ready to start?
 - Yes
 	Colonel: Great! *pulls down a large touchscreen with asteroids on it*
+	[clear time="1.0"]
+	[signal arg="start_asteroids"]
+	[end_timeline]
+	label after_minigame
 	This is where the minigame will be inserted.
 	You can decide if you do well or not here.
 	- Easy money

@@ -50,7 +50,7 @@ func _on_asteroid_timer_timeout():
 	else:
 		add_child(asteroid)
 		asteroid_count -= 1
-		print(asteroid_count)
+		#print(asteroid_count)
 	
 	
 func _on_asteroid_destroyed():
