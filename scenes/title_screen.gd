@@ -10,12 +10,6 @@ extends Node2D
 func _ready():
 	music_player.play(0.0)
 
-
-# Called every frame. 'delta' is the elapsed time since the previous frame.
-func _process(delta):
-	pass
-
-
 func _on_start_pressed():
 	transistioner.set_next_animation(true)
 	audio_control.queue("fade_out_music")

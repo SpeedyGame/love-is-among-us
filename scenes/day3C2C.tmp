@@ -1,0 +1,33 @@
+[gd_scene load_steps=5 format=3 uid="uid://vfd0ydydf8fc"]
+
+[ext_resource type="Script" path="res://scenes/day_1_opening.gd" id="1_qbjbg"]
+[ext_resource type="Script" path="res://addons/dialogic/Modules/Background/dialogic_background.gd" id="2_588ev"]
+[ext_resource type="PackedScene" uid="uid://ccqu3swo2jrr7" path="res://assets/UI/transitioner.tscn" id="3_fd2qe"]
+[ext_resource type="PackedScene" uid="uid://p61guvano00v" path="res://minigames/asteroids/asteroids_main.tscn" id="4_u6ncp"]
+
+[node name="Node2D" type="Node2D" node_paths=PackedStringArray("transistioner")]
+script = ExtResource("1_qbjbg")
+asteroids_1 = ExtResource("4_u6ncp")
+transistioner = NodePath("Transitioner")
+
+[node name="DialogicBackground" type="Node" parent="."]
+script = ExtResource("2_588ev")
+
+[node name="Transitioner" parent="." instance=ExtResource("3_fd2qe")]
+anchors_preset = 0
+anchor_right = 0.0
+anchor_bottom = 0.0
+offset_left = 640.0
+offset_top = 360.0
+offset_right = 640.0
+offset_bottom = 360.0
+grow_horizontal = 1
+grow_vertical = 1
+scene_to_load = ExtResource("4_u6ncp")
+
+[node name="Main" parent="." instance=ExtResource("4_u6ncp")]
+process_mode = 4
+visible = false
+asteroid = null
+transistioner = NodePath("")
+prev_scene = null

@@ -7,11 +7,6 @@ func _ready():
 	Dialogic.start("res://dialogic_assets/timelines/opening.dtl")
 	Dialogic.signal_event.connect(DialogicSignal)
 
-
-# Called every frame. 'delta' is the elapsed time since the previous frame.
-func _process(delta):
-	pass
-
 func DialogicSignal(argument:String):
 	if argument == "start_asteroids":
 		transistioner.set_next_animation(true)
