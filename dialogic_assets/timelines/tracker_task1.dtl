@@ -36,3 +36,4 @@ Tracker: Oh, you came. Would you mind helping me out for a bit?
 		- This is impossible! How much do you get paid for this?
 			Tracker: Not enough, it’s almost not worth it. Run now if you know what's best for you.
 set {Day1Task} = "Tracker"
+jump day1_end/

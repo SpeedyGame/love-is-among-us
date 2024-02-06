@@ -12,7 +12,6 @@ config_version=5
 
 config/name="LoveIsAmongUs"
 run/main_scene="res://scenes/title_screen.tscn"
-run/main_scene="res://scenes/title_screen.tscn"
 config/features=PackedStringArray("4.2", "Forward Plus")
 config/icon="res://icon.svg"
 
@@ -29,12 +28,11 @@ directories/dch_directory={
 }
 directories/dtl_directory={
 "colonel_task1": "res://dialogic_assets/timelines/colonel_task1.dtl",
-"day1_end": "res://day1_end.dtl",
+"day1_end": "res://dialogic_assets/timelines/day1_end.dtl",
 "opening": "res://dialogic_assets/timelines/opening.dtl",
 "spark_task1": "res://dialogic_assets/timelines/spark_task1.dtl",
 "tracker_task1": "res://dialogic_assets/timelines/tracker_task1.dtl"
 }
-text/letter_speed=0.03
 text/letter_speed=0.03
 text/initial_text_reveal_skippable=true
 text/text_reveal_skip_delay=0.1
@@ -56,9 +54,6 @@ variables={
 "Day1TaskWellness": "False",
 "PlayerName": ""
 }
-glossary/default_case_sensitive=true
-layout/style_list=[]
-layout/default_style="Default"
 glossary/default_case_sensitive=true
 layout/style_list=[]
 layout/default_style="Default"

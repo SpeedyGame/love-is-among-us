@@ -1,3 +1,4 @@
+[background arg="res://assets/Backgrounds/meeting room.jpg" fade="0.0"]
 if {Day1Task} == "Spark":
 	join Spark 3
 	Spark: Alright, what's the meeting tonight about?

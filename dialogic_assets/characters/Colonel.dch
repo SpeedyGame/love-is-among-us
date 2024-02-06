@@ -13,7 +13,7 @@
 "display_name": "Colonel",
 "mirror": false,
 "nicknames": [""],
-"offset": Vector2(0, 0),
+"offset": Vector2(0, 100),
 "portraits": {
 "Neutral Colonel": {
 "export_overrides": {

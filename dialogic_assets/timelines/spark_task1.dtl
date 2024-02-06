@@ -43,3 +43,4 @@ Spark: Hey, how’s it going? Wanna give me a hand?
 			Spark: I guess that works, good luck with the others.
 		Spark: Come back sometime if you wanna give it another shot, I’ll be here.
 set {Day1Task} = "Spark"
+jump day1_end/

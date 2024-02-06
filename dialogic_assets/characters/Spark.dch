@@ -13,7 +13,7 @@
 "display_name": "Spark",
 "mirror": false,
 "nicknames": [""],
-"offset": Vector2(0, 0),
+"offset": Vector2(0, 100),
 "portraits": {
 "Neutral Spark": {
 "export_overrides": {
