@@ -42,4 +42,5 @@ Colonel: Heeeey, it’s the new guy! Ready to start?
 		This hasn't been fully integrated, but the minigame does work. Here we go!
 		[signal arg="start_asteroids"]
 set {Day1Task} = "Colonel"
+[clear time="1.0"]
 jump day1_end/
