@@ -28,6 +28,7 @@ directories/dch_directory={
 }
 directories/dtl_directory={
 "colonel_task1": "res://dialogic_assets/timelines/colonel_task1.dtl",
+"day1_end": "res://day1_end.dtl",
 "opening": "res://dialogic_assets/timelines/opening.dtl",
 "spark_task1": "res://dialogic_assets/timelines/spark_task1.dtl",
 "tracker_task1": "res://dialogic_assets/timelines/tracker_task1.dtl"
@@ -49,6 +50,8 @@ save/autosave_delay=60.0
 save/encryption_on_exports_only=true
 text/autopauses={}
 variables={
+"Day1Task": "",
+"Day1TaskWellness": "False",
 "PlayerName": ""
 }
 glossary/default_case_sensitive=true

@@ -18,7 +18,7 @@ func game_over():
 	# asteroid.disconnect("destroyed", _on_asteroid_destroyed)
 	$AsteroidTimer.stop()
 	$HUD.show_game_over()
-	await get_tree().create_timer(3.0).timeout
+	#await get_tree().create_timer(3.0).timeout
 	#back_to_timeline()
 	
 func _on_start_timer_timeout():

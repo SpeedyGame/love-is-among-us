@@ -1,6 +1,5 @@
 extends Node2D
 
-@export var opening_scene : PackedScene
 @export var transistioner : Transitioner
 
 @onready var audio_control : AnimationPlayer =  $TitleScreenMusic/AudioFade

@@ -6,6 +6,7 @@ Spark: Hey, how’s it going? Wanna give me a hand?
 	This is where the minigame will be inserted.
 	You can decide if you do well or not here.
 	- Easy money
+		set {Day1TaskWellness} = "True"
 		Spark: Huh, you really know what you're doing. Glad to have you around. (+1 fondness)
 		- I really do huh? I thought I was dumb as a rock. (sarcastic)
 			Spark: Be that way then, I guess. (-1 fondness)
@@ -41,3 +42,4 @@ Spark: Hey, how’s it going? Wanna give me a hand?
 		- Ah, I give up, didn't know I need to be an electrician for this job.
 			Spark: I guess that works, good luck with the others.
 		Spark: Come back sometime if you wanna give it another shot, I’ll be here.
+set {Day1Task} = "Spark"

@@ -1,0 +1,90 @@
+if {Day1Task} == "Spark":
+	join Spark 3
+	Spark: Alright, what's the meeting tonight about?
+	Spark: I’m trying to hit the sack as soon as I can.
+	leave Spark
+elif {Day1Task} == "Colonel":
+	join Colonel 3
+	Colonel: What's up?
+	Colonel: Someone hit the button?
+	leave Colonel
+join Tracker 3
+Tracker: Sorry for hitting the button, but we have a problem.
+Tracker: I was running a system check, and the power on the ship was barely functioning.
+Tracker: Did something happen in Electrical?
+leave Tracker
+join Colonel 3
+Colonel: So that's why the lights were blinking all weird earlier.
+leave Colonel
+join Spark 3
+Spark: *sigh* I could go check back there again, but I just got done with maintenance an hour ago.
+- No, we did it right, everything was fine when we left. Unless someone else did something since then… [if {Day1Task} == "Spark"]
+	Spark: I mean normally when the power messes up, the lights just turn off, never blink.
+	Spark: They only do that when I reset the breaker.
+	Tracker: Who would be messing with the electrical stuff but you, Spark?
+	Spark: Did you try to reset the wifi?
+	Tracker: I had to ask you to do it last time, I don’t know where the breaker is.
+	Colonel: {PlayerName} went with you today right? *turns to you*
+	Colonel: Did you go back in after Spark got done and do something?
+	- Did you?
+		Colonel: Nah, I was chilling in comms listening to the radio.
+	- No, I've been in my room since I got done with Spark.
+	- I left after checking everything over again a bit after he did, nothing should be wrong. [if {Day1TaskWellness} == "True"]
+		Spark: {PlayerName} even fixed a few of *my* mistakes. It wasn't them.
+	Spark: I guess that leaves you Colonel.
+	Spark: What did you do when I was gone?
+	Colonel: Woah woah, I didn’t do anything.
+	Colonel: I was just chilling in comms listening to the one radio we have.
+	Tracker: Huh, didn’t know our main link to civilization played music too.
+	Tracker: You know, I have spare laptops you can use for that.
+	Colonel: It’s just not the same though.
+	Colonel: Besides, the chairs in there are the comfiest onboard.
+	Spark: I guess I can go and fix everything up.
+	Spark: Tracker, maybe tomorrow you can help me set some cameras up in there. This isn’t the first time stuff has messed up in there with nobody around.
+	Tracker: Sure, anybody can see everything you do in there through cams if I do tho.
+	Spark: That's fine, I’ll see you all tomorrow. *walks off to electrical*
+	Colonel: Alright, meeting adjourned, I think.
+	Colonel: See y’all in the morning.
+	Tracker: Goodnight everyone.
+- It wouldn't hurt, it’s gotta get fixed either way.
+	Spark: True, I guess. I’ll go and handle it. *leaves to electrical*
+	Colonel: Weird, Spark takes their job real serious.
+	Colonel: This kind of stuff doesn't normally happen.
+	Tracker: Yeah, last time the lights started blinking like that, it was because you plugged too much stuff in one outlet.
+	Colonel: Hey, it's not my fault I have a lot of stuff to plug in.
+	- There are only 2 outlets in Weapons, it’s hard not to. [if {Day1Task} == "Colonel"]
+		Tracker: Only 2?! No wonder It’s such a problem. I should’ve gotten you that power strip sooner.
+	- There is twice as much stuff in Admin, I don’t think it was a stuff problem. [if {Day1Task} == "Tracker"]
+		Colonel: Don’t worry, I have new power strips now. Thanks, Tracker.
+		Tracker: Don't worry about it, Spark getting off my back was payment enough.
+	- Hm...
+	Colonel: I guess we should get going then, unless you had anymore for the meeting, Tracker.
+	Tracker: That was it really, I’ve just got to send in the meeting report.
+	Tracker: Don’t worry about it, Spark getting off of my back was payment enough.
+	Colonel: I guess we should get going then, unless you had anything more for the meeting, Tracker.
+	Tracker: I think it's my turn to be scrum master this time.
+	Colonel: Alright then, See y'all tomorrow then.
+	Tracker: Goodnight everyone.
+- If it was fine when you left, why is it bugging now?
+	Spark: No idea.
+	Spark: Like I said, I haven’t been there to mess with it.
+	Colonel: I promise it wasn’t me this time! I learned my lesson with the power strips.
+	- They actually use both outlets now. [if {Day1Task} == "Colonel"]
+	- I don’t know, there were like, seven things on that one plug. [if {Day1Task} == "Colonel"]
+		Tracker: *glares at Colonel* Come on Colonel, you fried my good monitor last time you did that stuff!
+		Colonel: Hey, in my defense, I use both outlets equally now, There’s just a lot of stuff!
+	- Both outlets?
+	Tracker: Yeah, that's fair. As long as you use both of them, it shouldn’t do this to the lights.
+	Spark: Has anyone messed with the breaker at all recently? The blinking usually means the power was reset.
+	- I went in after you and checked everything over like you said, nothing was wrong about 15 minutes ago. [if {Day1Task} == "Spark"]
+		Spark: Thanks, but that means that whatever happened, it was really recent.
+		Spark: Tracker? Did you need to reset the power somewhere?
+		Tracker: I haven’t been back there since the power strip incident. Colonel?
+		Colonel: Nope, I’m just as mad as you must be about it. My whole asteroids setup is all messed up.
+	- Tracker and I were uploading reports to admin when the power flickered, I thought you had reset the power for something. [if {} == "Tracker"]
+		Tracker: So. Much. Work. GONE!
+		Colonel: *looks at Tracker, kinda scared* Hey, hey sometimes tech just glitches you know? Remember that time the doors would close randomly, then open again?
+	- Maybe it’s just bugged? Electrical stuff tends to break sometimes.
+	Spark: Yeah, it hasn’t happened yet to this degree, but I can see the awful electrics we got finally starting to quit. I’ll go and get it back on.
+	Tracker: Well, that was all I had for the meeting tonight, and I’m trying to get some sleep.
+	Colonel: Nothing here either, goodnight.
