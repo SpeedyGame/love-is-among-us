@@ -1,0 +1,119 @@
+[gd_scene load_steps=9 format=3 uid="uid://p61guvano00v"]
+
+[ext_resource type="Script" path="res://minigames/asteroids/asteroids_main.gd" id="1_0tlme"]
+[ext_resource type="PackedScene" uid="uid://bmmtdih2clyf4" path="res://minigames/asteroids/asteroid.tscn" id="2_ujlv4"]
+[ext_resource type="Script" path="res://minigames/asteroids/HUD.gd" id="3_dwo0o"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_fyqk4"]
+size = Vector2(720, 719.5)
+
+[sub_resource type="Curve2D" id="Curve2D_q4six"]
+_data = {
+"points": PackedVector2Array(0, 0, 0, 0, 832, 0, 0, 0, 0, 0, 1000, 0, 0, 0, 0, 0, 1000, 720, 0, 0, 0, 0, 832, 720)
+}
+point_count = 4
+
+[sub_resource type="SystemFont" id="SystemFont_vttf6"]
+
+[sub_resource type="SystemFont" id="SystemFont_sxdb4"]
+
+[sub_resource type="SystemFont" id="SystemFont_ndfiu"]
+
+[node name="Main" type="Node2D"]
+editor_description = "Breaking down the tasks:
+-Randomly generated objects moving right to left at a random position
+-Clickable objects with a set number
+-Incrementable score from clickable objects
+-Ends after all asteroids have been deployed
+-Score can be accessed by Dialogic"
+script = ExtResource("1_0tlme")
+asteroid = ExtResource("2_ujlv4")
+
+[node name="ColorRect" type="ColorRect" parent="."]
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = 280.0
+offset_right = 1000.0
+offset_bottom = 720.0
+grow_horizontal = 2
+grow_vertical = 2
+size_flags_horizontal = 6
+size_flags_vertical = 6
+color = Color(0.360366, 0.80549, 0.42518, 1)
+
+[node name="Area2D" type="Area2D" parent="ColorRect"]
+position = Vector2(6, 2)
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="ColorRect/Area2D"]
+position = Vector2(354, 358.25)
+shape = SubResource("RectangleShape2D_fyqk4")
+
+[node name="AsteroidTimer" type="Timer" parent="."]
+
+[node name="StartTimer" type="Timer" parent="."]
+wait_time = 2.0
+one_shot = true
+
+[node name="AsteroidPath" type="Path2D" parent="."]
+curve = SubResource("Curve2D_q4six")
+
+[node name="AsteroidSpawnLocation" type="PathFollow2D" parent="AsteroidPath"]
+position = Vector2(832, 0)
+
+[node name="HUD" type="CanvasLayer" parent="."]
+script = ExtResource("3_dwo0o")
+
+[node name="ScoreLabel" type="Label" parent="HUD"]
+offset_left = 551.0
+offset_top = -7.0
+offset_right = 591.0
+offset_bottom = 48.0
+theme_override_fonts/font = SubResource("SystemFont_vttf6")
+theme_override_font_sizes/font_size = 40
+text = "4"
+
+[node name="Message" type="Label" parent="HUD"]
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -315.0
+offset_top = -27.5
+offset_right = 315.0
+offset_bottom = 27.5
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_fonts/font = SubResource("SystemFont_sxdb4")
+theme_override_font_sizes/font_size = 40
+text = "Destroy the asteroids by clicking!"
+
+[node name="StartButton" type="Button" parent="HUD"]
+anchors_preset = 7
+anchor_left = 0.5
+anchor_top = 1.0
+anchor_right = 0.5
+anchor_bottom = 1.0
+offset_left = -51.0
+offset_top = -231.0
+offset_right = 51.0
+offset_bottom = -168.0
+grow_horizontal = 2
+grow_vertical = 0
+theme_override_fonts/font = SubResource("SystemFont_ndfiu")
+theme_override_font_sizes/font_size = 40
+text = "Start"
+
+[node name="MessageTimer" type="Timer" parent="HUD"]
+wait_time = 2.0
+one_shot = true
+
+[connection signal="body_exited" from="ColorRect/Area2D" to="." method="_on_area_2d_body_exited"]
+[connection signal="timeout" from="AsteroidTimer" to="." method="_on_asteroid_timer_timeout"]
+[connection signal="timeout" from="StartTimer" to="." method="_on_start_timer_timeout"]
+[connection signal="start_game" from="HUD" to="." method="start_game"]
+[connection signal="pressed" from="HUD/StartButton" to="HUD" method="_on_start_button_pressed"]
+[connection signal="timeout" from="HUD/MessageTimer" to="HUD" method="_on_message_timer_timeout"]

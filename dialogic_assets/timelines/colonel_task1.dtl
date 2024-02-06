@@ -6,6 +6,7 @@ Colonel: Heeeey, it’s the new guy! Ready to start?
 	This is where the minigame will be inserted.
 	You can decide if you do well or not here.
 	- Easy money
+		set {Day1TaskWellness} = "True"
 		Colonel: Nice shooting {PlayerName}. And thanks for the help too. (+1 fondness)
 		- Don't mention it, just doing my job.
 			Colonel: Come on back sometime if you want another round.
@@ -37,3 +38,9 @@ Colonel: Heeeey, it’s the new guy! Ready to start?
 			Colonel: Sure, you got this!  (insert tip on how to do the minigame, maybe then give another chance to do it well for the fondness)
 		- This has gotta be the worst game I've played in a while, to be honest.
 			Colonel: Dang, sorry you feel that way. It is a bit plain, but not that bad I thought. To each their own I guess.
+	- Play the minigame (may require a refresh)
+		This hasn't been fully integrated, but the minigame does work. Here we go!
+		[signal arg="start_asteroids"]
+set {Day1Task} = "Colonel"
+[clear time="1.0"]
+jump day1_end/

@@ -7,6 +7,7 @@
 
 [node name="Node2D" type="Node2D" node_paths=PackedStringArray("transistioner")]
 script = ExtResource("1_qbjbg")
+asteroids_1 = ExtResource("4_u6ncp")
 transistioner = NodePath("Transitioner")
 
 [node name="DialogicBackground" type="Node" parent="."]
@@ -23,3 +24,10 @@ offset_bottom = 360.0
 grow_horizontal = 1
 grow_vertical = 1
 scene_to_load = ExtResource("4_u6ncp")
+
+[node name="Main" parent="." instance=ExtResource("4_u6ncp")]
+process_mode = 4
+visible = false
+asteroid = null
+transistioner = NodePath("")
+prev_scene = null

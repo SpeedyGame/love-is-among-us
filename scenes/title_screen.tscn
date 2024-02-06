@@ -32,7 +32,6 @@ _data = {
 
 [node name="TitleScreen" type="Node2D" node_paths=PackedStringArray("transistioner")]
 script = ExtResource("1_n3lbd")
-opening_scene = ExtResource("2_6oub2")
 transistioner = NodePath("UI/Transitioner")
 
 [node name="UI" type="CanvasLayer" parent="."]

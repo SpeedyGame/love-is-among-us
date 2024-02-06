@@ -1,0 +1,49 @@
+[gd_scene load_steps=5 format=3 uid="uid://bmmtdih2clyf4"]
+
+[ext_resource type="Script" path="res://minigames/asteroids/asteroid.gd" id="1_6cj4e"]
+[ext_resource type="Texture2D" uid="uid://bv2lp447rfaf2" path="res://icon.svg" id="1_rgux3"]
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_msjfh"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("1_rgux3")
+}],
+"loop": true,
+"name": &"default",
+"speed": 5.0
+}]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_kv1jb"]
+size = Vector2(8.11655, 8.11655)
+
+[node name="Asteroid" type="RigidBody2D"]
+collision_mask = 0
+gravity_scale = 0.0
+script = ExtResource("1_6cj4e")
+metadata/_edit_group_ = true
+
+[node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="."]
+position = Vector2(-1.90735e-06, 0)
+scale = Vector2(0.6, 0.6)
+sprite_frames = SubResource("SpriteFrames_msjfh")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+position = Vector2(9.53674e-07, -5.96046e-07)
+scale = Vector2(9.61, 9.61)
+shape = SubResource("RectangleShape2D_kv1jb")
+
+[node name="VisibleOnScreenNotifier2D" type="VisibleOnScreenNotifier2D" parent="."]
+position = Vector2(2.86102e-06, -1.90735e-06)
+scale = Vector2(3.9, 3.9)
+
+[node name="Clickable" type="Button" parent="."]
+visibility_layer = 0
+offset_left = -39.0
+offset_top = -39.0
+offset_right = 39.0
+offset_bottom = 39.0
+
+[connection signal="body_exited" from="." to="." method="_on_body_exited"]
+[connection signal="screen_exited" from="VisibleOnScreenNotifier2D" to="." method="_on_visible_on_screen_notifier_2d_screen_exited"]
+[connection signal="pressed" from="Clickable" to="." method="_on_clickable_pressed"]
