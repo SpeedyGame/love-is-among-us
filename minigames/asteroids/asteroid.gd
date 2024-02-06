@@ -13,6 +13,6 @@ func _on_clickable_pressed():
 	queue_free()
 	destroyed.emit()
 	
-func disable_button():
-	print("asteroid disabled")
-	# $Clickable.disabled()
+#func disable_button():
+	#print("asteroid disabled")
+	## $Clickable.disabled()

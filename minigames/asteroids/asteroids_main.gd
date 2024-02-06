@@ -52,7 +52,7 @@ func _on_asteroid_timer_timeout():
 	if (asteroid_count <= 0):
 		game_over()
 	else:
-		add_child(asteroid)
+		get_tree().root.add_child(asteroid)
 		asteroid_count -= 1
 		#print(asteroid_count)
 	
@@ -63,8 +63,9 @@ func _on_asteroid_destroyed():
 	$HUD.update_score(score)
 	#print(score)
 
-func _on_area_2d_body_exited():
-	asteroid.queue_free()
+func _on_area_2d_body_exited(body):
+	print("remove asteroid")
+	body.queue_free()
 
 #func back_to_timeline():
 	#transistioner.set_next_animation(true)
