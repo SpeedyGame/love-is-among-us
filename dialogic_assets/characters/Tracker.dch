@@ -2,7 +2,7 @@
 "@path": "res://addons/dialogic/Resources/character.gd",
 "@subpath": NodePath(""),
 "_translation_id": "",
-"color": Color(0.0431373, 0.286275, 0.933333, 1),
+"color": Color(0.227451, 0.933333, 0.0431373, 1),
 "custom_info": {
 "sound_mood_default": "",
 "sound_moods": {},
@@ -17,7 +17,7 @@
 "portraits": {
 "Neutral Tracker": {
 "export_overrides": {
-"image": "\"res://assets/sprite holder/tracker/tracker.png\""
+"image": "\"res://assets/navigator.png\""
 },
 "mirror": false,
 "offset": Vector2(0, 0),

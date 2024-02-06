@@ -12,6 +12,7 @@ config_version=5
 
 config/name="LoveIsAmongUs"
 run/main_scene="res://scenes/title_screen.tscn"
+run/main_scene="res://scenes/title_screen.tscn"
 config/features=PackedStringArray("4.2", "Forward Plus")
 config/icon="res://icon.svg"
 
@@ -34,6 +35,7 @@ directories/dtl_directory={
 "tracker_task1": "res://dialogic_assets/timelines/tracker_task1.dtl"
 }
 text/letter_speed=0.03
+text/letter_speed=0.03
 text/initial_text_reveal_skippable=true
 text/text_reveal_skip_delay=0.1
 text/autoadvance_per_character_delay=0.1
@@ -54,6 +56,9 @@ variables={
 "Day1TaskWellness": "False",
 "PlayerName": ""
 }
+glossary/default_case_sensitive=true
+layout/style_list=[]
+layout/default_style="Default"
 glossary/default_case_sensitive=true
 layout/style_list=[]
 layout/default_style="Default"
