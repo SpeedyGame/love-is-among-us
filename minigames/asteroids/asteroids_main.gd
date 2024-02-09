@@ -1,12 +1,14 @@
 extends Node2D
 
 @export var asteroid : PackedScene
+@export var transitioner : Transitioner
 
 var score
 var asteroid_count = 20
 
 func start_game():
 	#game_over()
+	print(Dialogic.VAR.Day1TaskWellness)
 	score = 0
 	$StartTimer.start()
 	$HUD/ScoreLabel.show()
@@ -16,10 +18,12 @@ func start_game():
 	
 func game_over():
 	# asteroid.disconnect("destroyed", _on_asteroid_destroyed)
+	acc_calc()
+	print(Dialogic.VAR.Day1TaskWellness)
 	$AsteroidTimer.stop()
 	$HUD.show_game_over()
-	#await get_tree().create_timer(3.0).timeout
-	#back_to_timeline()
+	await get_tree().create_timer(3.0).timeout
+	back_to_timeline()
 	
 func _on_start_timer_timeout():
 	$AsteroidTimer.start()
@@ -50,6 +54,7 @@ func _on_asteroid_timer_timeout():
 	asteroid.linear_velocity = velocity.rotated(direction)
 	
 	if (asteroid_count <= 0):
+		asteroid_count = 20
 		game_over()
 	else:
 		get_tree().root.add_child(asteroid)
@@ -64,8 +69,12 @@ func _on_asteroid_destroyed():
 	#print(score)
 
 func _on_area_2d_body_exited(body):
-	print("remove asteroid")
+	#print("remove asteroid")
 	body.queue_free()
 
-#func back_to_timeline():
-	#transistioner.set_next_animation(true)
+func back_to_timeline():
+	transitioner.set_next_animation(true)
+	
+func acc_calc():
+	if ((0 / asteroid_count) * 100 >= 75):
+		Dialogic.VAR.Day1TaskWellness = str("True")

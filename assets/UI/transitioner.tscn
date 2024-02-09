@@ -86,7 +86,7 @@ script = ExtResource("1_60fet")
 layout_mode = 0
 offset_right = 40.0
 offset_bottom = 40.0
-scale = Vector2(0.1, 0.1)
+scale = Vector2(26, 26)
 pivot_offset = Vector2(32, 32)
 texture = SubResource("GradientTexture2D_xgexp")
 
