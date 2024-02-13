@@ -49,8 +49,8 @@ func _on_asteroid_timer_timeout():
 		direction = (4 * PI) / 3
 	elif (asteroid_spawn_location.progress_ratio > 0.75):
 		direction = (4 * PI) / 3
-	elif (asteroid_spawn_location.progress_ratio < 0.2):
-		direction = PI/2
+	elif (asteroid_spawn_location.progress_ratio < 0.1):
+		direction = PI/4
 		
 	asteroid.rotation = direction
 	
