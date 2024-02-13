@@ -56,13 +56,14 @@ variables={
 "PlayerName": ""
 }
 glossary/default_case_sensitive=true
-layout/style_list=[]
-layout/default_style="Default"
+layout/style_list=["res://dialogic_assets/styles/MainStyle.tres"]
+layout/default_style="res://dialogic_assets/styles/MainStyle.tres"
 
 [display]
 
 window/size/viewport_width=1280
 window/size/viewport_height=720
+window/stretch/mode="canvas_items"
 
 [editor]
 
