@@ -24,7 +24,4 @@ grow_horizontal = 1
 grow_vertical = 1
 scene_to_load = ExtResource("4_u6ncp")
 
-[node name="TextureRect" parent="Transitioner" index="0"]
-scale = Vector2(26, 26)
-
 [editable path="Transitioner"]

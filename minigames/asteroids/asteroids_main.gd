@@ -34,7 +34,7 @@ func _on_asteroid_timer_timeout():
 	
 	var asteroid_spawn_location = $AsteroidPath/AsteroidSpawnLocation
 	asteroid_spawn_location.progress_ratio = randf()
-	# print(asteroid_spawn_location.progress_ratio)
+	print(asteroid_spawn_location.progress_ratio)
 	
 	# print(asteroid_spawn_location.rotation)
 	var direction = asteroid_spawn_location.rotation + PI / 2
@@ -47,10 +47,14 @@ func _on_asteroid_timer_timeout():
 		direction = PI/2
 	elif (direction > (4 * PI) / 3):
 		direction = (4 * PI) / 3
+	elif (asteroid_spawn_location.progress_ratio > 0.75):
+		direction = (4 * PI) / 3
+	elif (asteroid_spawn_location.progress_ratio < 0.2):
+		direction = PI/2
 		
 	asteroid.rotation = direction
 	
-	var velocity = Vector2(randf_range(150.0, 250.0), 0.0)
+	var velocity = Vector2(randf_range(225.0, 400.0), 0.0)
 	asteroid.linear_velocity = velocity.rotated(direction)
 	
 	if (asteroid_count <= 0):
@@ -76,5 +80,5 @@ func back_to_timeline():
 	transitioner.set_next_animation(true)
 	
 func acc_calc():
-	if ((0 / asteroid_count) * 100 >= 75):
+	if ((score / asteroid_count) * 100 >= 75):
 		Dialogic.VAR.Day1TaskWellness = str("True")
