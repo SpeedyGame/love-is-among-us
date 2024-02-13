@@ -1,8 +1,9 @@
-[gd_scene load_steps=9 format=3 uid="uid://bs7fc2s044etg"]
+[gd_scene load_steps=11 format=3 uid="uid://bs7fc2s044etg"]
 
 [ext_resource type="Texture2D" uid="uid://dxdipc4msdvo0" path="res://minigames/electrical/tile.png" id="1_xk3h2"]
 [ext_resource type="Script" path="res://minigames/electrical/TileMap.gd" id="2_dek46"]
 [ext_resource type="Script" path="res://minigames/electrical/Area2D.gd" id="2_m67qi"]
+[ext_resource type="Script" path="res://minigames/electrical/global.gd" id="3_cps7v"]
 [ext_resource type="Texture2D" uid="uid://cp8apup4qsjdi" path="res://minigames/electrical/red_wire_sprite.png" id="3_o5l7p"]
 [ext_resource type="Script" path="res://minigames/electrical/object1.gd" id="3_p41o5"]
 
@@ -50,6 +51,8 @@ texture_region_size = Vector2i(100, 100)
 tile_size = Vector2i(100, 100)
 sources/0 = SubResource("TileSetAtlasSource_4gfge")
 
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_akshv"]
+
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_h3or5"]
 
 [node name="Node2D" type="Node2D" groups=["dropable"]]
@@ -63,11 +66,21 @@ script = ExtResource("2_dek46")
 
 [node name="Camera2D" type="Camera2D" parent="."]
 
-[node name="object1" type="Node2D" parent="."]
+[node name="StaticBody2D" type="StaticBody2D" parent="." groups=["dropable"]]
+script = ExtResource("3_cps7v")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="StaticBody2D"]
+shape = SubResource("RectangleShape2D_akshv")
+
+[node name="ColorRect" type="ColorRect" parent="StaticBody2D"]
+offset_left = 100.0
+offset_top = -100.0
+offset_right = 200.0
+
+[node name="object1" type="Node" parent="."]
 script = ExtResource("3_p41o5")
 
 [node name="Sprite2D" type="Sprite2D" parent="object1"]
-position = Vector2(-350, -150)
 texture = ExtResource("3_o5l7p")
 
 [node name="Area2D" type="Area2D" parent="object1"]
