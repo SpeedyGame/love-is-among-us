@@ -8,6 +8,9 @@ class_name Transitioner
 @onready var animation_tex : TextureRect = $TextureRect
 @onready var animation_player : AnimationPlayer =  $AnimationPlayer
 
+#@onready var animation_tex = get_node("/root/Main/HUD/Transitioner/TextureRect")
+#@onready var animation_player = get_node("/root/Main/HUD/Transitioner/AnimationPlayer")
+
 # Called when the node enters the scene tree for the first time.
 func _ready():
 	animation_tex.visible = false

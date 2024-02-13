@@ -28,6 +28,7 @@ directories/dch_directory={
 }
 directories/dtl_directory={
 "colonel_task1": "res://dialogic_assets/timelines/colonel_task1.dtl",
+"colonel_task1_2": "res://dialogic_assets/timelines/colonel_task1_2.dtl",
 "day1_end": "res://dialogic_assets/timelines/day1_end.dtl",
 "opening": "res://dialogic_assets/timelines/opening.dtl",
 "spark_task1": "res://dialogic_assets/timelines/spark_task1.dtl",
