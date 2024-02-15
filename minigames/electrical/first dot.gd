@@ -1,5 +1,7 @@
 extends Node2D
 
+var dot1 = preload("C:/Users/liami/Desktop/draggable/draggable.tscn")
+# Called when the node enters the scene tree for the first time.
 var draggable = false
 var is_inside_droppable = false
 var body_ref
@@ -19,7 +21,7 @@ func _process(delta):
 			offset = get_global_mouse_position() - global_position
 			global_position = get_global_mouse_position()
 		elif Input.is_action_just_released('click'):
-			global.is_dragging = false
+			Global.is_dragging = false
 			var tween = get_tree().create_tween()
 			if is_inside_droppable:
 				tween.tween_property(self,'position',body_ref.position, 0.2).set_ease(Tween.EASE_OUT)
@@ -39,14 +41,13 @@ func _on_area_2d_body_exited(body):
 		body.modulate = Color(Color.CRIMSON, 0.7) 
 
 func _on_area_2d_mouse_entered():
-	if not global.is_dragging:
+	if not Global.is_dragging:
 		draggable = true
 		scale = Vector2(1.05,1.05)
 
 
 
 func _on_area_2d_mouse_exited():
-	if not global.is_dragging:
+	if not Global.is_dragging:
 		draggable = false
 		scale = Vector2(1,1)
-

@@ -1,10 +1,9 @@
-[gd_scene load_steps=9 format=3 uid="uid://bs7fc2s044etg"]
+[gd_scene load_steps=8 format=3 uid="uid://bs7fc2s044etg"]
 
 [ext_resource type="Texture2D" uid="uid://dxdipc4msdvo0" path="res://minigames/electrical/tile.png" id="1_xk3h2"]
 [ext_resource type="Script" path="res://minigames/electrical/TileMap.gd" id="2_dek46"]
-[ext_resource type="Script" path="res://minigames/electrical/Area2D.gd" id="2_m67qi"]
-[ext_resource type="Texture2D" uid="uid://cp8apup4qsjdi" path="res://minigames/electrical/red_wire_sprite.png" id="3_o5l7p"]
-[ext_resource type="Script" path="res://minigames/electrical/object1.gd" id="3_p41o5"]
+[ext_resource type="Script" path="res://minigames/electrical/first dot.gd" id="3_52r1g"]
+[ext_resource type="Texture2D" uid="uid://bv2lp447rfaf2" path="res://icon.svg" id="4_w7bcn"]
 
 [sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_4gfge"]
 texture = ExtResource("1_xk3h2")
@@ -50,7 +49,8 @@ texture_region_size = Vector2i(100, 100)
 tile_size = Vector2i(100, 100)
 sources/0 = SubResource("TileSetAtlasSource_4gfge")
 
-[sub_resource type="RectangleShape2D" id="RectangleShape2D_h3or5"]
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_6ak4b"]
+size = Vector2(100, 100)
 
 [node name="Node2D" type="Node2D" groups=["dropable"]]
 
@@ -63,20 +63,19 @@ script = ExtResource("2_dek46")
 
 [node name="Camera2D" type="Camera2D" parent="."]
 
-[node name="object1" type="Node2D" parent="."]
-script = ExtResource("3_p41o5")
+[node name="first dot" type="Node2D" parent="."]
+script = ExtResource("3_52r1g")
 
-[node name="Sprite2D" type="Sprite2D" parent="object1"]
-position = Vector2(-350, -150)
-texture = ExtResource("3_o5l7p")
+[node name="Sprite2D" type="Sprite2D" parent="first dot"]
+position = Vector2(-10, 2)
+texture = ExtResource("4_w7bcn")
 
-[node name="Area2D" type="Area2D" parent="object1"]
-script = ExtResource("2_m67qi")
+[node name="Area2D" type="Area2D" parent="first dot"]
 
-[node name="CollisionShape2D" type="CollisionShape2D" parent="object1/Area2D"]
-shape = SubResource("RectangleShape2D_h3or5")
+[node name="CollisionShape2D" type="CollisionShape2D" parent="first dot/Area2D"]
+shape = SubResource("RectangleShape2D_6ak4b")
 
-[connection signal="body_entered" from="object1/Area2D" to="TileMap" method="_on_area_2d_body_entered"]
-[connection signal="body_exited" from="object1/Area2D" to="TileMap" method="_on_area_2d_body_exited"]
-[connection signal="mouse_entered" from="object1/Area2D" to="TileMap" method="_on_area_2d_mouse_entered"]
-[connection signal="mouse_exited" from="object1/Area2D" to="TileMap" method="_on_area_2d_mouse_exited"]
+[connection signal="body_entered" from="first dot/Area2D" to="first dot" method="_on_area_2d_body_entered"]
+[connection signal="body_exited" from="first dot/Area2D" to="first dot" method="_on_area_2d_body_exited"]
+[connection signal="mouse_entered" from="first dot/Area2D" to="first dot" method="_on_area_2d_mouse_entered"]
+[connection signal="mouse_exited" from="first dot/Area2D" to="first dot" method="_on_area_2d_mouse_exited"]
