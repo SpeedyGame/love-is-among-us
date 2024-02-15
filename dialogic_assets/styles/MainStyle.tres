@@ -25,6 +25,7 @@ overrides = {}
 script = ExtResource("2_nlrv4")
 scene = ExtResource("4_ua8fg")
 overrides = {
+"name_label_font": "\"res://assets/fonts/COMIC.TTF\"",
 "normal_font": "\"res://assets/fonts/COMIC.TTF\""
 }
 

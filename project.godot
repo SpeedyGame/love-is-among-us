@@ -63,6 +63,7 @@ layout/default_style="res://dialogic_assets/styles/MainStyle.tres"
 
 window/size/viewport_width=1280
 window/size/viewport_height=720
+window/size/mode=3
 window/stretch/mode="canvas_items"
 
 [editor]
