@@ -19,6 +19,7 @@ config/icon="res://icon.svg"
 
 Dialogic="*res://addons/dialogic/Other/DialogicGameHandler.gd"
 Global="*res://minigames/electrical/global.gd"
+fondess_global="*res://fondness_global.gd"
 
 [dialogic]
 
@@ -52,9 +53,12 @@ save/autosave_delay=60.0
 save/encryption_on_exports_only=true
 text/autopauses={}
 variables={
+"ColonelFondness": "0",
 "Day1Task": "",
 "Day1TaskWellness": "False",
-"PlayerName": ""
+"PlayerName": "",
+"SparkFondness": "0",
+"TrackerFondness": "0"
 }
 glossary/default_case_sensitive=true
 layout/style_list=["res://dialogic_assets/styles/MainStyle.tres"]

@@ -1,6 +1,7 @@
 [background arg="res://assets/Backgrounds/weapons.jpg" fade="0.0"]
 join Colonel 3
 if {Day1TaskWellness} == "True":
+	set {ColonelFondness} += 1
 	Colonel: Nice shooting {PlayerName}. And thanks for the help too. (+1 fondness)
 	- Don't mention it, just doing my job.
 		Colonel: Come on back sometime if you want another round.

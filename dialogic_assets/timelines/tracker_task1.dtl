@@ -7,6 +7,7 @@ Tracker: Oh, you came. Would you mind helping me out for a bit?
 	You can decide if you do well or not here.
 	- Easy money
 		set {Day1TaskWellness} = "True"
+		set {TrackerFondness} += 1
 		Tracker: I really appreciate the help, this stuff can get so tedious. (+1 fondness)
 		- Don't mention it, I know how bad computer work can get sometimes.
 			Tracker: You work with computers too? What did you do before this?

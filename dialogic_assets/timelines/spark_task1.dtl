@@ -7,6 +7,7 @@ Spark: Hey, how’s it going? Wanna give me a hand?
 	You can decide if you do well or not here.
 	- Easy money
 		set {Day1TaskWellness} = "True"
+		set {SparkFondness} += 1
 		Spark: Huh, you really know what you're doing. Glad to have you around. (+1 fondness)
 		- I really do huh? I thought I was dumb as a rock. (sarcastic)
 			Spark: Be that way then, I guess. (-1 fondness)
