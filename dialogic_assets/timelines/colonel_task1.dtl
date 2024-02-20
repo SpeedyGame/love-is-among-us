@@ -4,7 +4,8 @@ Colonel: Heeeey, it’s the new guy! Ready to start?
 - Yeah, sure!
 	set {Day1Task} = "Colonel"
 	Colonel: Great! *pulls down a large touchscreen with asteroids on it*
-	This is where the minigame will be inserted.
 	[clear time="1.0"]
 	[signal arg="start_asteroids"]
 - Maybe not...
+	Colonel: Why don't you bother someone else then?
+	jump opening/task_selection

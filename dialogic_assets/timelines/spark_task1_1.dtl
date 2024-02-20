@@ -1,0 +1,10 @@
+[background arg="res://assets/Backgrounds/electrical.jpg" fade="0.0"]
+join Spark 3
+Spark: Hey, how’s it going? Wanna give me a hand?
+- Yeah, let's do this.
+	set {Day1Task} = "Spark"
+	Spark: Great. It’s not that hard.
+	This is where the minigame will be inserted.
+- Nah, I'll pass.
+	Spark: Be that way, then.
+	jump opening/task_selection
