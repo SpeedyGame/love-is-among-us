@@ -34,7 +34,7 @@ func _on_asteroid_timer_timeout():
 	
 	var asteroid_spawn_location = $AsteroidPath/AsteroidSpawnLocation
 	asteroid_spawn_location.progress_ratio = randf()
-	print(asteroid_spawn_location.progress_ratio)
+	# print(asteroid_spawn_location.progress_ratio)
 	
 	# print(asteroid_spawn_location.rotation)
 	var direction = asteroid_spawn_location.rotation + PI / 2
