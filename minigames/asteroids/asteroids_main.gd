@@ -5,11 +5,15 @@ extends Node2D
 
 var score
 var asteroid_count = 20
+var asteroid_sfx_player = AudioStreamPlayer.new()
+var sfx_stream = preload("res://assets/sfx/explosion.wav")
 
 func start_game():
 	#game_over()
 	print(Dialogic.VAR.Day1TaskWellness)
 	score = 0
+	asteroid_sfx_player.stream = sfx_stream
+	print(sfx_stream.get_length())
 	$StartTimer.start()
 	$HUD/ScoreLabel.show()
 	$HUD/AsteroidsDestroyed.show()
@@ -70,6 +74,7 @@ func _on_asteroid_destroyed():
 	#print("destroy signal receieved")
 	score += 1
 	$HUD.update_score(score)
+	asteroid_sfx_player.play()
 	#print(score)
 
 func _on_area_2d_body_exited(body):
