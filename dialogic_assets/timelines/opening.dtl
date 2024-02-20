@@ -38,10 +38,11 @@ Tracker: I’m off to work too, I’ll be doing computer stuff in navigation, an
 leave Tracker
 [background arg="res://assets/Backgrounds/Space Background.png" fade="0.0"]
 label task_selection
+[clear time="1.0" text="false" music="false" background="false" positions="false" style="false"]
 Who would you like to go with?
 - Spark
 	jump spark_task1/
 - Colonel
-	jump colonel_task1/
+	jump colonel_task1_1/
 - Tracker
 	jump tracker_task1/
