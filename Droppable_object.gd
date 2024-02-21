@@ -1,12 +1,12 @@
 extends Node2D
 
-var dot2 = preload("res://minigames/electrical/first dot.gd")
+var dot = preload("res://minigames/electrical/first dot.gd")
 # Called when the node enters the scene tree for the first time.
-var draggable1 = false
-var is_inside_droppable1 = false
-var body_ref1
-var offset1: Vector2
-var initialPos1 : Vector2
+var draggable = false
+var is_inside_droppable = false
+var body_ref
+var offset: Vector2
+var initialPos : Vector2
 
 # Called when the node enters the scene tree for the first time.
 func _ready():
@@ -15,39 +15,40 @@ func _ready():
 
 # Called every frame. 'delta' is the elapsed time since the previous frame.
 func _process(delta):
-	if draggable1:
+	if draggable:
 		if Input.is_action_pressed('click'):
-			initialPos1 = global_position
-			offset1 = get_global_mouse_position() - global_position
+			initialPos = global_position
+			offset = get_global_mouse_position() - global_position
+			#Global.is_draging = true
 			global_position = get_global_mouse_position()
 		elif Input.is_action_just_released('click'):
 			Global.is_dragging = false
 			var tween = get_tree().create_tween()
-			if is_inside_droppable1:
-				tween.tween_property(self,'position',body_ref1.position, 0.2).set_ease(Tween.EASE_OUT)
+			if is_inside_droppable:
+				tween.tween_property(self,'position',initialPos, 0.2).set_ease(Tween.EASE_OUT)
 			else:
-				tween.tween_property(self,'global_position',initialPos1, 0.2).set_ease(Tween.EASE_OUT)
+				tween.tween_property(self,'global_position',body_ref.position, 0.2).set_ease(Tween.EASE_OUT)
 
 
-func _on_area_2d_body_entered(body):
+func _on_area_2d_body_entered(body:StaticBody2D):
 	if body.is_in_group('dropable'):
-		is_inside_droppable1 = true
+		is_inside_droppable = true
 		body.modulate = Color(Color.CRIMSON,1)
-		body_ref1 = body
+		body_ref = body
 
 func _on_area_2d_body_exited(body):
 	if body.is_in_group('dropable'):
-		is_inside_droppable1 = false
+		is_inside_droppable = false
 		body.modulate = Color(Color.CRIMSON, 0.7) 
 
 func _on_area_2d_mouse_entered():
 	if not Global.is_dragging:
-		draggable1 = true
+		draggable = true
 		scale = Vector2(1.05,1.05)
 
 
 
 func _on_area_2d_mouse_exited():
 	if not Global.is_dragging:
-		draggable1 = false
+		draggable = false
 		scale = Vector2(1,1)

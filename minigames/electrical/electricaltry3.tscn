@@ -1,0 +1,66 @@
+[gd_scene load_steps=6 format=3 uid="uid://03dofdouqh37"]
+
+[ext_resource type="PackedScene" uid="uid://bjjcty01ur1lm" path="res://minigames/electrical/dragObj.tscn" id="1_jeib6"]
+[ext_resource type="PackedScene" uid="uid://b0ylmq1cpm5om" path="res://minigames/electrical/droppable.tscn" id="2_cx15a"]
+[ext_resource type="Texture2D" uid="uid://d1v6e7y75ejg4" path="res://assets/electrical/tile.png" id="3_h6xid"]
+
+[sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_l4mpc"]
+texture = ExtResource("3_h6xid")
+texture_region_size = Vector2i(100, 100)
+0:0/0 = 0
+1:0/0 = 0
+2:0/0 = 0
+3:0/0 = 0
+4:0/0 = 0
+5:0/0 = 0
+0:1/0 = 0
+1:1/0 = 0
+2:1/0 = 0
+3:1/0 = 0
+4:1/0 = 0
+5:1/0 = 0
+0:2/0 = 0
+1:2/0 = 0
+2:2/0 = 0
+3:2/0 = 0
+4:2/0 = 0
+5:2/0 = 0
+0:3/0 = 0
+1:3/0 = 0
+2:3/0 = 0
+3:3/0 = 0
+4:3/0 = 0
+5:3/0 = 0
+0:4/0 = 0
+1:4/0 = 0
+2:4/0 = 0
+3:4/0 = 0
+4:4/0 = 0
+5:4/0 = 0
+0:5/0 = 0
+1:5/0 = 0
+2:5/0 = 0
+3:5/0 = 0
+4:5/0 = 0
+5:5/0 = 0
+
+[sub_resource type="TileSet" id="TileSet_weuqg"]
+tile_size = Vector2i(128, 128)
+sources/0 = SubResource("TileSetAtlasSource_l4mpc")
+
+[node name="WorldEnvironment" type="WorldEnvironment"]
+
+[node name="Node2D" parent="." instance=ExtResource("1_jeib6")]
+position = Vector2(729, 387)
+
+[node name="start" parent="." instance=ExtResource("2_cx15a")]
+position = Vector2(738, 390)
+scale = Vector2(3, 3)
+
+[node name="end" parent="." instance=ExtResource("2_cx15a")]
+position = Vector2(211, 140)
+scale = Vector2(3, 3)
+
+[node name="TileMap" type="TileMap" parent="."]
+tile_set = SubResource("TileSet_weuqg")
+format = 2
