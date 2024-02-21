@@ -1,0 +1,99 @@
+[gd_scene load_steps=9 format=3 uid="uid://bs7fc2s044etg"]
+
+[ext_resource type="Texture2D" uid="uid://dxdipc4msdvo0" path="res://minigames/electrical/tile.png" id="1_xk3h2"]
+[ext_resource type="Script" path="res://minigames/electrical/TileMap.gd" id="2_dek46"]
+[ext_resource type="Script" path="res://minigames/electrical/first dot.gd" id="3_52r1g"]
+[ext_resource type="Texture2D" uid="uid://bv2lp447rfaf2" path="res://icon.svg" id="4_w7bcn"]
+[ext_resource type="Script" path="res://minigames/electrical/first dot2.gd" id="5_v2gde"]
+
+[sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_4gfge"]
+texture = ExtResource("1_xk3h2")
+texture_region_size = Vector2i(100, 100)
+0:0/0 = 0
+1:0/0 = 0
+2:0/0 = 0
+3:0/0 = 0
+4:0/0 = 0
+5:0/0 = 0
+0:1/0 = 0
+1:1/0 = 0
+2:1/0 = 0
+3:1/0 = 0
+4:1/0 = 0
+5:1/0 = 0
+0:2/0 = 0
+1:2/0 = 0
+2:2/0 = 0
+3:2/0 = 0
+4:2/0 = 0
+5:2/0 = 0
+0:3/0 = 0
+1:3/0 = 0
+2:3/0 = 0
+3:3/0 = 0
+4:3/0 = 0
+5:3/0 = 0
+0:4/0 = 0
+1:4/0 = 0
+2:4/0 = 0
+3:4/0 = 0
+4:4/0 = 0
+5:4/0 = 0
+0:5/0 = 0
+1:5/0 = 0
+2:5/0 = 0
+3:5/0 = 0
+4:5/0 = 0
+5:5/0 = 0
+
+[sub_resource type="TileSet" id="TileSet_b324t"]
+tile_size = Vector2i(100, 100)
+sources/0 = SubResource("TileSetAtlasSource_4gfge")
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_6ak4b"]
+size = Vector2(100, 100)
+
+[node name="Node2D" type="Node2D" groups=["dropable"]]
+
+[node name="TileMap" type="TileMap" parent="."]
+tile_set = SubResource("TileSet_b324t")
+rendering_quadrant_size = 100
+format = 2
+layer_0/tile_data = PackedInt32Array(65537, 0, 0, 131073, 0, 0, 131072, 0, 0, 65536, 0, 0, 0, 0, 0, -65536, 0, 0, -131072, 0, 0, -131071, 0, 0, -65535, 0, 0, -65534, 0, 0, 2, 0, 0, 1, 0, 0, -131070, 0, 0, 65538, 0, 0, 131074, 0, 0, 131075, 0, 0, 131076, 0, 0, 131077, 0, 0, 65541, 0, 0, 5, 0, 0, -65531, 0, 0, -65532, 0, 0, -131068, 0, 0, -131067, 0, 0, -131069, 0, 0, -65533, 0, 0, 3, 0, 0, 4, 0, 0, 65540, 0, 0, 65539, 0, 0, -196604, 0, 0, -196603, 0, 0, -196605, 0, 0, -196606, 0, 0, -196607, 0, 0, -196608, 0, 0, 196607, 0, 0, 196606, 0, 0, 196605, 0, 0, 196604, 0, 0, 196603, 0, 0, 196602, 0, 0, 131066, 0, 0, 65530, 0, 0, -6, 0, 0, -65542, 0, 0, -131078, 0, 0, -131077, 0, 0, -131076, 0, 0, -131075, 0, 0, -131074, 0, 0, -131073, 0, 0, -65537, 0, 0, -1, 0, 0, 65535, 0, 0, 131071, 0, 0, 131070, 0, 0, 65534, 0, 0, -2, 0, 0, -65538, 0, 0, -196610, 0, 0, -65539, 0, 0, -3, 0, 0, 65533, 0, 0, 131069, 0, 0, 131068, 0, 0, 65532, 0, 0, -4, 0, 0, -65540, 0, 0, -65541, 0, 0, -5, 0, 0, 65531, 0, 0, 131067, 0, 0, 262138, 0, 0, 262139, 0, 0, 262140, 0, 0, 262141, 0, 0, 262142, 0, 0, 262143, 0, 0, 196608, 0, 0, 196609, 0, 0, 196610, 0, 0, 196611, 0, 0, 196612, 0, 0, 196613, 0, 0, 196614, 0, 0, 131078, 0, 0, 65542, 0, 0, 6, 0, 0, -65530, 0, 0, -131066, 0, 0, -196602, 0, 0, -262138, 0, 0, -262139, 0, 0, -262140, 0, 0, -262141, 0, 0, -262142, 0, 0, -262143, 0, 0, -262144, 0, 0, -196609, 0, 0, -196611, 0, 0, -196612, 0, 0, -196613, 0, 0, -196614, 0, 0, -196615, 0, 0, -131079, 0, 0, -65543, 0, 0, -7, 0, 0, 65529, 0, 0, 131065, 0, 0, 196601, 0, 0, 262137, 0, 0)
+script = ExtResource("2_dek46")
+
+[node name="Camera2D" type="Camera2D" parent="."]
+
+[node name="first dot" type="Node2D" parent="."]
+script = ExtResource("3_52r1g")
+
+[node name="Sprite2D" type="Sprite2D" parent="first dot"]
+position = Vector2(-10, 2)
+texture = ExtResource("4_w7bcn")
+
+[node name="Area2D" type="Area2D" parent="first dot"]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="first dot/Area2D"]
+shape = SubResource("RectangleShape2D_6ak4b")
+
+[node name="first dot2" type="Node2D" parent="."]
+script = ExtResource("5_v2gde")
+
+[node name="Sprite2D" type="Sprite2D" parent="first dot2"]
+position = Vector2(-257, -17)
+texture = ExtResource("4_w7bcn")
+
+[node name="Area2D" type="Area2D" parent="first dot2"]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="first dot2/Area2D"]
+position = Vector2(-246, -17)
+shape = SubResource("RectangleShape2D_6ak4b")
+
+[connection signal="body_entered" from="first dot/Area2D" to="first dot" method="_on_area_2d_body_entered"]
+[connection signal="body_exited" from="first dot/Area2D" to="first dot" method="_on_area_2d_body_exited"]
+[connection signal="mouse_entered" from="first dot/Area2D" to="first dot" method="_on_area_2d_mouse_entered"]
+[connection signal="mouse_exited" from="first dot/Area2D" to="first dot" method="_on_area_2d_mouse_exited"]
+[connection signal="body_entered" from="first dot2/Area2D" to="first dot2" method="_on_area_2d_body_entered"]
+[connection signal="body_exited" from="first dot2/Area2D" to="first dot2" method="_on_area_2d_body_exited"]
+[connection signal="mouse_entered" from="first dot2/Area2D" to="first dot2" method="_on_area_2d_mouse_entered"]
+[connection signal="mouse_exited" from="first dot2/Area2D" to="first dot2" method="_on_area_2d_mouse_exited"]
