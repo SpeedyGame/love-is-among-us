@@ -1,14 +1,14 @@
 [gd_scene load_steps=15 format=3 uid="uid://chhwusef7x6wh"]
 
-[ext_resource type="Texture2D" uid="uid://mva18ae5lrx" path="res://assets/nav assets/tile.png" id="1_to746"]
-[ext_resource type="Texture2D" uid="uid://cg3tnlcg1h8w6" path="res://assets/nav assets/obst.png" id="2_8ew83"]
+[ext_resource type="Texture2D" path="res://assets/nav assets/tile.png" id="1_to746"]
+[ext_resource type="Texture2D" path="res://assets/nav assets/obst.png" id="2_8ew83"]
 [ext_resource type="Script" path="res://minigames/Nav/player.gd" id="3_t5y7h"]
-[ext_resource type="Texture2D" uid="uid://djoumay3qc6f7" path="res://assets/nav assets/player.png" id="4_tycx0"]
+[ext_resource type="Texture2D" path="res://assets/nav assets/player.png" id="4_tycx0"]
 [ext_resource type="Script" path="res://minigames/Nav/win.gd" id="5_pwwyd"]
-[ext_resource type="Texture2D" uid="uid://d0lemkfim5nmh" path="res://assets/nav assets/win.png" id="6_8pl7c"]
-[ext_resource type="Script" path="res://minigames/Nav/navtimer.gd" id="7_o4ikh"]
+[ext_resource type="Texture2D" path="res://assets/nav assets/win.png" id="6_8pl7c"]
 [ext_resource type="PackedScene" uid="uid://ccqu3swo2jrr7" path="res://assets/UI/transitioner.tscn" id="8_tm4nh"]
-[ext_resource type="PackedScene" path="res://scenes/task_scenes/trackertask1.tscn" id="9_wj0kc"]
+[ext_resource type="PackedScene" uid="uid://c8ra4ttlgekr2" path="res://minigames/Nav/coin.tscn" id="9_3ywrw"]
+[ext_resource type="PackedScene" uid="uid://dmauafcnbc4mq" path="res://scenes/task_scenes/trackertask1.tscn" id="9_wj0kc"]
 
 [sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_ws35m"]
 texture = ExtResource("1_to746")
@@ -62,7 +62,6 @@ size = Vector2(30, 30)
 position = Vector2(-3, 0)
 
 [node name="Transitioner" parent="." instance=ExtResource("8_tm4nh")]
-visible = false
 offset_left = 563.0
 offset_top = 264.0
 offset_right = 563.0
@@ -93,8 +92,128 @@ shape = SubResource("RectangleShape2D_puyuo")
 
 [node name="AnimationPlayer" type="AnimationPlayer" parent="Area2D"]
 
+[node name="Timer" type="Timer" parent="."]
+process_callback = 0
+wait_time = 60.0
+one_shot = true
+autostart = true
+
+[node name="Coin11" parent="." instance=ExtResource("9_3ywrw")]
+position = Vector2(703.434, 61.7329)
+
+[node name="Sprite2D" parent="Coin11" index="0"]
+scale = Vector2(0.15, 0.15)
+
+[node name="Coin13" parent="." instance=ExtResource("9_3ywrw")]
+position = Vector2(909.909, 662.774)
+
+[node name="Sprite2D" parent="Coin13" index="0"]
+scale = Vector2(0.15, 0.15)
+
+[node name="Coin12" parent="." instance=ExtResource("9_3ywrw")]
+position = Vector2(67.7452, 646.51)
+
+[node name="Sprite2D" parent="Coin12" index="0"]
+scale = Vector2(0.15, 0.15)
+
+[node name="Coin10" parent="." instance=ExtResource("9_3ywrw")]
+position = Vector2(807.379, 465.491)
+
+[node name="Sprite2D" parent="Coin10" index="0"]
+scale = Vector2(0.15, 0.15)
+
+[node name="Coin" parent="." instance=ExtResource("9_3ywrw")]
+position = Vector2(60, 146)
+
+[node name="Sprite2D" parent="Coin" index="0"]
+scale = Vector2(0.15, 0.15)
+
+[node name="Coin9" parent="." instance=ExtResource("9_3ywrw")]
+position = Vector2(617.167, 398.316)
+
+[node name="Sprite2D" parent="Coin9" index="0"]
+scale = Vector2(0.15, 0.15)
+
+[node name="Coin8" parent="." instance=ExtResource("9_3ywrw")]
+position = Vector2(311.077, 414.166)
+
+[node name="Sprite2D" parent="Coin8" index="0"]
+scale = Vector2(0.15, 0.15)
+
+[node name="Coin2" parent="." instance=ExtResource("9_3ywrw")]
+position = Vector2(251.077, 268.166)
+
+[node name="Sprite2D" parent="Coin2" index="0"]
+scale = Vector2(0.15, 0.15)
+
+[node name="Coin18" parent="." instance=ExtResource("9_3ywrw")]
+position = Vector2(1061.94, 464.784)
+
+[node name="Sprite2D" parent="Coin18" index="0"]
+scale = Vector2(0.15, 0.15)
+
+[node name="Coin3" parent="." instance=ExtResource("9_3ywrw")]
+position = Vector2(1005.37, 553.172)
+
+[node name="Sprite2D" parent="Coin3" index="0"]
+scale = Vector2(0.15, 0.15)
+
+[node name="Coin6" parent="." instance=ExtResource("9_3ywrw")]
+position = Vector2(344.931, 70.9253)
+
+[node name="Sprite2D" parent="Coin6" index="0"]
+scale = Vector2(0.15, 0.15)
+
+[node name="Coin7" parent="." instance=ExtResource("9_3ywrw")]
+position = Vector2(506.859, 73.7538)
+
+[node name="Sprite2D" parent="Coin7" index="0"]
+scale = Vector2(0.15, 0.15)
+
+[node name="Coin4" parent="." instance=ExtResource("9_3ywrw")]
+position = Vector2(1140.43, 462.663)
+
+[node name="Sprite2D" parent="Coin4" index="0"]
+scale = Vector2(0.15, 0.15)
+
+[node name="Coin5" parent="." instance=ExtResource("9_3ywrw")]
+position = Vector2(320.889, 181.234)
+
+[node name="Sprite2D" parent="Coin5" index="0"]
+scale = Vector2(0.15, 0.15)
+
+[node name="Coin17" parent="." instance=ExtResource("9_3ywrw")]
+position = Vector2(1214.67, 69.5111)
+
+[node name="Sprite2D" parent="Coin17" index="0"]
+scale = Vector2(0.15, 0.15)
+
+[node name="Coin16" parent="." instance=ExtResource("9_3ywrw")]
+position = Vector2(1143.96, 152.243)
+
+[node name="Sprite2D" parent="Coin16" index="0"]
+scale = Vector2(0.15, 0.15)
+
+[node name="Coin15" parent="." instance=ExtResource("9_3ywrw")]
+position = Vector2(705.556, 658.531)
+
+[node name="Sprite2D" parent="Coin15" index="0"]
+scale = Vector2(0.15, 0.15)
+
+[node name="Coin14" parent="." instance=ExtResource("9_3ywrw")]
+position = Vector2(377.458, 658.531)
+
+[node name="Sprite2D" parent="Coin14" index="0"]
+scale = Vector2(0.15, 0.15)
+
+[node name="Label" type="Label" parent="."]
+offset_left = 287.0
+offset_right = 900.0
+offset_bottom = 43.0
+text = "You have 60 seconds to collect as many coins as you can and reach the end!"
+
 [node name="Area2D2" type="Area2D" parent="." node_paths=PackedStringArray("transitioner")]
-position = Vector2(159, 161)
+position = Vector2(1205, 650)
 collision_layer = 3
 collision_mask = 3
 script = ExtResource("5_pwwyd")
@@ -107,10 +226,26 @@ shape = SubResource("RectangleShape2D_fpfvk")
 scale = Vector2(0.3, 0.3)
 texture = ExtResource("6_8pl7c")
 
-[node name="Timer" type="Timer" parent="."]
-script = ExtResource("7_o4ikh")
-
 [connection signal="area_entered" from="Area2D" to="Area2D2" method="_on_area_2d_area_entered"]
+[connection signal="timeout" from="Timer" to="Area2D2" method="_on_timer_timeout"]
 [connection signal="area_entered" from="Area2D2" to="Area2D2" method="_on_area_entered"]
 
 [editable path="Transitioner"]
+[editable path="Coin11"]
+[editable path="Coin13"]
+[editable path="Coin12"]
+[editable path="Coin10"]
+[editable path="Coin"]
+[editable path="Coin9"]
+[editable path="Coin8"]
+[editable path="Coin2"]
+[editable path="Coin18"]
+[editable path="Coin3"]
+[editable path="Coin6"]
+[editable path="Coin7"]
+[editable path="Coin4"]
+[editable path="Coin5"]
+[editable path="Coin17"]
+[editable path="Coin16"]
+[editable path="Coin15"]
+[editable path="Coin14"]
