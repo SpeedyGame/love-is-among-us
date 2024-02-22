@@ -1,4 +1,4 @@
-[gd_scene load_steps=4 format=3 uid="uid://c8ra4ttlgekr2"]
+[gd_scene load_steps=4 format=3 uid="uid://cnm8v2qxpp7x4"]
 
 [ext_resource type="Script" path="res://minigames/Nav/coin.gd" id="1_gkwod"]
 [ext_resource type="Texture2D" uid="uid://bv3tymewka3eb" path="res://assets/nav assets/coin.png" id="1_s2rpc"]
