@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://v228if4i2xeq"
-path="res://.godot/imported/obst.png-b249d4ad269ba7738d1ea6c4f95c8960.ctex"
+uid="uid://mva18ae5lrx"
+path="res://.godot/imported/tile.png-44a14dab7016f2b82a027f5b596c1b7b.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://assets/electrical/obst.png"
-dest_files=["res://.godot/imported/obst.png-b249d4ad269ba7738d1ea6c4f95c8960.ctex"]
+source_file="res://assets/nav assets/tile.png"
+dest_files=["res://.godot/imported/tile.png-44a14dab7016f2b82a027f5b596c1b7b.ctex"]
 
 [params]
 
