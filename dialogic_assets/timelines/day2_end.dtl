@@ -1,7 +1,6 @@
 [background arg="res://assets/Backgrounds/updated meeting room.png" fade="0.0"]
 join Colonel 4
 join Spark 0 [ mirrored="true"]
-set {Day2Task} = "Spark"
 if {Day2Task} == "Colonel":
 	Colonel: Did something happen?
 	Spark: I'm starting to get worried about Tracker. I haven't seen them since the meeting earlier. Have either of you seen them?
