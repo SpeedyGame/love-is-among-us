@@ -97,4 +97,4 @@ Spark: *sigh* I could go check back there again, but I just got done with mainte
 	Tracker: Well, that was all I had for the meeting tonight, and I’m trying to get some sleep.
 	Colonel: Nothing here either, goodnight.
 [clear time="1.0"]
-[signal arg="day2"]
+jump day2opening/

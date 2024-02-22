@@ -11,4 +11,4 @@ func _ready():
 func DialogicSignal(argument:String):
 	if argument == "day2":
 		ptransistioner.set_next_animation(true)
-		#print("Something was activated!")
+		print("Something was activated!")

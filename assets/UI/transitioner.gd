@@ -48,7 +48,7 @@ func set_next_animation_timeline(fading_out : bool):
 	
 	scene_to_load = "res://scenes/" + selected_timeline + ".tscn"
 	#print(scene_to_load)
-	print(Dialogic.VAR.Day1Task)
+	print(selected_timeline)
 	
 	if (fading_out):
 		animation_player.queue("fade_out")

@@ -29,6 +29,7 @@ func _on_area_entered(area):
 	empty = false
 	
 func back_to_timeline():
+	Dialogic.VAR.Day1TaskWellness = str("True")
 	transitioner.set_next_animation_timeline(true)
 
 
