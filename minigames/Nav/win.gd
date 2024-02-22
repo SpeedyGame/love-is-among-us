@@ -5,9 +5,11 @@ var empty = true
 @export var transitioner : Transitioner
 #var coins = get_tree().get_nodes_in_group("coin")
 var score = 0
+var curr_day : String
 
 
 func _ready():
+	curr_day = Dialogic.VAR.CurrentDay
 	position = position.snapped(Vector2.ONE * tile_size)
 	position += Vector2.ONE * tile_size/2
 
@@ -27,7 +29,7 @@ func _on_area_entered(area):
 	empty = false
 	
 func back_to_timeline():
-	transitioner.set_next_animation(true)
+	transitioner.set_next_animation_timeline(true)
 
 
 
