@@ -3,7 +3,6 @@ extends Area2D
 var tile_size = 40
 var empty = true
 
-@export var transitioner : Transitioner
 
 func _ready():
 	position = position.snapped(Vector2.ONE * tile_size)
@@ -16,13 +15,11 @@ func _process(delta):
 func _unhandled_input(event):
 	if !empty:
 		print("level complete")
-		back_to_timeline()
+		#back_to_timeline()
 
 func _on_area_entered(area):
 	empty = false
 
-func back_to_timeline():
-	transitioner.set_next_animation(true)
 
 
 
