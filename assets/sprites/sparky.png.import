@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://clw6u1krxk6ie"
-path="res://.godot/imported/default.png-c38b6a7af2b4f7ae3bbd7c42ec1d1fcd.ctex"
+uid="uid://do2ucnxgg17j1"
+path="res://.godot/imported/sparky.png-6596fbf528a8d8199b64b77fca60cfd0.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://assets/default.png"
-dest_files=["res://.godot/imported/default.png-c38b6a7af2b4f7ae3bbd7c42ec1d1fcd.ctex"]
+source_file="res://assets/sprites/sparky.png"
+dest_files=["res://.godot/imported/sparky.png-6596fbf528a8d8199b64b77fca60cfd0.ctex"]
 
 [params]
 

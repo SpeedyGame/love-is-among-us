@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://do2ucnxgg17j1"
-path="res://.godot/imported/sparky.png-8226799bbe4785385d0b2e65a6051058.ctex"
+uid="uid://hv3l652ub11s"
+path="res://.godot/imported/navigator.png-f3cbfef0933745665015ff0fb08ea25e.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://assets/sparky.png"
-dest_files=["res://.godot/imported/sparky.png-8226799bbe4785385d0b2e65a6051058.ctex"]
+source_file="res://assets/sprites/navigator.png"
+dest_files=["res://.godot/imported/navigator.png-f3cbfef0933745665015ff0fb08ea25e.ctex"]
 
 [params]
 
