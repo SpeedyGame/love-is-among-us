@@ -2,7 +2,7 @@
 join Colonel 3
 if {Day2TaskWellness} == "True":
 	set {ColonelFondness} += 1
-	Colonel: Nice job {Playername}! Those asteroids didn't stand a chance.
+	Colonel: Nice job {PlayerName}! Those asteroids didn't stand a chance.
 	- Thanks! I'd say I'm something of an expert at this point
 		Colonel: I've seen this too many times before. Some young recruit does well for once, and they think they're god's greatest gift to humanity.
 		Colonel: You may have gotten lucky, but I served in the Navy longer than you've been alive, and I earned my keep. I was a gunnery officer on the Crail in the last war.
@@ -10,7 +10,7 @@ if {Day2TaskWellness} == "True":
 		Colonel: Ah, those were the days! And then they had the gall to kick me out, on trumped-up charges no less!
 	- It was nothing. I'm just glad I could help
 		Colonel: Don't be too humble, you did a number on those asteroids. It reminds me of when I served on the Crail as a gunnery officer. I'm sure you've heard of the ship. \
-		Colonel\: She was the best ship in the fleet, and I miss her dearly. They sent her to mothballs when the war ended, and I did all I could to see her preserved as a museum, but my pleas fell on deaf ears.
+Colonel\: She was the best ship in the fleet, and I miss her dearly. They sent her to mothballs when the war ended, and I did all I could to see her preserved as a museum, but my pleas fell on deaf ears.
 		Colonel: She was scrapped only a few years later.
 		- Mothballed? What's that?
 			Colonel: It's when the Navy wants to put a ship into storage. They clean it up, close everything up, and dock it up somewhere to rust away until they need it.

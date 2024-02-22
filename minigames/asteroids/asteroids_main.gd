@@ -4,28 +4,28 @@ extends Node2D
 @export var transitioner : Transitioner
 #@export var ptransitioner : PackedTransitioner
 
-var score : int = 15
+var score : int
 var asteroid_count : int = 20
-var curr_day : String = "Day2"
+var curr_day : String
 
 func start_game():
-	game_over()
+	#game_over()
 	#print(Dialogic.VAR.Day1TaskWellness)
 	#print(Dialogic.VAR.Day2TaskWellness)
-	#curr_day = Dialogic.VAR.CurrentDay
-	#print(curr_day)
-	#score = 0
-	#$StartTimer.start()
-	#$HUD/ScoreLabel.show()
-	#$HUD/AsteroidsDestroyed.show()
-	#$HUD.update_score(score)
-	#$HUD.show_message("Get Ready...")
+	curr_day = Dialogic.VAR.CurrentDay
+	print(curr_day)
+	score = 0
+	$StartTimer.start()
+	$HUD/ScoreLabel.show()
+	$HUD/AsteroidsDestroyed.show()
+	$HUD.update_score(score)
+	$HUD.show_message("Get Ready...")
 	
 func game_over():
 	# asteroid.disconnect("destroyed", _on_asteroid_destroyed)
 	acc_calc()
 	#print(Dialogic.VAR.Day1TaskWellness)
-	print(Dialogic.VAR.Day2TaskWellness)
+	#print(Dialogic.VAR.Day2TaskWellness)
 	$AsteroidTimer.stop()
 	$HUD.show_game_over()
 	await get_tree().create_timer(3.0).timeout

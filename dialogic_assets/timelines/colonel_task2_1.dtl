@@ -1,9 +1,9 @@
 [background arg="res://assets/Backgrounds/weapons.jpg" fade="0.0"]
 join Colonel 3
 if {ColonelFondness} >= 0:
-	Colonel: Hey! Good to see you again {Playername}!
+	Colonel: Hey! Good to see you again {PlayerName}!
 else:
-	Colonel: Thanks for stopping by {Playername}.
+	Colonel: Thanks for stopping by {PlayerName}.
 Colonel: I could use some help with these asteroids. You up to the task?
 - Hell yeah! Let's do this
 	set {Day2Task} = "Colonel"
