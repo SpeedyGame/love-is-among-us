@@ -41,9 +41,9 @@ elif {ColonelFondness} == 1:
 label task_selection
 [clear time="1.0" text="false" music="false" background="false" positions="false" style="false"]
 Who would you like to go with?
-- Spark
+- Spark (not in demo)
 	jump spark_task2_1/
 - Colonel
 	jump colonel_task2_1/
-- Tracker
+- Tracker (not in demo)
 	jump tracker_task1/
