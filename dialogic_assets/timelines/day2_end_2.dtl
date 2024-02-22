@@ -1,0 +1,14 @@
+[background arg="res://assets/Backgrounds/updated meeting room.png" fade="0.0"]
+join Colonel 4
+join Spark 0 [ mirrored="true"]
+Spark: Well, I'd be lying if I said this didn't worry me. If they don't turn up soon, I…I don't even know what we'd do.
+Colonel: What could have happened to them? I'd be willing to bet that, in an hour or two, Tracker will stumble out of some crevice on the ship where they lay down for a nap. I mean, they can't have gone far.
+Spark: It's a small ship! Where could they even be hiding? And if they were asleep, wouldn't they have heard the message over the PA that we're having a meeting?
+Colonel: If anything happened to them, it would have set off alarms immediately. All of our suits are connected to the ship's central computer.
+Colonel: Don't you remember how you set off the alarms last week when you fell off a ladder while replacing a light? It's almost impossible to bypass that monitoring.
+Colonel: Well, what are you suggesting? I don't suppose you think Tracker stepped out to get some fresh air.
+Spark: Obviously not! I'm worried about my crewmate. What if they're hurt? I don't think I could forgive myself if something happened to them.
+Spark: You're right. I guess I was overreacting. Still, it worries me that they just disappeared like this. I hope they turn up soon...
+(Everyone leaves to go to sleep, still a bit uneasy)
+leave Colonel
+leave Spark
