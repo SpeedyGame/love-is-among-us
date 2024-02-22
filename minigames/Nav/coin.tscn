@@ -1,0 +1,20 @@
+[gd_scene load_steps=4 format=3 uid="uid://c8ra4ttlgekr2"]
+
+[ext_resource type="Script" path="res://minigames/Nav/coin.gd" id="1_gkwod"]
+[ext_resource type="Texture2D" uid="uid://bv3tymewka3eb" path="res://assets/nav assets/coin.png" id="1_s2rpc"]
+
+[sub_resource type="CircleShape2D" id="CircleShape2D_827wq"]
+radius = 15.0
+
+[node name="Coin" type="Area2D" groups=["coin"]]
+collision_layer = 7
+collision_mask = 7
+script = ExtResource("1_gkwod")
+
+[node name="Sprite2D" type="Sprite2D" parent="."]
+texture = ExtResource("1_s2rpc")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+shape = SubResource("CircleShape2D_827wq")
+
+[connection signal="area_entered" from="." to="." method="_on_area_entered"]

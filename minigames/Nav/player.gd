@@ -22,6 +22,8 @@ func move(dir):
 	#elif ray.is_colliding():
 	#	if collision_layer == 2:
 	#		print("level complete")
+	
+
 #
 # Called every frame. 'delta' is the elapsed time since the previous frame.
 #func _process(delta):
