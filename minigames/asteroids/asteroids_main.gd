@@ -4,7 +4,7 @@ extends Node2D
 @export var transitioner : Transitioner
 #@export var ptransitioner : PackedTransitioner
 
-var score
+var score = 19
 var asteroid_count = 20
 var curr_day : String = "Day2"
 
@@ -86,9 +86,8 @@ func back_to_timeline():
 	#ptransitioner.set_next_animation(true)
 	
 func acc_calc():
-	print("19" + "/" + str(asteroid_count))
-	print(str((19 / asteroid_count)) + ">=" + "75")
-	if ((19 / asteroid_count) * 100 >= 75):
+	print(str((score / asteroid_count) * 100) + ">=" + "75")
+	if ((score / asteroid_count) * 100 >= 75):
 		if (curr_day == "Day1"):
 			Dialogic.VAR.Day1TaskWellness = str("True")
 		elif (curr_day == "Day2"):
