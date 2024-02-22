@@ -1,63 +1,40 @@
-[background arg="res://assets/Backgrounds/weapons.jpg" fade="0.0"]
-join Colonel 3
-if {Day2TaskWellness} == "True":
-	set {ColonelFondness} += 1
-	Colonel: Nice job {PlayerName}! Those asteroids didn't stand a chance.
-	- Thanks! I'd say I'm something of an expert at this point
-		Colonel: I've seen this too many times before. Some young recruit does well for once, and they think they're god's greatest gift to humanity.
-		Colonel: You may have gotten lucky, but I served in the Navy longer than you've been alive, and I earned my keep. I was a gunnery officer on the Crail in the last war.
-		Colonel: I'll have you know that she was rated as one of the most accurate ships in the fleet, and that was all a result of the training I oversaw.
-		Colonel: Ah, those were the days! And then they had the gall to kick me out, on trumped-up charges no less!
-	- It was nothing. I'm just glad I could help
-		Colonel: Don't be too humble, you did a number on those asteroids. It reminds me of when I served on the Crail as a gunnery officer. I'm sure you've heard of the ship. \
-Colonel: She was the best ship in the fleet, and I miss her dearly. They sent her to mothballs when the war ended, and I did all I could to see her preserved as a museum, but my pleas fell on deaf ears.
-Colonel: She was scrapped only a few years later.
-- Mothballed? What's that?
-	Colonel: It's when the Navy wants to put a ship into storage. They clean it up, close everything up, and dock it up somewhere to rust away until they need it.
-	Colonel: Usually it's just what they do before they send the ship off to get scrapped.
-- You're actually in the Navy? I thought you just wore that uniform because it looks cool.
-	Colonel: I was, but a few officers had a problem with me, so they made up some charges to get me dishonorably discharged.
-	Colonel: Didn't even let me get my pension, and all because they thought I was too harsh on the recruits. I say they'll never learn if all they ever know is easy.
-- What's it like, serving in the Navy?
-	Colonel: It was the best time of my life. I was in for 31 years, and I don't regret a second of it.
-	Colonel: And then my fellow officers worked together behind my back to get me kicked out, AND they denied me my pension.
-	Colonel: And all of that because they claimed I was being too harsh on the cadets.
-	Colonel: All I'll say is that, when I was gunnery officer on the Crail, she was one of the best ships in the fleet,
-- Eh, it wasn't that hard
-	Colonel: Kids these days, never faced with a real challenge. Next time I'll send you out to clean the hull with a toothbrush, and that's going easy on you!
-	Colonel: Back when I was a cadet in the Navy, I once had to paint the entire hull of a frigate with a paintbrush, and that was going easy on me!
-	Colonel: Too bad we don't have any paint on board the Skeld. The old girl could use a little freshening up.
-- The hard part was avoiding touching the tablet as much as possible. This thing's nasty. Are you sure you cleaned it?
-	if {ColonelFondness} >= 0:
-		Colonel: Listen, I don’t want any smoke for how my area is cleaned. You can talk when you get your own. And I can’t smell any worse than the suit you’ve got on. How about you take it somewhere else.
-	else:
-		Colonel: The only reason you're not already out the door is that you did well enough shooting the asteroids, but you're on thin ice, buddy.
-if {ColonelFondness} >= 1:
-	Colonel: I'll see you around! You're not too bad, kid.
-else:
-	Colonel: Thanks for your help, kid.
-[clear time="1.0"]
-jump day2_end/
-else:
-	Colonel: I've seen better from my own grandma, and she was blind in both eyes! Granted, she's in the ground now, but she'd probably still hit more than you did!
-	- Can I give it another go?
-		Colonel: Sure! Always like to see a young recruit who won't leave a job half-done. Reminds me of when I was just getting my start in the Navy, all bright-eyed and full of energy.
-		Colonel: Ah, those were the days! I was younger and better looking…
-		(You stop paying attention and pick the tablet back up to shoot some more asteroids)
-	- Eh, it just gives me more room for improvement
-		Colonel: Well, I expect to see you back here this time tomorrow to improve, then.
-		Colonel: Better here, keeping everyone on this ship safe, than fiddling with wires or wasting time with computers.
-	- I couldn't care less about your grandma, dead or not. I'm just here to get paid and get out of here.
-		Colonel: OUT. NOW.
-		(You leave quickly, with Colonel slinging insults at you)
-		jump day2_end_1/
-	- I would've done better if that tablet wasn't a risk to my health. I mean, seriously, have you even heard of cleaning? Besides the tablet, this whole place is a dump! I didn't know empty soda cans were in vogue in interior decorating.
-		Colonel: Really? I'm here protecting the ship from asteroids, and your biggest concern is that the room isn't as clean as a damn operating room.
-		Colonel: I don't know if you've noticed, but this ship isn't exactly well-crewed, and I for one am busy doing my own job. If you want to clean up, be my guest, but I need to get back to work .
-		(Colonel turns away and picks up the tablet again. Moments later, you hear laser shots, and see asteroids exploding in the distance)
-if {ColonelFondness} >= 1:
-	Colonel: I'll see you around! You're not bad, kid.
-else:
-	Colonel: Thanks for your help, kid.
-[clear time="1.0"]
-jump day2_end/
+[background arg="res://assets/Backgrounds/updated meeting room.png" fade="0.0"]
+join Colonel 4
+join Spark 0 [ mirrored="true"]
+if {Day2Task} == "Colonel":
+	Colonel: Did something happen?
+	Spark: I'm starting to get worried about Tracker. I haven't seen them since the meeting earlier. Have either of you seen them?
+	Colonel: I haven't. What about you, {Playername}?
+	- I haven't either
+		jump Main Discussion
+	- Not since the meeting
+		jump Main Discussion
+elif {Day2Task} == "Spark":
+	Spark: What's up? Did something break? Because if not, I'd like to get back to changing the batteries in the smoke detectors.
+	Colonel: I went to go talk to Tracker earlier, but they weren't on the bridge, and I haven't seen them since. Have either of you seen them?
+	Spark: I haven't. Have you, {Playername}?
+	- Nope
+		jump Main Discussion
+	- Did you check their bunk?
+		Colonel: Of course! This wouldn't be the first time they left the ship on autopilot and took a nap.
+		jump Main Discussion
+label Main Discussion
+Spark: Well, I'd be lying if I said this didn't worry me. If they don't turn up soon, I…I don't even know what we'd do.
+Colonel: What could have happened to them? I'd be willing to bet that, in an hour or two, Tracker will stumble out of some crevice on the ship where they lay down for a nap. I mean, they can't have gone far.
+Spark: It's a small ship! Where could they even be hiding? And if they were asleep, wouldn't they have heard the message over the PA that we're having a meeting?
+Colonel: If anything happened to them, it would have set off alarms immediately. All of our suits are connected to the ship's central computer.
+Colonel: Don't you remember how you set off the alarms last week when you fell off a ladder while replacing a light? It's almost impossible to bypass that monitoring.
+Colonel: Well, what are you suggesting? I don't suppose you think Tracker stepped out to get some fresh air.
+Spark: Obviously not! I'm worried about my crewmate. What if they're hurt? I don't think I could forgive myself if something happened to them.
+Spark: You're right. I guess I was overreacting. Still, it worries me that they just disappeared like this. I hope they turn up soon...
+leave Colonel
+leave Spark
+(Everyone leaves to go to sleep, still a bit uneasy)
+[background arg="res://assets/Backgrounds/Stars.png" fade="0.0"]
+join Tracker 2 [ mirrored="true"]
+Tracker: Wha- Huh? Where am I?
+leave Tracker
+[background arg="res://assets/Backgrounds/Space Background.png" fade="0.0"]
+Thanks for playing through the demo of Love is Among Us! We hope you enjoyed it
+We have a lot more we'd like to add to the game, but this is just a demo, so it's not quite done yet.
+It would really help us if you filled out our feedback form, linked in the description.
