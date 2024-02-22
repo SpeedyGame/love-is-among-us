@@ -1,3 +1,25 @@
-[gd_scene format=3 uid="uid://itahpo0mb2i"]
+[gd_scene load_steps=5 format=3 uid="uid://itahpo0mb2i"]
 
-[node name="Node2D" type="Node2D"]
+[ext_resource type="Script" path="res://scenes/day_1_ending.gd" id="1_g483h"]
+[ext_resource type="Script" path="res://addons/dialogic/Modules/Background/dialogic_background.gd" id="1_y8u1d"]
+[ext_resource type="PackedScene" uid="uid://dowwkho7oo7kr" path="res://assets/UI/packedtransitioner.tscn" id="3_e1gbb"]
+[ext_resource type="PackedScene" uid="uid://edxwvj2hwnxp" path="res://scenes/day_2_opening.tscn" id="4_l88sn"]
+
+[node name="Node2D" type="Node2D" node_paths=PackedStringArray("ptransistioner")]
+script = ExtResource("1_g483h")
+ptransistioner = NodePath("PackedTransitioner")
+
+[node name="DialogicBackground" type="Node" parent="."]
+script = ExtResource("1_y8u1d")
+
+[node name="PackedTransitioner" parent="." instance=ExtResource("3_e1gbb")]
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = 540.0
+offset_top = 480.0
+offset_right = 540.0
+offset_bottom = 480.0
+scene_to_load = ExtResource("4_l88sn")
