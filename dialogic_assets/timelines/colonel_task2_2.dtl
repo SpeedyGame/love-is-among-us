@@ -10,34 +10,34 @@ if {Day2TaskWellness} == "True":
 		Colonel: Ah, those were the days! And then they had the gall to kick me out, on trumped-up charges no less!
 	- It was nothing. I'm just glad I could help
 		Colonel: Don't be too humble, you did a number on those asteroids. It reminds me of when I served on the Crail as a gunnery officer. I'm sure you've heard of the ship. \
-Colonel\: She was the best ship in the fleet, and I miss her dearly. They sent her to mothballs when the war ended, and I did all I could to see her preserved as a museum, but my pleas fell on deaf ears.
-		Colonel: She was scrapped only a few years later.
-		- Mothballed? What's that?
-			Colonel: It's when the Navy wants to put a ship into storage. They clean it up, close everything up, and dock it up somewhere to rust away until they need it.
-			Colonel: Usually it's just what they do before they send the ship off to get scrapped.
-		- You're actually in the Navy? I thought you just wore that uniform because it looks cool.
-			Colonel: I was, but a few officers had a problem with me, so they made up some charges to get me dishonorably discharged.
-			Colonel: Didn't even let me get my pension, and all because they thought I was too harsh on the recruits. I say they'll never learn if all they ever know is easy.
-		- What's it like, serving in the Navy?
-			Colonel: It was the best time of my life. I was in for 31 years, and I don't regret a second of it.
-			Colonel: And then my fellow officers worked together behind my back to get me kicked out, AND they denied me my pension.
-			Colonel: And all of that because they claimed I was being too harsh on the cadets.
-			Colonel: All I'll say is that, when I was gunnery officer on the Crail, she was one of the best ships in the fleet,
-	- Eh, it wasn't that hard
-		Colonel: Kids these days, never faced with a real challenge. Next time I'll send you out to clean the hull with a toothbrush, and that's going easy on you!
-		Colonel: Back when I was a cadet in the Navy, I once had to paint the entire hull of a frigate with a paintbrush, and that was going easy on me!
-		Colonel: Too bad we don't have any paint on board the Skeld. The old girl could use a little freshening up.
-	- The hard part was avoiding touching the tablet as much as possible. This thing's nasty. Are you sure you cleaned it?
-		if {ColonelFondness} >= 0:
-			Colonel: Listen, I don’t want any smoke for how my area is cleaned. You can talk when you get your own. And I can’t smell any worse than the suit you’ve got on. How about you take it somewhere else.
-		else:
-			Colonel: The only reason you're not already out the door is that you did well enough shooting the asteroids, but you're on thin ice, buddy.
-	if {ColonelFondness} >= 1:
-		Colonel: I'll see you around! You're not too bad, kid.
+She was the best ship in the fleet, and I miss her dearly. They sent her to mothballs when the war ended, and I did all I could to see her preserved as a museum, but my pleas fell on deaf ears.
+Colonel: She was scrapped only a few years later.
+- Mothballed? What's that?
+	Colonel: It's when the Navy wants to put a ship into storage. They clean it up, close everything up, and dock it up somewhere to rust away until they need it.
+	Colonel: Usually it's just what they do before they send the ship off to get scrapped.
+- You're actually in the Navy? I thought you just wore that uniform because it looks cool.
+	Colonel: I was, but a few officers had a problem with me, so they made up some charges to get me dishonorably discharged.
+	Colonel: Didn't even let me get my pension, and all because they thought I was too harsh on the recruits. I say they'll never learn if all they ever know is easy.
+- What's it like, serving in the Navy?
+	Colonel: It was the best time of my life. I was in for 31 years, and I don't regret a second of it.
+	Colonel: And then my fellow officers worked together behind my back to get me kicked out, AND they denied me my pension.
+	Colonel: And all of that because they claimed I was being too harsh on the cadets.
+	Colonel: All I'll say is that, when I was gunnery officer on the Crail, she was one of the best ships in the fleet,
+- Eh, it wasn't that hard
+	Colonel: Kids these days, never faced with a real challenge. Next time I'll send you out to clean the hull with a toothbrush, and that's going easy on you!
+	Colonel: Back when I was a cadet in the Navy, I once had to paint the entire hull of a frigate with a paintbrush, and that was going easy on me!
+	Colonel: Too bad we don't have any paint on board the Skeld. The old girl could use a little freshening up.
+- The hard part was avoiding touching the tablet as much as possible. This thing's nasty. Are you sure you cleaned it?
+	if {ColonelFondness} >= 0:
+		Colonel: Listen, I don’t want any smoke for how my area is cleaned. You can talk when you get your own. And I can’t smell any worse than the suit you’ve got on. How about you take it somewhere else.
 	else:
-		Colonel: Thanks for your help, kid.
-	[clear time="1.0"]
-	jump day2_end_1/
+		Colonel: The only reason you're not already out the door is that you did well enough shooting the asteroids, but you're on thin ice, buddy.
+if {ColonelFondness} >= 1:
+	Colonel: I'll see you around! You're not too bad, kid.
+else:
+	Colonel: Thanks for your help, kid.
+[clear time="1.0"]
+jump day2_end/
 else:
 	Colonel: I've seen better from my own grandma, and she was blind in both eyes! Granted, she's in the ground now, but she'd probably still hit more than you did!
 	- Can I give it another go?

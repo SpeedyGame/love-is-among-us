@@ -1,4 +1,4 @@
-[gd_scene load_steps=3 format=3 uid="uid://dmauafcnbc4mq"]
+[gd_scene load_steps=3 format=3 uid="uid://7pkwapn5jpwd"]
 
 [ext_resource type="Script" path="res://scenes/task_scenes/trackertask1.gd" id="1_hop0u"]
 [ext_resource type="Script" path="res://addons/dialogic/Modules/Background/dialogic_background.gd" id="2_t8j6q"]

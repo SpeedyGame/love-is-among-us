@@ -26,7 +26,8 @@ func set_next_animation(fading_out : bool):
 	
 	scene_to_load = "res://minigames/" + selected_task + ".tscn"
 	#print(scene_to_load)
-	print(Dialogic.VAR.Day1Task)
+	print(Dialogic.VAR.Day2Task)
+	print(selected_task)
 	
 	if (fading_out):
 		animation_player.queue("fade_out")
