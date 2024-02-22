@@ -1,7 +1,8 @@
 extends Node2D
 
 @export var asteroid : PackedScene
-@export var transitioner : Transitioner
+#@export var transitioner : Transitioner
+@export var ptransitioner : PackedTransitioner
 
 var score
 var asteroid_count = 20
@@ -77,7 +78,8 @@ func _on_area_2d_body_exited(body):
 	body.queue_free()
 
 func back_to_timeline():
-	transitioner.set_next_animation(true)
+	#transitioner.set_next_animation(true)
+	ptransitioner.set_next_animation(true)
 	
 func acc_calc():
 	if ((score / asteroid_count) * 100 >= 75):

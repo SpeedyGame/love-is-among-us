@@ -13,7 +13,7 @@
 "display_name": "Tracker",
 "mirror": false,
 "nicknames": [""],
-"offset": Vector2(0, 150),
+"offset": Vector2(0, 100),
 "portraits": {
 "Neutral Tracker": {
 "export_overrides": {
