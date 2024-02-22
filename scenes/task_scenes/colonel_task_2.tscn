@@ -1,0 +1,10 @@
+[gd_scene load_steps=3 format=3 uid="uid://dlh36mcg2l0ig"]
+
+[ext_resource type="Script" path="res://scenes/task_scenes/colonel_task_2.gd" id="1_711u8"]
+[ext_resource type="Script" path="res://addons/dialogic/Modules/Background/dialogic_background.gd" id="2_hga5p"]
+
+[node name="Node2D" type="Node2D"]
+script = ExtResource("1_711u8")
+
+[node name="DialogicBackground" type="Node" parent="."]
+script = ExtResource("2_hga5p")

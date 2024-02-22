@@ -1,4 +1,5 @@
 [background arg="res://assets/Backgrounds/weapons.jpg" fade="0.0"]
+[music path="res://assets/music/Late Night Radio.mp3" fade="0.0" volume="-12.0"]
 join Colonel 3
 if {Day1TaskWellness} == "True":
 	set {ColonelFondness} += 1

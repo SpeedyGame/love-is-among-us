@@ -1,0 +1,32 @@
+[background arg="res://assets/Backgrounds/weapons.jpg" fade="0.0"]
+join Colonel 3
+if {ColonelFondness} >= 0:
+	Colonel: Hey! Good to see you again {Playername}!
+else:
+	Colonel: Thanks for stopping by {Playername}.
+Colonel: I could use some help with these asteroids. You up to the task?
+- Hell yeah! Let's do this
+	set {Day2Task} = "Colonel"
+	Colonel: I appreciate the enthusiasm! Let's see if your aim is as good as your attitude.
+	[clear time="1.0"]
+	[signal arg="start_asteroids"]
+- I was born ready!
+	set {Day2Task} = "Colonel"
+	Colonel: I appreciate the enthusiasm! Let's see if your aim is as good as your attitude.
+	[clear time="1.0"]
+	[signal arg="start_asteroids"]
+- I guess so...
+	set {Day2Task} = "Colonel"
+	Colonel: Not so enthusiastic, huh? Why'd you even come here if you don't want to do any work? This ain't a cruise ship buddy, you need to pull your weight. Now get over here and shoot the damn asteroids, or I'll send you out there with a Nerp gun instead!
+	[clear time="1.0"]
+	[signal arg="start_asteroids"]
+- Glad to see the place hasn't changed…or been cleaned
+	set {ColonelFondness} -= 0.5
+	set {Day2Task} = "Colonel"
+	Colonel: Hey! I'll have you know I used a whole bottle of Killer Clean on this room, AND I sanitized the tablet. Got flashbacks to boot camp and everything!
+	Colonel: Now, you'd better hit every last asteroid, or I'll make sure you're scrubbing toilets for the rest of your time on this ship!
+	[clear time="1.0"]
+	[signal arg="start_asteroids"]
+- I'd rather see what the others are up to first
+	(You head back to the meeting room)
+	jump day2opening/task_selection

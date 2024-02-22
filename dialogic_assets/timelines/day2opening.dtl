@@ -1,18 +1,25 @@
 [background arg="res://assets/Backgrounds/updated meeting room.png" fade="0.0"]
-join Spark 1 [ mirrored="true"]
+[music path="res://assets/music/Late Night Radio.mp3" fade="0.0" volume="-12.0"]
+set {CurrentDay} = "Day2"
+join Spark 2 [ mirrored="true"]
 join Tracker 0 [ mirrored="true"]
 join Colonel 4
-Spark: Another day, another meeting. I promise all my stuff in electrical is okay now. If anything else happens, *glares at Tracker* tell me in advance instead of making the end-of-day all about it.
-Tracker: I’m sorry for making a big deal about it, but sabotage hasn’t happened in years, and you made it sound like it wasn’t you that messed things up. Either you messed up something, or someone Among Us wants to shut the power down.
-Spark: *peeved* Hey, you stay back with your little screens down in Nav, and I’ll do my job in Electrical. You don’t hear me complaining about other people’s work.
+Spark: Another day, another meeting. I promise all my stuff in electrical is okay now.
+Spark: If anything else happens...
+update Spark [ mirrored="false"]
+Spark: ...tell me in advance instead of making the end-of-day all about it.
+Tracker: I’m sorry for making a big deal about it, but sabotage hasn’t happened in years, and you made it sound like it wasn’t you that messed things up.
+Tracker: Either you messed up something, or someone Among Us wants to shut the power down.
+Spark: Hey, you stay back with your little screens down in Nav, and I’ll do my job in Electrical. You don’t hear me complaining about other people’s work.
 - I don't know why everyone thinks that Spark messed up. [if {Day1Task} == "Spark"]
 	Spark: Thank you! We need to figure out who here is screwing with us, and not gripe about work. Does anyone have any ideas on who it is?
 - I also don't ever see anyone *else's* main task screwing up that badly.
 	Tracker: Exactly, this could all just be that Spark had a bad day, and maybe needs a break. It can be really stressful to manage all that equipment Spark, believe me, I know.
-	Spark: Well you don’t know trust. You know how long I’ve been here and not done SHIT wrong. I’m telling you, either you or Colonel had something to do with this, and I guess I’m alone in figuring it out.
-	Colonel: You’re not alone here Spark, I don’t know about anyone else, but I’m very concerned about someone screwing around where they don’t belong. Tracker, we need to get on board with this.
-	Tracker: I don’t know, I haven’t seen anyone going around and messing with other people’s stuff, not except for PLAYER helping us out sometimes.
-	Spark: Fine, act like nothing’s wrong, We’ll figure out who’s doing all of this.
+	Spark: Well you don’t know trust. You know how long I’ve been here and not done SHIT wrong.
+	Spark: I’m telling you, either you or Colonel had something to do with this, and I guess I’m alone in figuring it out.
+	Colonel: You’re not alone here Spark. I don’t know about anyone else, but I’m very concerned about someone screwing around where they don’t belong. Tracker, we need to get on board with this.
+	Tracker: I don’t know, I haven’t seen anyone going around and messing with other people’s stuff, not except for {PlayerName} helping us out sometimes.
+	Spark: Fine, act like nothing’s wrong. We’ll figure out who’s doing all of this.
 - ...any thoughts Colonel?
 Colonel: …Okay then, let’s say one of us here is trying to screw us over, and they’ve been messing with the power. What do we do about it?
 Spark: Cameras. I can get working on setting some up in the halls and see if we can find who’s doing this.
@@ -35,8 +42,8 @@ label task_selection
 [clear time="1.0" text="false" music="false" background="false" positions="false" style="false"]
 Who would you like to go with?
 - Spark
-	jump spark_task1/
+	jump spark_task2_1/
 - Colonel
-	jump colonel_task1_1/
+	jump colonel_task2_1/
 - Tracker
 	jump tracker_task1/

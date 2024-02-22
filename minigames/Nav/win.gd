@@ -2,7 +2,8 @@ extends Area2D
 
 var tile_size = 40
 var empty = true
-@export var transitioner : Transitioner
+#@export var transitioner : Transitioner
+@export var ptransitioner: PackedTransitioner
 #var coins = get_tree().get_nodes_in_group("coin")
 var score = 0
 
@@ -27,7 +28,8 @@ func _on_area_entered(area):
 	empty = false
 	
 func back_to_timeline():
-	transitioner.set_next_animation(true)
+	#transitioner.set_next_animation(true)
+	ptransitioner.set_next_animation(true)
 
 
 

@@ -1,10 +1,11 @@
-[gd_scene load_steps=12 format=3 uid="uid://p61guvano00v"]
+[gd_scene load_steps=13 format=3 uid="uid://p61guvano00v"]
 
 [ext_resource type="Script" path="res://minigames/asteroids/asteroids_main.gd" id="1_0tlme"]
 [ext_resource type="PackedScene" uid="uid://bmmtdih2clyf4" path="res://minigames/asteroids/asteroid.tscn" id="2_ujlv4"]
 [ext_resource type="Script" path="res://minigames/asteroids/HUD.gd" id="3_dwo0o"]
 [ext_resource type="PackedScene" uid="uid://ccqu3swo2jrr7" path="res://assets/UI/transitioner.tscn" id="4_0h447"]
 [ext_resource type="PackedScene" uid="uid://b2n634rv1yppn" path="res://scenes/task_scenes/colonel_task_1.tscn" id="5_grcdi"]
+[ext_resource type="PackedScene" uid="uid://dowwkho7oo7kr" path="res://assets/UI/packedtransitioner.tscn" id="5_mj2ix"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_fyqk4"]
 size = Vector2(720, 719.5)
@@ -133,6 +134,18 @@ anchor_bottom = 0.5
 offset_left = 480.0
 offset_top = 360.0
 offset_right = 480.0
+offset_bottom = 360.0
+
+[node name="PackedTransitioner" parent="." instance=ExtResource("5_mj2ix")]
+visible = false
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = 540.74
+offset_top = 360.0
+offset_right = 540.74
 offset_bottom = 360.0
 scene_to_load = ExtResource("5_grcdi")
 

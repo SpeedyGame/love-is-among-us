@@ -1,0 +1,40 @@
+[background arg="res://assets/Backgrounds/updated meeting room.png" fade="0.0"]
+join Colonel 4
+join Spark 0 [ mirrored="true"]
+if {Day2Task} == "Colonel":
+	Colonel: Did something happen?
+	Spark: I'm starting to get worried about Tracker. I haven't seen them since the meeting earlier. Have either of you seen them?
+	Colonel: I haven't. What about you, {Playername}?
+	- I haven't either
+		jump Main Discussion
+	- Not since the meeting
+		jump Main Discussion
+elif {Day2Task} == "Spark":
+	Spark: What's up? Did something break? Because if not, I'd like to get back to changing the batteries in the smoke detectors.
+	Colonel: I went to go talk to Tracker earlier, but they weren't on the bridge, and I haven't seen them since. Have either of you seen them?
+	Spark: I haven't. Have you, {Playername}?
+	- Nope
+		jump Main Discussion
+	- Did you check their bunk?
+		Colonel: Of course! This wouldn't be the first time they left the ship on autopilot and took a nap.
+		jump Main Discussion
+label Main Discussion
+Spark: Well, I'd be lying if I said this didn't worry me. If they don't turn up soon, I…I don't even know what we'd do.
+Colonel: What could have happened to them? I'd be willing to bet that, in an hour or two, Tracker will stumble out of some crevice on the ship where they lay down for a nap. I mean, they can't have gone far.
+Spark: It's a small ship! Where could they even be hiding? And if they were asleep, wouldn't they have heard the message over the PA that we're having a meeting?
+Colonel: If anything happened to them, it would have set off alarms immediately. All of our suits are connected to the ship's central computer.
+Colonel: Don't you remember how you set off the alarms last week when you fell off a ladder while replacing a light? It's almost impossible to bypass that monitoring.
+Colonel: Well, what are you suggesting? I don't suppose you think Tracker stepped out to get some fresh air.
+Spark: Obviously not! I'm worried about my crewmate. What if they're hurt? I don't think I could forgive myself if something happened to them.
+Spark: You're right. I guess I was overreacting. Still, it worries me that they just disappeared like this. I hope they turn up soon...
+leave Colonel
+leave Spark
+(Everyone leaves to go to sleep, still a bit uneasy)
+[background arg="res://assets/Backgrounds/Stars.png" fade="0.0"]
+join Tracker 2 [ mirrored="true"]
+Tracker: Wha- Huh? Where am I?
+leave Tracker
+[background arg="res://assets/Backgrounds/Space Background.png" fade="0.0"]
+Thanks for playing through the demo of Love is Among Us! We hope you enjoyed it
+We have a lot more we'd like to add to the game, but this is just a demo, so it's not quite done yet.
+It would really help us if you filled out our feedback form, linked in the description.

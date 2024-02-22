@@ -4,10 +4,20 @@
 [ext_resource type="Script" path="res://addons/dialogic/Modules/Background/dialogic_background.gd" id="2_i6vxp"]
 [ext_resource type="PackedScene" uid="uid://ccqu3swo2jrr7" path="res://assets/UI/transitioner.tscn" id="3_7ek7l"]
 
-[node name="Day2Opening" type="Node2D"]
+[node name="Day2Opening" type="Node2D" node_paths=PackedStringArray("transistioner")]
 script = ExtResource("1_7dwqo")
+transistioner = NodePath("Transitioner")
 
 [node name="DialogicBackground" type="Node" parent="."]
 script = ExtResource("2_i6vxp")
 
 [node name="Transitioner" parent="." instance=ExtResource("3_7ek7l")]
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = 640.0
+offset_top = 360.0
+offset_right = 640.0
+offset_bottom = 360.0

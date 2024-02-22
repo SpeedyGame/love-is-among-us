@@ -5,6 +5,7 @@ Tracker: Oh, you came. Mind helping me out for a bit?
 	set {Day1Task} = "Tracker"
 	Tracker: Thanks. *hands you a tablet (or whatever relates to the task we put in)*
 	This is where the minigame will be inserted.
+	[clear time="1.0"]
 	[signal arg="start_maze"]
 - Nah, I'll pass.
 	Tracker: That's alright. See you when I see you.
