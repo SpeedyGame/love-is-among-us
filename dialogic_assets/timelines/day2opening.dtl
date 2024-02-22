@@ -32,7 +32,7 @@ Tracker: Then let’s get to it. Meeting over.
 if {SparkFondness} == 1:
 	leave Colonel
 	leave Tracker
-	Spark: Mind coming with me today PLAYER? I could use someone to take care of the job now that I gotta set up all of these cameras.
+	Spark: Mind coming with me today {PlayerName}? I could use someone to take care of the job now that I gotta set up all of these cameras.
 elif {ColonelFondness} == 1:
 	leave Spark
 	leave Tracker
