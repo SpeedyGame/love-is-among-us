@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://ck732ycbqhbjm"
-path="res://.godot/imported/colonel.png-31f222438f837f363c8071a4f020c89e.ctex"
+uid="uid://dadibuinngm5p"
+path="res://.godot/imported/suspicious.png-6c82933010bb64870b4714d2e6215cc7.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://assets/colonel.png"
-dest_files=["res://.godot/imported/colonel.png-31f222438f837f363c8071a4f020c89e.ctex"]
+source_file="res://assets/sprites/suspicious.png"
+dest_files=["res://.godot/imported/suspicious.png-6c82933010bb64870b4714d2e6215cc7.ctex"]
 
 [params]
 

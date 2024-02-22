@@ -5,7 +5,7 @@
 [ext_resource type="Script" path="res://minigames/asteroids/HUD.gd" id="3_dwo0o"]
 [ext_resource type="PackedScene" uid="uid://ccqu3swo2jrr7" path="res://assets/UI/transitioner.tscn" id="4_0h447"]
 [ext_resource type="PackedScene" uid="uid://b2n634rv1yppn" path="res://scenes/task_scenes/colonel_task_1.tscn" id="5_grcdi"]
-[ext_resource type="AudioStream" uid="uid://r6yitcmnj3ku" path="res://assets/sfx/explosion.mp3" id="6_qrf4r"]
+[ext_resource type="AudioStream" uid="uid://capmc3k4oiek8" path="res://assets/sfx/shatter.mp3" id="6_djdgy"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_fyqk4"]
 size = Vector2(720, 719.5)
@@ -138,7 +138,7 @@ offset_bottom = 360.0
 scene_to_load = ExtResource("5_grcdi")
 
 [node name="AsteroidSFXPlayer" type="AudioStreamPlayer2D" parent="."]
-stream = ExtResource("6_qrf4r")
+stream = ExtResource("6_djdgy")
 
 [connection signal="body_exited" from="ColorRect/Area2D" to="." method="_on_area_2d_body_exited"]
 [connection signal="timeout" from="AsteroidTimer" to="." method="_on_asteroid_timer_timeout"]

@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://hv3l652ub11s"
-path="res://.godot/imported/navigator.png-14b80fc672adc5cfe8646cf31048a36b.ctex"
+uid="uid://cvtoo2y3i6ocl"
+path="res://.godot/imported/angry.png-f682cd559631070e1c50ba0394e827f5.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://assets/navigator.png"
-dest_files=["res://.godot/imported/navigator.png-14b80fc672adc5cfe8646cf31048a36b.ctex"]
+source_file="res://assets/sprites/angry.png"
+dest_files=["res://.godot/imported/angry.png-f682cd559631070e1c50ba0394e827f5.ctex"]
 
 [params]
 
