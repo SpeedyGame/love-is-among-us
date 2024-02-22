@@ -35,7 +35,8 @@ directories/dtl_directory={
 "opening": "res://dialogic_assets/timelines/opening.dtl",
 "spark_task1": "res://dialogic_assets/timelines/spark_task1_1.dtl",
 "spark_task1_2": "res://dialogic_assets/timelines/spark_task1_2.dtl",
-"tracker_task1": "res://dialogic_assets/timelines/tracker_task1.dtl"
+"tracker_task1": "res://dialogic_assets/timelines/tracker_task1.dtl",
+"tracker_task1_2": "res://dialogic_assets/timelines/tracker_task1_2.dtl"
 }
 text/letter_speed=0.03
 text/initial_text_reveal_skippable=true

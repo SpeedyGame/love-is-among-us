@@ -92,7 +92,9 @@ Spark: *sigh* I could go check back there again, but I just got done with mainte
 		Colonel: Hey, hey sometimes tech just glitches you know? Remember that time the doors would close randomly, then open again?
 	- Maybe it’s just bugged? Electrical stuff tends to break sometimes.
 	Spark: Yeah, it hasn’t happened yet to this degree. I can see the awful electrics we got finally starting to quit.
-	Spark:  I’ll go and get it back on.
+	Spark: I’ll go and get it back on.
 	leave Spark
 	Tracker: Well, that was all I had for the meeting tonight, and I’m trying to get some sleep.
 	Colonel: Nothing here either, goodnight.
+[clear time="1.0"]
+jump day2opening/
