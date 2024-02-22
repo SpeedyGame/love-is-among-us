@@ -19,7 +19,12 @@ func move(dir):
 	ray.force_raycast_update()
 	if !ray.is_colliding():
 		position += inputs[dir] * tile_size
+	#elif ray.is_colliding():
+	#	if collision_layer == 2:
+	#		print("level complete")
 
 # Called every frame. 'delta' is the elapsed time since the previous frame.
 func _process(delta):
 	pass
+
+

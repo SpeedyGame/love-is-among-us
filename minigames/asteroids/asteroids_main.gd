@@ -5,7 +5,6 @@ extends Node2D
 
 var score
 var asteroid_count = 20
-@onready var asteroid_sfx_player: AudioStreamPlayer2D = $AsteroidSFXPlayer
 
 func start_game():
 	#game_over()
@@ -71,7 +70,6 @@ func _on_asteroid_destroyed():
 	#print("destroy signal receieved")
 	score += 1
 	$HUD.update_score(score)
-	asteroid_sfx_player.play(0.0)
 	#print(score)
 
 func _on_area_2d_body_exited(body):
