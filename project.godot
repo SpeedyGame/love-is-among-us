@@ -31,12 +31,10 @@ directories/dtl_directory={
 "colonel_task1_1": "res://dialogic_assets/timelines/colonel_task1.dtl",
 "colonel_task1_2": "res://dialogic_assets/timelines/colonel_task1_2.dtl",
 "day1_end": "res://dialogic_assets/timelines/day1_end.dtl",
-"day2opening": "res://dialogic_assets/timelines/day2opening.dtl",
 "opening": "res://dialogic_assets/timelines/opening.dtl",
 "spark_task1": "res://dialogic_assets/timelines/spark_task1_1.dtl",
 "spark_task1_2": "res://dialogic_assets/timelines/spark_task1_2.dtl",
-"tracker_task1": "res://dialogic_assets/timelines/tracker_task1.dtl",
-"tracker_task1_2": "res://dialogic_assets/timelines/tracker_task1_2.dtl"
+"tracker_task1": "res://dialogic_assets/timelines/tracker_task1.dtl"
 }
 text/letter_speed=0.03
 text/initial_text_reveal_skippable=true
