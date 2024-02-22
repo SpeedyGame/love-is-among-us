@@ -1,41 +1,10 @@
 [background arg="res://assets/Backgrounds/navigation.jpg" fade="0.0"]
 join Tracker 3
-Tracker: Oh, you came. Would you mind helping me out for a bit?
-- Yes
+Tracker: Oh, you came. Mind helping me out for a bit?
+- Yeah, let's do this!
+	set {Day1Task} = "Tracker"
 	Tracker: Thanks. *hands you a tablet (or whatever relates to the task we put in)*
 	This is where the minigame will be inserted.
-	You can decide if you do well or not here.
-	- Easy money
-		set {Day1TaskWellness} = "True"
-		set {TrackerFondness} += 1
-		Tracker: I really appreciate the help, this stuff can get so tedious. (+1 fondness)
-		- Don't mention it, I know how bad computer work can get sometimes.
-			Tracker: You work with computers too? What did you do before this?
-			- I'm studying CS in college.
-				Tracker: Good luck, I just got out of there myself. Hope to be out of here soon too, it gets lonely up in space, you know.
-			- I'm big into spreadsheets.
-				Tracker: Oh no, you have it even worse than me. I couldn’t imagine doing all of that serious paper-pusher stuff all day. The world needs more people that can tolerate that. Anyway, I’ll see you around.
-			- Nothing except for what we've done.
-				Tracker: Huh, lots of experience then yeah? Can’t wait to see what it can do around here.(sarcastic)
-		- I feel you, happy I could help.
-			Tracker: Then I’m happy too. Maybe you can come by again tomorrow, always more to do online.
-			- I'll be there.
-				Tracker: Thank you, see you then!
-			- I don't know, I might have other tasks tomorrow.
-				Tracker: Makes sense, everybody's busy around here.
-			- I would rather scrub the toilets.
-				Tracker: Fine then, I see how it is! (-1 fondness)
-		- Honestly, your whole setup is terrible, I couldn't imagine working like this all the time.
-			Tracker: This is like my one thing I do well! I guess not good enough for you though. *turns away to a nearby computer screen* (sad) (-1 fondness)
-	- That was tough
-		Tracker: Something wrong? Are you having a bad time?
-		- Yeah, somethings wrong. I’m not the right one to help you with this kind of stuff.
-			Tracker: It’s not for everyone. Maybe someone else's job is better for you.
-			Tracker: I hear Colonel’s tasks are fun, maybe stop by there tomorrow.
-		- It’s a little rough, but I’m getting there.
-			Tracker: Ain't that the truth, I can help you out.  (insert tip on how to do the minigame, maybe then give another chance to do it well for the fondness)
-		- This is impossible! How much do you get paid for this?
-			Tracker: Not enough, it’s almost not worth it. Run now if you know what's best for you.
-set {Day1Task} = "Tracker"
-[clear time="1.0"]
-jump day1_end/
+- Nah, I'll pass.
+	Tracker: That's alright. See you when I see you.
+	jump opening/task_selection
