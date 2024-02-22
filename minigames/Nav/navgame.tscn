@@ -1,14 +1,13 @@
-[gd_scene load_steps=15 format=3 uid="uid://chhwusef7x6wh"]
+[gd_scene load_steps=14 format=3 uid="uid://chhwusef7x6wh"]
 
-[ext_resource type="Texture2D" path="res://assets/nav assets/tile.png" id="1_to746"]
-[ext_resource type="Texture2D" path="res://assets/nav assets/obst.png" id="2_8ew83"]
+[ext_resource type="Texture2D" uid="uid://mva18ae5lrx" path="res://assets/nav assets/tile.png" id="1_to746"]
+[ext_resource type="Texture2D" uid="uid://cg3tnlcg1h8w6" path="res://assets/nav assets/obst.png" id="2_8ew83"]
 [ext_resource type="Script" path="res://minigames/Nav/player.gd" id="3_t5y7h"]
-[ext_resource type="Texture2D" path="res://assets/nav assets/player.png" id="4_tycx0"]
+[ext_resource type="Texture2D" uid="uid://djoumay3qc6f7" path="res://assets/nav assets/player.png" id="4_tycx0"]
 [ext_resource type="Script" path="res://minigames/Nav/win.gd" id="5_pwwyd"]
-[ext_resource type="Texture2D" path="res://assets/nav assets/win.png" id="6_8pl7c"]
+[ext_resource type="Texture2D" uid="uid://d0lemkfim5nmh" path="res://assets/nav assets/win.png" id="6_8pl7c"]
 [ext_resource type="PackedScene" uid="uid://ccqu3swo2jrr7" path="res://assets/UI/transitioner.tscn" id="8_tm4nh"]
 [ext_resource type="PackedScene" uid="uid://c8ra4ttlgekr2" path="res://minigames/Nav/coin.tscn" id="9_3ywrw"]
-[ext_resource type="PackedScene" uid="uid://dmauafcnbc4mq" path="res://scenes/task_scenes/trackertask1.tscn" id="9_wj0kc"]
 
 [sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_ws35m"]
 texture = ExtResource("1_to746")
@@ -66,7 +65,6 @@ offset_left = 563.0
 offset_top = 264.0
 offset_right = 563.0
 offset_bottom = 264.0
-scene_to_load = ExtResource("9_wj0kc")
 
 [node name="TileMap" type="TileMap" parent="."]
 position = Vector2(3, 1)

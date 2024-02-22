@@ -31,6 +31,8 @@ directories/dtl_directory={
 "colonel_task1_1": "res://dialogic_assets/timelines/colonel_task1.dtl",
 "colonel_task1_2": "res://dialogic_assets/timelines/colonel_task1_2.dtl",
 "day1_end": "res://dialogic_assets/timelines/day1_end.dtl",
+"day2_end_1": "res://dialogic_assets/timelines/day2_end_1.dtl",
+"day2_end_2": "res://dialogic_assets/timelines/day2_end_2.dtl",
 "day2opening": "res://dialogic_assets/timelines/day2opening.dtl",
 "opening": "res://dialogic_assets/timelines/opening.dtl",
 "spark_task1": "res://dialogic_assets/timelines/spark_task1_1.dtl",
@@ -71,6 +73,7 @@ layout/default_style="res://dialogic_assets/styles/MainStyle.tres"
 
 window/size/viewport_width=1280
 window/size/viewport_height=720
+window/size/mode=3
 window/stretch/mode="canvas_items"
 
 [editor]
