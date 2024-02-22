@@ -1,8 +1,10 @@
 [background arg="res://assets/Backgrounds/updated meeting room.png" fade="0.0"]
+[music path="res://assets/music/Late Night Radio.mp3" fade="0.0" volume="-12.0"]
+set {CurrentDay} = "Day2"
 join Spark 2 [ mirrored="true"]
 join Tracker 0 [ mirrored="true"]
 join Colonel 4
-Spark: Another day, another meeting. I promise all my stuff in electrical is okay now. 
+Spark: Another day, another meeting. I promise all my stuff in electrical is okay now.
 Spark: If anything else happens...
 update Spark [ mirrored="false"]
 Spark: ...tell me in advance instead of making the end-of-day all about it.

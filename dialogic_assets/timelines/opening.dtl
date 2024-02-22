@@ -1,5 +1,6 @@
 [background arg="res://assets/Backgrounds/Space Background.png" fade="0.0"]
 [music path="res://assets/music/Late Night Radio.mp3" fade="0.0" volume="-12.0"]
+set {CurrentDay} = "Day1"
 join Spark 3
 Spark: Hey everyone, Spark here.
 Spark: I ain’t much for introductions, but I’m the one that keeps the lights on around here.

@@ -1,26 +1,31 @@
 extends Node2D
 
 @export var asteroid : PackedScene
-#@export var transitioner : Transitioner
-@export var ptransitioner : PackedTransitioner
+@export var transitioner : Transitioner
+#@export var ptransitioner : PackedTransitioner
 
 var score
 var asteroid_count = 20
+var curr_day : String = "Day2"
 
 func start_game():
-	#game_over()
-	print(Dialogic.VAR.Day1TaskWellness)
-	score = 0
-	$StartTimer.start()
-	$HUD/ScoreLabel.show()
-	$HUD/AsteroidsDestroyed.show()
-	$HUD.update_score(score)
-	$HUD.show_message("Get Ready...")
+	game_over()
+	#print(Dialogic.VAR.Day1TaskWellness)
+	#print(Dialogic.VAR.Day2TaskWellness)
+	#curr_day = Dialogic.VAR.CurrentDay
+	#print(curr_day)
+	#score = 0
+	#$StartTimer.start()
+	#$HUD/ScoreLabel.show()
+	#$HUD/AsteroidsDestroyed.show()
+	#$HUD.update_score(score)
+	#$HUD.show_message("Get Ready...")
 	
 func game_over():
 	# asteroid.disconnect("destroyed", _on_asteroid_destroyed)
 	acc_calc()
-	print(Dialogic.VAR.Day1TaskWellness)
+	#print(Dialogic.VAR.Day1TaskWellness)
+	print(Dialogic.VAR.Day2TaskWellness)
 	$AsteroidTimer.stop()
 	$HUD.show_game_over()
 	await get_tree().create_timer(3.0).timeout
@@ -66,7 +71,6 @@ func _on_asteroid_timer_timeout():
 		asteroid_count -= 1
 		#print(asteroid_count)
 	
-	
 func _on_asteroid_destroyed():
 	#print("destroy signal receieved")
 	score += 1
@@ -78,9 +82,14 @@ func _on_area_2d_body_exited(body):
 	body.queue_free()
 
 func back_to_timeline():
-	#transitioner.set_next_animation(true)
-	ptransitioner.set_next_animation(true)
+	transitioner.set_next_animation_timeline(true)
+	#ptransitioner.set_next_animation(true)
 	
 func acc_calc():
-	if ((score / asteroid_count) * 100 >= 75):
-		Dialogic.VAR.Day1TaskWellness = str("True")
+	print("19" + "/" + str(asteroid_count))
+	print(str((19 / asteroid_count)) + ">=" + "75")
+	if ((19 / asteroid_count) * 100 >= 75):
+		if (curr_day == "Day1"):
+			Dialogic.VAR.Day1TaskWellness = str("True")
+		elif (curr_day == "Day2"):
+			Dialogic.VAR.Day2TaskWellness = str("True")
