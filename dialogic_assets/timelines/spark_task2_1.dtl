@@ -1,0 +1,18 @@
+[background arg="res://assets/Backgrounds/electrical.jpg" fade="0.0"]
+join Spark 3
+if {SparkFondness} == 1:
+	Spark: Hey, It’s {PlayerName}, again. Ready to get started today?
+elif {SparkFondness} == 0:
+	Spark: How’s it going? Wanna give me a hand?
+Want to give Spark a hand?
+- Yeah, let’s do this!
+	Spark: Woah, I like the enthusiasm. Reminds me of when I first started this job… (pulls open a panel revealing dangling wires)
+	This is where the minigame will be inserted.
+- Sure, whatever.
+	This is where the minigame will be inserted.
+- Ah maybe. Let me check what the others are doing.
+	Spark: Alright.
+	jump day2opening/task_selection
+- No.
+	Spark: Then why’d you come by here if not to work?
+	jump day2opening/task_selection

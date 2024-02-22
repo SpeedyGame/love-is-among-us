@@ -35,6 +35,7 @@ directories/dtl_directory={
 "opening": "res://dialogic_assets/timelines/opening.dtl",
 "spark_task1": "res://dialogic_assets/timelines/spark_task1_1.dtl",
 "spark_task1_2": "res://dialogic_assets/timelines/spark_task1_2.dtl",
+"spark_task2_1": "res://dialogic_assets/timelines/spark_task2_1.dtl",
 "tracker_task1": "res://dialogic_assets/timelines/tracker_task1.dtl",
 "tracker_task1_2": "res://dialogic_assets/timelines/tracker_task1_2.dtl"
 }
@@ -70,7 +71,6 @@ layout/default_style="res://dialogic_assets/styles/MainStyle.tres"
 
 window/size/viewport_width=1280
 window/size/viewport_height=720
-window/size/mode=3
 window/stretch/mode="canvas_items"
 
 [editor]
