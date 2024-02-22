@@ -18,9 +18,9 @@ func _ready():
 	animation_tex.visible = false
 	
 func set_next_animation(fading_out : bool):
-	if (Dialogic.VAR.Day1Task == str("Colonel")):
+	if (Dialogic.VAR.Day1Task == str("Colonel") || Dialogic.VAR.Day2Task == str("Colonel")):
 		selected_task = "asteroids/asteroids_main"
-	elif (Dialogic.VAR.Day1Task == str("Tracker")):
+	elif (Dialogic.VAR.Day1Task == str("Tracker") || Dialogic.VAR.Day2Task == str("Tracker")):
 		selected_task = "Nav/navgame"
 	
 	scene_to_load = "res://minigames/" + selected_task + ".tscn"

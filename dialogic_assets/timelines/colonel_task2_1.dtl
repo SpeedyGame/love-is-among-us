@@ -16,10 +16,11 @@ Colonel: I could use some help with these asteroids. You up to the task?
 	set {Day2Task} = "Colonel"
 - Glad to see the place hasn't changed…or been cleaned
 	set {ColonelFondness} -= 0.5
-	Colonel: Hey! I'll have you know I used a whole bottle of Killer Clean on this room, AND I sanitized the tablet. Got flashbacks to boot camp and everything! Now, you'd better hit every last asteroid, or I'll make sure you're scrubbing toilets for the rest of your time on this ship!
+	Colonel: Hey! I'll have you know I used a whole bottle of Killer Clean on this room, AND I sanitized the tablet. Got flashbacks to boot camp and everything!
+	Colonel: Now, you'd better hit every last asteroid, or I'll make sure you're scrubbing toilets for the rest of your time on this ship!
 	set {Day2Task} = "Colonel"
+	[clear time="1.0"]
+	[signal arg="start_asteroids"]
 - I'd rather see what the others are up to first
 	(You head back to the meeting room)
 	jump day2opening/task_selection
-(Colonel pulls out a large touchscreen)
-[signal arg="start_asteroids"]
