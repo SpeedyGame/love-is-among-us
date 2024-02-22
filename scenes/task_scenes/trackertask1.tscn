@@ -1,0 +1,10 @@
+[gd_scene load_steps=3 format=3 uid="uid://dmauafcnbc4mq"]
+
+[ext_resource type="Script" path="res://scenes/task_scenes/trackertask1.gd" id="1_hop0u"]
+[ext_resource type="Script" path="res://addons/dialogic/Modules/Background/dialogic_background.gd" id="2_t8j6q"]
+
+[node name="Trackertask1" type="Node2D"]
+script = ExtResource("1_hop0u")
+
+[node name="DialogicBackground" type="Node" parent="."]
+script = ExtResource("2_t8j6q")

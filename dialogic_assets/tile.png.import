@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://c4mndiu50o8tv"
-path="res://.godot/imported/red_wire_sprite.png-0ef6bb9003650cd146f0b9a95b215015.ctex"
+uid="uid://dbpfbe6kxviq1"
+path="res://.godot/imported/tile.png-cb82da1a9561639225f46772b3dd371f.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://red_wire_sprite.png"
-dest_files=["res://.godot/imported/red_wire_sprite.png-0ef6bb9003650cd146f0b9a95b215015.ctex"]
+source_file="res://dialogic_assets/tile.png"
+dest_files=["res://.godot/imported/tile.png-cb82da1a9561639225f46772b3dd371f.ctex"]
 
 [params]
 
