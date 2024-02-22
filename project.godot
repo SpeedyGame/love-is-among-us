@@ -19,7 +19,6 @@ config/icon="res://icon.svg"
 
 Dialogic="*res://addons/dialogic/Other/DialogicGameHandler.gd"
 Global="res://minigames/electrical/global.gd"
-fondess_global="*res://fondness_global.gd"
 
 [dialogic]
 
@@ -34,8 +33,7 @@ directories/dtl_directory={
 "colonel_task2_1": "res://dialogic_assets/timelines/colonel_task2_1.dtl",
 "colonel_task2_2": "res://dialogic_assets/timelines/colonel_task2_2.dtl",
 "day1_end": "res://dialogic_assets/timelines/day1_end.dtl",
-"day2_end_1": "res://dialogic_assets/timelines/day2_end_1.dtl",
-"day2_end_2": "res://dialogic_assets/timelines/day2_end_2.dtl",
+"day2_end": "res://dialogic_assets/timelines/day2_end.dtl",
 "day2opening": "res://dialogic_assets/timelines/day2opening.dtl",
 "opening": "res://dialogic_assets/timelines/opening.dtl",
 "spark_task1": "res://dialogic_assets/timelines/spark_task1_1.dtl",
@@ -64,8 +62,6 @@ variables={
 "ColonelFondness": "0",
 "Day1Task": "",
 "Day1TaskWellness": "False",
-"Day2Task": "",
-"Day2TaskWellness": "",
 "PlayerName": "",
 "SparkFondness": "0",
 "TrackerFondness": "0"
@@ -78,7 +74,6 @@ layout/default_style="res://dialogic_assets/styles/MainStyle.tres"
 
 window/size/viewport_width=1280
 window/size/viewport_height=720
-window/size/mode=3
 window/stretch/mode="canvas_items"
 
 [editor]
