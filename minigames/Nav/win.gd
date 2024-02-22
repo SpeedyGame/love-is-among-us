@@ -18,7 +18,7 @@ func _ready():
 func _unhandled_input(event):
 	if !empty:
 		print("level complete")
-		#back_to_timeline()
+		back_to_timeline()
 		#score = get_node("Coin").coins  #coins - get_tree().get_nodes_in_group("coin")
 		
 
