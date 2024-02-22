@@ -33,7 +33,12 @@ directories/dtl_directory={
 "colonel_task2_1": "res://dialogic_assets/timelines/colonel_task2_1.dtl",
 "colonel_task2_2": "res://dialogic_assets/timelines/colonel_task2_2.dtl",
 "day1_end": "res://dialogic_assets/timelines/day1_end.dtl",
+<<<<<<< HEAD
+"day2_end_1": "res://dialogic_assets/timelines/day2_end_1.dtl",
+"day2_end_2": "res://dialogic_assets/timelines/day2_end_2.dtl",
+=======
 "day2_end": "res://dialogic_assets/timelines/day2_end.dtl",
+>>>>>>> cdfbffd2c0e35c57ed7bd3460341b00f947bcbca
 "day2opening": "res://dialogic_assets/timelines/day2opening.dtl",
 "opening": "res://dialogic_assets/timelines/opening.dtl",
 "spark_task1": "res://dialogic_assets/timelines/spark_task1_1.dtl",
