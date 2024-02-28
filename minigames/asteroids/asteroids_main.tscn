@@ -13,9 +13,9 @@ size = Vector2(720, 719.5)
 
 [sub_resource type="Curve2D" id="Curve2D_q4six"]
 _data = {
-"points": PackedVector2Array(0, 0, 0, 0, 832, 0, 0, 0, 0, 0, 1000, 0, 0, 0, 0, 0, 1000, 720, 0, 0, 0, 0, 832, 720)
+"points": PackedVector2Array(0, 0, 0, 0, 280, 0, 0, 0, 0, 0, 1000, 0, 0, 0, 0, 0, 1000, 720, 0, 0, 0, 0, 280, 720, 0, 0, 0, 0, 280, 0)
 }
-point_count = 4
+point_count = 5
 
 [sub_resource type="SystemFont" id="SystemFont_vttf6"]
 
@@ -68,7 +68,7 @@ one_shot = true
 curve = SubResource("Curve2D_q4six")
 
 [node name="AsteroidSpawnLocation" type="PathFollow2D" parent="AsteroidPath"]
-position = Vector2(832, 0)
+position = Vector2(280, 0)
 
 [node name="HUD" type="CanvasLayer" parent="."]
 script = ExtResource("3_dwo0o")
@@ -132,10 +132,13 @@ anchor_left = 0.5
 anchor_top = 0.5
 anchor_right = 0.5
 anchor_bottom = 0.5
-offset_left = 480.0
+offset_left = 540.0
 offset_top = 360.0
-offset_right = 480.0
+offset_right = 540.0
 offset_bottom = 360.0
+
+[node name="TextureRect" parent="Transitioner" index="0"]
+scale = Vector2(0.1, 0.1)
 
 [node name="PackedTransitioner" parent="." instance=ExtResource("5_mj2ix")]
 visible = false
