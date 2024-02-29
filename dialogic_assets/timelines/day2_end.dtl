@@ -4,7 +4,7 @@ join Spark 0 [ mirrored="true"]
 if {Day2Task} == "Colonel":
 	Colonel: Did something happen?
 	Spark: I'm starting to get worried about Tracker. I haven't seen them since the meeting earlier. Have either of you seen them?
-	Colonel: I haven't. What about you, {Playername}?
+	Colonel: I haven't. What about you, {PlayerName}?
 	- I haven't either
 		jump Main Discussion
 	- Not since the meeting

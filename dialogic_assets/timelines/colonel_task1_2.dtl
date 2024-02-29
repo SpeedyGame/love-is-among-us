@@ -3,7 +3,7 @@
 join Colonel 3
 if {Day1TaskWellness} == "True":
 	set {ColonelFondness} += 1
-	Colonel: Nice shooting {PlayerName}. And thanks for the help too.
+	Colonel: Nice shooting, {PlayerName}. And thanks for the help too.
 	- Don't mention it, just doing my job.
 		Colonel: Come on back sometime if you want another round.
 		Colonel: And you do it well.
@@ -35,4 +35,4 @@ elif {Day1TaskWellness} == "False":
 	- This has gotta be the worst game I've played in a while, to be honest.
 		Colonel: Dang, sorry you feel that way. It is a bit plain, but not that bad I thought. To each their own I guess.
 [clear time="1.0"]
-jump day1_end/
+[signal arg="day1_end"]

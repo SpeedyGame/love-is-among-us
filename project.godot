@@ -76,6 +76,7 @@ variables={
 glossary/default_case_sensitive=true
 layout/style_list=["res://dialogic_assets/styles/MainStyle.tres"]
 layout/default_style="res://dialogic_assets/styles/MainStyle.tres"
+history/simple_history_enabled=true
 
 [display]
 

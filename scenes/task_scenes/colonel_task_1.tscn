@@ -1,10 +1,27 @@
-[gd_scene load_steps=3 format=3 uid="uid://b2n634rv1yppn"]
+[gd_scene load_steps=5 format=3 uid="uid://b2n634rv1yppn"]
 
 [ext_resource type="Script" path="res://addons/dialogic/Modules/Background/dialogic_background.gd" id="1_lglp8"]
 [ext_resource type="Script" path="res://scenes/task_scenes/colonel_task_1.gd" id="1_scsaf"]
+[ext_resource type="PackedScene" uid="uid://dowwkho7oo7kr" path="res://assets/UI/packedtransitioner.tscn" id="3_2e0cb"]
+[ext_resource type="PackedScene" uid="uid://itahpo0mb2i" path="res://scenes/day_1_ending.tscn" id="4_dsqa6"]
 
-[node name="Node2D" type="Node2D"]
+[node name="Node2D" type="Node2D" node_paths=PackedStringArray("ptransistioner")]
 script = ExtResource("1_scsaf")
+ptransistioner = NodePath("PackedTransitioner")
 
 [node name="DialogicBackground" type="Node" parent="."]
 script = ExtResource("1_lglp8")
+
+[node name="PackedTransitioner" parent="." instance=ExtResource("3_2e0cb")]
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = 540.0
+offset_top = 360.0
+offset_right = 540.0
+offset_bottom = 360.0
+scene_to_load = ExtResource("4_dsqa6")
+
+[editable path="PackedTransitioner"]

@@ -23,3 +23,5 @@ offset_top = 360.0
 offset_right = 540.0
 offset_bottom = 360.0
 scene_to_load = ExtResource("4_l88sn")
+
+[editable path="PackedTransitioner"]

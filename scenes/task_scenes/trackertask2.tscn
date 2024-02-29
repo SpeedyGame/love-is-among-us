@@ -1,0 +1,18 @@
+[gd_scene load_steps=4 format=3 uid="uid://dfu57tw0paks6"]
+
+[ext_resource type="Script" path="res://addons/dialogic/Modules/Background/dialogic_background.gd" id="1_im4pw"]
+[ext_resource type="Script" path="res://scenes/task_scenes/trackertask2.gd" id="1_vxe43"]
+[ext_resource type="Script" path="res://assets/UI/packedtransitioner.gd" id="2_q5lkj"]
+
+[node name="Trackertask2" type="Node2D"]
+script = ExtResource("1_vxe43")
+
+[node name="DialogicBackground" type="Node" parent="."]
+script = ExtResource("1_im4pw")
+
+[node name="PackedTransitioner" type="Control" parent="."]
+layout_mode = 3
+anchors_preset = 0
+offset_right = 40.0
+offset_bottom = 40.0
+script = ExtResource("2_q5lkj")

@@ -32,4 +32,4 @@ elif {Day1TaskWellness} == "False":
 	- This is impossible! How much do you get paid for this?
 		Tracker: Not enough, it’s almost not worth it. Run now if you know what's best for you.
 [clear time="1.0"]
-jump day1_end/
+[signal arg="day1_end"]

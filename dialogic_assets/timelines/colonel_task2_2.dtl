@@ -2,7 +2,7 @@
 join Colonel 3
 if {Day2TaskWellness} == "True":
 	set {ColonelFondness} += 1
-	Colonel: Nice job {PlayerName}! Those asteroids didn't stand a chance.
+	Colonel: Nice job, {PlayerName}! Those asteroids didn't stand a chance.
 	- Thanks! I'd say I'm something of an expert at this point
 		Colonel: I've seen this too many times before. Some young recruit does well for once, and they think they're god's greatest gift to humanity.
 		Colonel: You may have gotten lucky, but I served in the Navy longer than you've been alive, and I earned my keep. I was a gunnery officer on the Crail in the last war.
@@ -36,8 +36,6 @@ if {ColonelFondness} >= 1:
 	Colonel: I'll see you around! You're not too bad, kid.
 else:
 	Colonel: Thanks for your help, kid.
-[clear time="1.0"]
-jump day2_end/
 else:
 	Colonel: I've seen better from my own grandma, and she was blind in both eyes! Granted, she's in the ground now, but she'd probably still hit more than you did!
 	- Can I give it another go?
@@ -60,4 +58,4 @@ if {ColonelFondness} >= 1:
 else:
 	Colonel: Thanks for your help, kid.
 [clear time="1.0"]
-jump day2_end/
+[signal arg="day2_end"]
