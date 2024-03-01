@@ -1,12 +1,14 @@
-[gd_scene load_steps=14 format=3 uid="uid://p61guvano00v"]
+[gd_scene load_steps=12 format=3 uid="uid://p61guvano00v"]
 
 [ext_resource type="Script" path="res://minigames/asteroids/asteroids_main.gd" id="1_0tlme"]
 [ext_resource type="PackedScene" uid="uid://bmmtdih2clyf4" path="res://minigames/asteroids/asteroid.tscn" id="2_ujlv4"]
 [ext_resource type="Script" path="res://minigames/asteroids/HUD.gd" id="3_dwo0o"]
 [ext_resource type="PackedScene" uid="uid://ccqu3swo2jrr7" path="res://assets/UI/transitioner.tscn" id="4_0h447"]
+[ext_resource type="FontFile" uid="uid://dxiinqp42sq15" path="res://assets/fonts/COMIC.TTF" id="4_pu1p4"]
 [ext_resource type="PackedScene" uid="uid://b2n634rv1yppn" path="res://scenes/task_scenes/colonel_task_1.tscn" id="5_grcdi"]
 [ext_resource type="PackedScene" uid="uid://dowwkho7oo7kr" path="res://assets/UI/packedtransitioner.tscn" id="5_mj2ix"]
 [ext_resource type="AudioStream" uid="uid://capmc3k4oiek8" path="res://assets/sfx/shatter.mp3" id="7_4x8pp"]
+[ext_resource type="PackedScene" uid="uid://dd1vi6tqxqo3d" path="res://minigames/asteroids/pause_menu.tscn" id="8_bo0ft"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_fyqk4"]
 size = Vector2(720, 719.5)
@@ -16,14 +18,6 @@ _data = {
 "points": PackedVector2Array(0, 0, 0, 0, 280, 0, 0, 0, 0, 0, 1000, 0, 0, 0, 0, 0, 1000, 720, 0, 0, 0, 0, 280, 720, 0, 0, 0, 0, 280, 0)
 }
 point_count = 5
-
-[sub_resource type="SystemFont" id="SystemFont_vttf6"]
-
-[sub_resource type="SystemFont" id="SystemFont_sxdb4"]
-
-[sub_resource type="SystemFont" id="SystemFont_ndfiu"]
-
-[sub_resource type="SystemFont" id="SystemFont_0bqtf"]
 
 [node name="Main" type="Node2D" node_paths=PackedStringArray("transitioner")]
 editor_description = "Breaking down the tasks:
@@ -78,7 +72,7 @@ offset_left = 696.0
 offset_top = 2.0
 offset_right = 736.0
 offset_bottom = 58.0
-theme_override_fonts/font = SubResource("SystemFont_vttf6")
+theme_override_fonts/font = ExtResource("4_pu1p4")
 theme_override_font_sizes/font_size = 40
 text = "4"
 
@@ -94,7 +88,7 @@ offset_right = 315.0
 offset_bottom = 27.5
 grow_horizontal = 2
 grow_vertical = 2
-theme_override_fonts/font = SubResource("SystemFont_sxdb4")
+theme_override_fonts/font = ExtResource("4_pu1p4")
 theme_override_font_sizes/font_size = 40
 text = "Destroy the asteroids by clicking!"
 
@@ -110,7 +104,7 @@ offset_right = 51.0
 offset_bottom = -168.0
 grow_horizontal = 2
 grow_vertical = 0
-theme_override_fonts/font = SubResource("SystemFont_ndfiu")
+theme_override_fonts/font = ExtResource("4_pu1p4")
 theme_override_font_sizes/font_size = 40
 text = "Start"
 
@@ -120,11 +114,26 @@ one_shot = true
 
 [node name="AsteroidsDestroyed" type="RichTextLabel" parent="HUD"]
 offset_left = 286.0
-offset_right = 702.0
+offset_right = 732.0
 offset_bottom = 56.0
-theme_override_fonts/normal_font = SubResource("SystemFont_0bqtf")
+theme_override_fonts/normal_font = ExtResource("4_pu1p4")
 theme_override_font_sizes/normal_font_size = 40
 text = "Asteroids Destroyed: "
+
+[node name="PauseMenu" parent="HUD" instance=ExtResource("8_bo0ft")]
+
+[node name="PauseButton" type="Button" parent="HUD"]
+process_mode = 3
+anchors_preset = 1
+anchor_left = 1.0
+anchor_right = 1.0
+offset_left = -314.0
+offset_top = 11.0
+offset_right = -291.0
+offset_bottom = 42.0
+grow_horizontal = 0
+toggle_mode = true
+text = "❚❚"
 
 [node name="Transitioner" parent="." instance=ExtResource("4_0h447")]
 anchors_preset = 8
@@ -163,5 +172,6 @@ stream = ExtResource("7_4x8pp")
 [connection signal="start_game" from="HUD" to="." method="start_game"]
 [connection signal="pressed" from="HUD/StartButton" to="HUD" method="_on_start_button_pressed"]
 [connection signal="timeout" from="HUD/MessageTimer" to="HUD" method="_on_message_timer_timeout"]
+[connection signal="toggled" from="HUD/PauseButton" to="HUD/PauseMenu" method="_on_pause_button_toggled"]
 
 [editable path="Transitioner"]

@@ -56,16 +56,16 @@ func _on_asteroid_timer_timeout():
 		#direction = (4 * PI) / 3
 	if (asteroid_spawn_location.progress_ratio > 0.9):
 		direction = PI/4
-	#elif (asteroid_spawn_location.progress_ratio < 0.15):
-		#direction = PI/4
-	#elif (asteroid_spawn_location.progress_ratio < 0.4):
-		#direction = PI/4
-	#elif (asteroid_spawn_location.progress_ratio < 0.65):
-		#direction = PI/4
+	elif (asteroid_spawn_location.progress_ratio < 0.8 && asteroid_spawn_location.progress_ratio > 0.7):
+		direction = (7 * PI)/4
+	elif (asteroid_spawn_location.progress_ratio < 0.3 && asteroid_spawn_location.progress_ratio > 0.1):
+		direction = (3 * PI)/4
+	elif (asteroid_spawn_location.progress_ratio < 0.55 && asteroid_spawn_location.progress_ratio > 0.50):
+		direction = (5 * PI)/4
 		
 	asteroid.rotation = direction
 	
-	var velocity = Vector2(randf_range(225.0, 400.0), 0.0)
+	var velocity = Vector2(randf_range(225.0, 350.0), 0.0)
 	asteroid.linear_velocity = velocity.rotated(direction)
 	
 	if (asteroid_count <= 0):

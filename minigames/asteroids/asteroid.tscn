@@ -39,10 +39,10 @@ scale = Vector2(3.9, 3.9)
 
 [node name="Clickable" type="Button" parent="."]
 visibility_layer = 0
-offset_left = -39.0
-offset_top = -39.0
-offset_right = 39.0
-offset_bottom = 39.0
+offset_left = -49.0
+offset_top = -49.0
+offset_right = 49.0
+offset_bottom = 49.0
 
 [connection signal="body_exited" from="." to="." method="_on_body_exited"]
 [connection signal="screen_exited" from="VisibleOnScreenNotifier2D" to="." method="_on_visible_on_screen_notifier_2d_screen_exited"]
