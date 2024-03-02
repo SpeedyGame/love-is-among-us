@@ -7,7 +7,10 @@ extends Node2D
 var score : int
 var asteroid_count : int = 20
 var curr_day : String
+
 @onready var asteroid_sfx_player: AudioStreamPlayer2D = $AsteroidSFXPlayer
+@onready var audio_control : AnimationPlayer =  $AsteroidMusic/AudioFade
+@onready var music_player : AudioStreamPlayer2D =  $AsteroidMusic 	# $ is the name of the node.
 
 func start_game():
 	#game_over()
@@ -21,6 +24,7 @@ func start_game():
 	$HUD/AsteroidsDestroyed.show()
 	$HUD.update_score(score)
 	$HUD.show_message("Get Ready...")
+	music_player.play(0.0)
 	
 func game_over():
 	# asteroid.disconnect("destroyed", _on_asteroid_destroyed)
@@ -84,6 +88,7 @@ func _on_area_2d_body_exited(body):
 	body.queue_free()
 
 func back_to_timeline():
+	audio_control.queue("fade_out_music")
 	transitioner.set_next_animation_timeline(true)
 	#ptransitioner.set_next_animation(true)
 	

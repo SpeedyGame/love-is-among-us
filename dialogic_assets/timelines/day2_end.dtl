@@ -1,4 +1,5 @@
 [background arg="res://assets/Backgrounds/updated meeting room.png" fade="0.0"]
+[music path="res://assets/music/Giant Wyrm.mp3" fade="0.0" volume="-10.0"]
 join Colonel 4
 join Spark 0 [ mirrored="true"]
 if {Day2Task} == "Colonel":
@@ -33,6 +34,7 @@ leave Spark
 [background arg="res://assets/Backgrounds/Stars.png" fade="0.0"]
 join Tracker 2 [ mirrored="true"]
 Tracker: Wha- Huh? Where am I?
+[music fade="3.0" volume="0.0"]
 leave Tracker
 [background arg="res://assets/Backgrounds/Space Background.png" fade="0.0"]
 Thanks for playing through the demo of Love is Among Us! We hope you enjoyed it
