@@ -1,4 +1,4 @@
-[gd_scene load_steps=17 format=3 uid="uid://chhwusef7x6wh"]
+[gd_scene load_steps=14 format=3 uid="uid://chhwusef7x6wh"]
 
 [ext_resource type="Texture2D" uid="uid://mva18ae5lrx" path="res://assets/nav assets/tile.png" id="1_to746"]
 [ext_resource type="Texture2D" uid="uid://cg3tnlcg1h8w6" path="res://assets/nav assets/obst.png" id="2_8ew83"]
@@ -8,8 +8,6 @@
 [ext_resource type="Texture2D" uid="uid://d0lemkfim5nmh" path="res://assets/nav assets/win.png" id="6_8pl7c"]
 [ext_resource type="PackedScene" uid="uid://ccqu3swo2jrr7" path="res://assets/UI/transitioner.tscn" id="8_tm4nh"]
 [ext_resource type="PackedScene" uid="uid://cnm8v2qxpp7x4" path="res://minigames/Nav/coin.tscn" id="9_3ywrw"]
-[ext_resource type="Script" path="res://minigames/Nav/visibletimer.gd" id="9_ijmy8"]
-[ext_resource type="Script" path="res://minigames/Nav/timer.gd" id="10_02eng"]
 
 [sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_ws35m"]
 texture = ExtResource("1_to746")
@@ -58,8 +56,6 @@ size = Vector2(40, 40)
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_fpfvk"]
 size = Vector2(30, 30)
-
-[sub_resource type="Theme" id="Theme_t7314"]
 
 [node name="Node2D" type="Node2D"]
 position = Vector2(-3, 0)
@@ -227,22 +223,6 @@ shape = SubResource("RectangleShape2D_fpfvk")
 [node name="Sprite2D" type="Sprite2D" parent="Area2D2"]
 scale = Vector2(0.3, 0.3)
 texture = ExtResource("6_8pl7c")
-
-[node name="Panel" type="Panel" parent="."]
-offset_left = -95.0
-offset_top = 460.0
-offset_right = -37.0
-offset_bottom = 511.0
-theme = SubResource("Theme_t7314")
-script = ExtResource("9_ijmy8")
-
-[node name="Seconds" type="Label" parent="Panel"]
-layout_mode = 0
-offset_left = 650.0
-offset_top = -347.0
-offset_right = 710.0
-offset_bottom = -297.0
-script = ExtResource("10_02eng")
 
 [connection signal="area_entered" from="Area2D" to="Area2D2" method="_on_area_2d_area_entered"]
 [connection signal="timeout" from="Timer" to="Area2D2" method="_on_timer_timeout"]
