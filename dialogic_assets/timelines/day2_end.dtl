@@ -4,39 +4,65 @@ join Colonel 4
 join Spark 0 [ mirrored="true"]
 if {Day2Task} == "Colonel":
 	Colonel: Did something happen?
-	Spark: I'm starting to get worried about Tracker. I haven't seen them since the meeting earlier. Have either of you seen them?
-	Colonel: I haven't. What about you, {PlayerName}?
-	- I haven't either
-		jump Main Discussion
-	- Not since the meeting
-		jump Main Discussion
+	Spark: I'm starting to get worried about Tracker. I haven't seen them since the meeting earlier.
+	Spark: Have either of you seen them?
 elif {Day2Task} == "Spark":
-	Spark: What's up? Did something break? Because if not, I'd like to get back to changing the batteries in the smoke detectors.
-	Colonel: I went to go talk to Tracker earlier, but they weren't on the bridge, and I haven't seen them since. Have either of you seen them?
-	Spark: I haven't. Have you, {Playername}?
-	- Nope
-		jump Main Discussion
-	- Did you check their bunk?
-		Colonel: Of course! This wouldn't be the first time they left the ship on autopilot and took a nap.
-		jump Main Discussion
-label Main Discussion
-Spark: Well, I'd be lying if I said this didn't worry me. If they don't turn up soon, I…I don't even know what we'd do.
-Colonel: What could have happened to them? I'd be willing to bet that, in an hour or two, Tracker will stumble out of some crevice on the ship where they lay down for a nap. I mean, they can't have gone far.
-Spark: It's a small ship! Where could they even be hiding? And if they were asleep, wouldn't they have heard the message over the PA that we're having a meeting?
-Colonel: If anything happened to them, it would have set off alarms immediately. All of our suits are connected to the ship's central computer.
-Colonel: Don't you remember how you set off the alarms last week when you fell off a ladder while replacing a light? It's almost impossible to bypass that monitoring.
-Colonel: Well, what are you suggesting? I don't suppose you think Tracker stepped out to get some fresh air.
-Spark: Obviously not! I'm worried about my crewmate. What if they're hurt? I don't think I could forgive myself if something happened to them.
-Spark: You're right. I guess I was overreacting. Still, it worries me that they just disappeared like this. I hope they turn up soon...
-leave Colonel
-leave Spark
-(Everyone leaves to go to sleep, still a bit uneasy)
-[background arg="res://assets/Backgrounds/Stars.png" fade="0.0"]
-join Tracker 2 [ mirrored="true"]
-Tracker: Wha- Huh? Where am I?
-[music fade="3.0" volume="0.0"]
-leave Tracker
-[background arg="res://assets/Backgrounds/Space Background.png" fade="0.0"]
-Thanks for playing through the demo of Love is Among Us! We hope you enjoyed it
-We have a lot more we'd like to add to the game, but this is just a demo, so it's not quite done yet.
-It would really help us if you filled out our feedback form, linked in the description.
+	Spark: What's up? Did something break?
+	Spark: Because if not, I'd like to get back to changing the batteries in the smoke detectors.
+	Colonel: I went to go talk to Tracker earlier, but they weren't on the bridge, and I haven't seen them since.
+	Colonel: Have either of you seen them?
+...
+- Nope.
+	if {Day2Task} == "Spark":
+		Spark: Neither have I. Should we go look for them?
+		Colonel: The only place I would think to look is their room. Nobody's seem 'em anywhere else.
+	elif {Day2Task} == "Colonel":
+		Colonel: Same here, maybe we should go looking for them.
+		Spark: Maybe we swing by their room their, I haven't seen them anywhere else on the ship.
+- I tried to find them after this morning, but they weren't in Nav like they normally are. [if {Day2Task} == "Tracker"]
+	Colonel: That’s real weird, they’re always in there typing at something.
+	Spark: Yeah, Tracker does a lot of things, but skipping work isn't usually one of them.
+	Maybe we should check on them, they must be in their room sick or something.
+- No, you think they've been in their room or something?
+	Colonel: They would have to be, nobody has seen them anywhere else all day.
+	Spark: Yeah, it’s not like there’s many places to hide on the ship, or anywhere else to go.
+	Spark: Maybe we should go check their room, make sure they’re still on board.
+...
+- Let's go then, hope nothing's actually wrong. [if {SparkFondness} >= "1"]
+- Sounds good, lead the way.
+- I don't know if I want to go into their room uninvited, they might just be sick or napping or something.
+	Spark: Even if they were, I think we should at least check on them.
+	Spark: They haven’t answered to the P.A. or to the meeting siren.
+	Colonel: We ouhta go and knock then at least, figure out why they weren't at the meeting.
+[sound path="res://assets/sfx/43497-IMPACT_DOOR_METAL_KNOCK_01.wav" volume="0.0"]
+[sound path="res://assets/sfx/43497-IMPACT_DOOR_METAL_KNOCK_01.wav" volume="0.0"]
+[sound path="res://assets/sfx/43497-IMPACT_DOOR_METAL_KNOCK_01.wav" volume="0.0"]
+Dev note\: Maybe background change here and insert knock sfx?
+[wait time="3.0"]
+Colonel: Seems like no one's home.
+Maybe they're somewhere else onboard? We should check their station in Nav. WOuldn't be the first time they've slept in there.
+- What? No, I'm opening the door. [if {} == ""]
+	set {SparkFondness} += 1
+	You open the door and see no one.
+- Maybe, but we need to see if Tracker’s here or not.
+	Spark: We would've seen them anywhere else. The ship's not THAT big.
+	Spark opens the door.
+	Everybody follows Spark in after a moment of silence.
+- Good point, we should go check Nav again.
+	set {ColonelFondness} += 1
+	Spark: Seriously? Fine, I'll do it then.
+	Spark opens the door.
+The others follow you in after a brief silence.
+The bed, the desk, and even the beanbag chairs in the corner are all clean, made up, and empty.
+Spark: They're... not here.
+Colonel: Told you, Tracker always answers the door.
+Spark: Then where's Tracker then?
+Colonel: Your guess is as good as mine.
+Colonel: I just thought that they would've said something to any of us by now.
+Colonel: Tracker's gotta be hiding somewhere or something.
+Spark thinks for a bit, packing around the room.
+Spark: I give it one more day. If Tracker's gone by this time tomorrow, I'm calling the Space Force.
+Colonel: Sounds good... gives them a chance to answer any of their tablets.
+Spark: Well... good night.
+Colonel: ...night.
+Switch to somewhere in space where Tracker drifts aimlessly. Their suit slowly loses power, and then shuts off entirely.
