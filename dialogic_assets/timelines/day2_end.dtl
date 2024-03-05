@@ -28,15 +28,12 @@ elif {Day2Task} == "Spark":
 	Spark: Yeah, it’s not like there’s many places to hide on the ship, or anywhere else to go.
 	Spark: Maybe we should go check their room, make sure they’re still on board.
 ...
-- Let's go then, hope nothing's actually wrong. [if {SparkFondness} >= "1"]
+- Let's go then, hope nothing's actually wrong. [if {SparkFondness} >= 0]
 - Sounds good, lead the way.
 - I don't know if I want to go into their room uninvited, they might just be sick or napping or something.
 	Spark: Even if they were, I think we should at least check on them.
 	Spark: They haven’t answered to the P.A. or to the meeting siren.
 	Colonel: We ouhta go and knock then at least, figure out why they weren't at the meeting.
-[sound path="res://assets/sfx/43497-IMPACT_DOOR_METAL_KNOCK_01.wav" volume="0.0"]
-[sound path="res://assets/sfx/43497-IMPACT_DOOR_METAL_KNOCK_01.wav" volume="0.0"]
-[sound path="res://assets/sfx/43497-IMPACT_DOOR_METAL_KNOCK_01.wav" volume="0.0"]
 Dev note\: Maybe background change here and insert knock sfx?
 [wait time="3.0"]
 Colonel: Seems like no one's home.
