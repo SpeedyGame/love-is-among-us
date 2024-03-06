@@ -12,30 +12,30 @@ Colonel: I’m just here to keep us moving and get paid.
 Colonel: Hope we can all have a good time together ‘till then.
 leave Colonel
 join Tracker 3
-Tracker: Uh- I’m Tracker. I do stuff with files and navigation.
+Tracker: Uh-[pause=0.3] I’m Tracker. I do stuff with files and navigation.
 Tracker: I just hope nothing screws up too bad, last trip was rough.
 leave Tracker
 join Spark 3
-Spark: Speaking of, what do we have the new guy do? Did we really need a fourth crewmate?
+Spark: Speaking of, what do we have the new guy do?[pause=0.3] Did we really need a fourth crewmate?
 leave Spark
 join Tracker 3
-Tracker: I think any help will be good, besides, if the boss thinks we need more people onboard, there must be a reason.
+Tracker: I think any help will be good,[pause=0.3] besides, if the boss thinks we need more people onboard, there must be a reason.
 leave Tracker
 join Colonel 3
-Colonel: That and it helps to have a new face, or, mask, to talk to for the next few days.
+Colonel: That and it helps to have a new face,[pause=0.3] or,[pause=0.3] mask, to talk to for the next few days.
 Colonel: Which reminds me, what’s your codename?
 [text_input text="What's your name?" var="PlayerName"]
 leave Colonel
 join Spark 3
-Spark: Well, good to know ya, {PlayerName}.
+Spark: Well,[pause=0.3] good to know ya, {PlayerName}.
 Spark: Now you can help us out around the ship.
-Spark: Best way to learn is to do. You know where I’ll be.
+Spark: Best way to learn is to do.[pause=0.3] You know where I’ll be.
 leave Spark
 join Colonel 3
 Colonel: Same here actually, if you wanna blow up some space rocks, meet me in weapons.
 leave Colonel
 join Tracker 3
-Tracker: I’m off to work too, I’ll be doing computer stuff in navigation, any help is appreciated.
+Tracker: I’m off to work too, I’ll be doing computer stuff in navigation,[pause=0.3] any help is appreciated.
 leave Tracker
 [background arg="res://assets/Backgrounds/Space Background.png" fade="0.0"]
 label task_selection

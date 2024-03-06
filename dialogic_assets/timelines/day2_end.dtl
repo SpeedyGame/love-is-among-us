@@ -35,9 +35,10 @@ elif {Day2Task} == "Spark":
 	Spark: They haven’t answered to the P.A. or to the meeting siren.
 	Colonel: We ouhta go and knock then at least, figure out why they weren't at the meeting.
 Dev note\: Maybe background change here and insert knock sfx?
+[sound path="res://assets/sfx/knocking sfx edit.wav" volume="-5.0"]
 [wait time="3.0"]
 Colonel: Seems like no one's home.
-Maybe they're somewhere else onboard? We should check their station in Nav. WOuldn't be the first time they've slept in there.
+Colonel: Maybe they're somewhere else onboard? We should check their station in Nav. WOuldn't be the first time they've slept in there.
 - What? No, I'm opening the door. [if {} == ""]
 	set {SparkFondness} += 1
 	You open the door and see no one.

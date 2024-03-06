@@ -1,4 +1,5 @@
 [background arg="res://assets/Backgrounds/updated meeting room.png" fade="0.0"]
+[music path="res://assets/music/Giant Wyrm.mp3" fade="0.0" volume="-10.0"]
 join Spark 4
 join Colonel 3
 if {Day1Task} == "Spark":

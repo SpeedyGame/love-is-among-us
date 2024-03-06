@@ -1,6 +1,6 @@
 [background arg="res://assets/Backgrounds/weapons.jpg" fade="0.0"]
 join Colonel 3
-Colonel: Heeeey, it’s the new guy! Ready to start?
+Colonel: Heeeey, it’s the new guy![pause=0.3] Ready to start?
 - Yeah, sure!
 	set {Day1Task} = "Colonel"
 	Colonel: Great! *pulls down a large touchscreen with asteroids on it*
