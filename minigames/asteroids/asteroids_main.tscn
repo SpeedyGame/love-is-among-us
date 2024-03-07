@@ -1,4 +1,4 @@
-[gd_scene load_steps=17 format=3 uid="uid://p61guvano00v"]
+[gd_scene load_steps=15 format=3 uid="uid://p61guvano00v"]
 
 [ext_resource type="Script" path="res://minigames/asteroids/asteroids_main.gd" id="1_0tlme"]
 [ext_resource type="PackedScene" uid="uid://bmmtdih2clyf4" path="res://minigames/asteroids/asteroid.tscn" id="2_ujlv4"]
@@ -8,8 +8,8 @@
 [ext_resource type="PackedScene" uid="uid://b2n634rv1yppn" path="res://scenes/task_scenes/colonel_task_1.tscn" id="5_grcdi"]
 [ext_resource type="PackedScene" uid="uid://dowwkho7oo7kr" path="res://assets/UI/packedtransitioner.tscn" id="5_mj2ix"]
 [ext_resource type="AudioStream" uid="uid://capmc3k4oiek8" path="res://assets/sfx/shatter.mp3" id="7_4x8pp"]
-[ext_resource type="AudioStream" uid="uid://3j1vk2ulkqw3" path="res://assets/music/Pookatori and Friends.mp3" id="8_iieyw"]
 [ext_resource type="PackedScene" uid="uid://dd1vi6tqxqo3d" path="res://minigames/asteroids/pause_menu.tscn" id="8_bo0ft"]
+[ext_resource type="AudioStream" uid="uid://3j1vk2ulkqw3" path="res://assets/music/Pookatori and Friends.mp3" id="8_iieyw"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_fyqk4"]
 size = Vector2(720, 719.5)
