@@ -3,6 +3,7 @@ extends Node2D
 
 var draggable = false
 var body_ref
+var holder = Line2D.new();
 
 # Called when the node enters the scene tree for the first time.
 func _ready():
@@ -29,3 +30,12 @@ func _on_area_2d_mouse_exited():
 	if not Electricalglobal.is_dragging:
 		draggable = false
 		scale = Vector2(1,1)
+
+
+
+func _on_area_2d_area_shape_entered(area_rid, area, area_shape_index, local_shape_index):
+	holder.add_point(area.position)
+
+
+func _on_area_2d_area_shape_exited(area_rid, area, area_shape_index, local_shape_index):
+	holder.remove_point(area.position)

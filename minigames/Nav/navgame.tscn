@@ -1,4 +1,8 @@
+<<<<<<< HEAD
 [gd_scene load_steps=17 format=3 uid="uid://chhwusef7x6wh"]
+=======
+<<<<<<< HEAD
+[gd_scene load_steps=14 format=3 uid="uid://chhwusef7x6wh"]
 
 [ext_resource type="Texture2D" uid="uid://mva18ae5lrx" path="res://assets/nav assets/tile.png" id="1_to746"]
 [ext_resource type="Texture2D" uid="uid://cg3tnlcg1h8w6" path="res://assets/nav assets/obst.png" id="2_8ew83"]
@@ -6,6 +10,21 @@
 [ext_resource type="Texture2D" uid="uid://djoumay3qc6f7" path="res://assets/nav assets/player.png" id="4_tycx0"]
 [ext_resource type="Script" path="res://minigames/Nav/win.gd" id="5_pwwyd"]
 [ext_resource type="Texture2D" uid="uid://d0lemkfim5nmh" path="res://assets/nav assets/win.png" id="6_8pl7c"]
+=======
+[gd_scene load_steps=16 format=3 uid="uid://chhwusef7x6wh"]
+>>>>>>> electricalgame
+
+[ext_resource type="Texture2D" uid="uid://mva18ae5lrx" path="res://assets/nav assets/tile.png" id="1_to746"]
+[ext_resource type="Texture2D" uid="uid://cg3tnlcg1h8w6" path="res://assets/nav assets/obst.png" id="2_8ew83"]
+[ext_resource type="Script" path="res://minigames/Nav/player.gd" id="3_t5y7h"]
+[ext_resource type="Texture2D" uid="uid://djoumay3qc6f7" path="res://assets/nav assets/player.png" id="4_tycx0"]
+[ext_resource type="Script" path="res://minigames/Nav/win.gd" id="5_pwwyd"]
+[ext_resource type="Texture2D" uid="uid://d0lemkfim5nmh" path="res://assets/nav assets/win.png" id="6_8pl7c"]
+<<<<<<< HEAD
+=======
+[ext_resource type="Texture2D" uid="uid://d0lemkfim5nmh" path="res://assets/nav assets/win.png" id="6_8pl7c"]
+>>>>>>> dev
+>>>>>>> electricalgame
 [ext_resource type="PackedScene" uid="uid://ccqu3swo2jrr7" path="res://assets/UI/transitioner.tscn" id="8_tm4nh"]
 [ext_resource type="PackedScene" uid="uid://cnm8v2qxpp7x4" path="res://minigames/Nav/coin.tscn" id="9_3ywrw"]
 [ext_resource type="Script" path="res://minigames/Nav/visibletimer.gd" id="9_ijmy8"]
