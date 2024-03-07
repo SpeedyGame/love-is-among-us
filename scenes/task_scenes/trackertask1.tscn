@@ -1,10 +1,16 @@
-[gd_scene load_steps=3 format=3 uid="uid://7pkwapn5jpwd"]
+[gd_scene load_steps=5 format=3 uid="uid://7pkwapn5jpwd"]
 
 [ext_resource type="Script" path="res://scenes/task_scenes/trackertask1.gd" id="1_hop0u"]
 [ext_resource type="Script" path="res://addons/dialogic/Modules/Background/dialogic_background.gd" id="2_t8j6q"]
+[ext_resource type="PackedScene" uid="uid://dowwkho7oo7kr" path="res://assets/UI/packedtransitioner.tscn" id="3_tf5p4"]
+[ext_resource type="PackedScene" uid="uid://itahpo0mb2i" path="res://scenes/day_1_ending.tscn" id="4_2py21"]
 
-[node name="Trackertask1" type="Node2D"]
+[node name="Trackertask1" type="Node2D" node_paths=PackedStringArray("ptransistioner")]
 script = ExtResource("1_hop0u")
+ptransistioner = NodePath("PackedTransitioner")
 
 [node name="DialogicBackground" type="Node" parent="."]
 script = ExtResource("2_t8j6q")
+
+[node name="PackedTransitioner" parent="." instance=ExtResource("3_tf5p4")]
+scene_to_load = ExtResource("4_2py21")

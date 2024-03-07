@@ -1,9 +1,9 @@
 [background arg="res://assets/Backgrounds/electrical.jpg" fade="0.0"]
 join Spark 3
-Spark: Hey, how’s it going? Wanna give me a hand?
+Spark: Hey, how’s it going?[pause=0.3] Wanna give me a hand?
 - Yeah, let's do this.
 	set {Day1Task} = "Spark"
-	Spark: Great. It’s not that hard.
+	Spark: Great.[pause=0.3] It’s not that hard.
 	This is where the minigame will be inserted.
 	You can choose whether or not you did well.
 	- Easy money
@@ -12,7 +12,7 @@ Spark: Hey, how’s it going? Wanna give me a hand?
 	- That was hard
 		set {Day1TaskWellness} = "False"
 		jump spark_task1_2/
-	
-	- Nah, I'll pass.
-		Spark: Be that way, then.
-		jump opening/task_selection
+
+- Nah, I'll pass.
+	Spark: Be that way, then.
+	jump opening/task_selection

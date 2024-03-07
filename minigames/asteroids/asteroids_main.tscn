@@ -1,4 +1,4 @@
-[gd_scene load_steps=12 format=3 uid="uid://p61guvano00v"]
+[gd_scene load_steps=17 format=3 uid="uid://p61guvano00v"]
 
 [ext_resource type="Script" path="res://minigames/asteroids/asteroids_main.gd" id="1_0tlme"]
 [ext_resource type="PackedScene" uid="uid://bmmtdih2clyf4" path="res://minigames/asteroids/asteroid.tscn" id="2_ujlv4"]
@@ -8,6 +8,7 @@
 [ext_resource type="PackedScene" uid="uid://b2n634rv1yppn" path="res://scenes/task_scenes/colonel_task_1.tscn" id="5_grcdi"]
 [ext_resource type="PackedScene" uid="uid://dowwkho7oo7kr" path="res://assets/UI/packedtransitioner.tscn" id="5_mj2ix"]
 [ext_resource type="AudioStream" uid="uid://capmc3k4oiek8" path="res://assets/sfx/shatter.mp3" id="7_4x8pp"]
+[ext_resource type="AudioStream" uid="uid://3j1vk2ulkqw3" path="res://assets/music/Pookatori and Friends.mp3" id="8_iieyw"]
 [ext_resource type="PackedScene" uid="uid://dd1vi6tqxqo3d" path="res://minigames/asteroids/pause_menu.tscn" id="8_bo0ft"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_fyqk4"]
@@ -18,6 +19,26 @@ _data = {
 "points": PackedVector2Array(0, 0, 0, 0, 280, 0, 0, 0, 0, 0, 1000, 0, 0, 0, 0, 0, 1000, 720, 0, 0, 0, 0, 280, 720, 0, 0, 0, 0, 280, 0)
 }
 point_count = 5
+
+[sub_resource type="Animation" id="Animation_l2slh"]
+resource_name = "fade_out_music"
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath(".:volume_db")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0, 1),
+"transitions": PackedFloat32Array(1, 1),
+"update": 0,
+"values": [0.0, -25.0]
+}
+
+[sub_resource type="AnimationLibrary" id="AnimationLibrary_mw0ca"]
+_data = {
+"fade_out_music": SubResource("Animation_l2slh")
+}
 
 [node name="Main" type="Node2D" node_paths=PackedStringArray("transitioner")]
 editor_description = "Breaking down the tasks:
@@ -166,6 +187,15 @@ scene_to_load = ExtResource("5_grcdi")
 [node name="AsteroidSFXPlayer" type="AudioStreamPlayer2D" parent="."]
 position = Vector2(589, 489)
 stream = ExtResource("7_4x8pp")
+
+[node name="AsteroidMusic" type="AudioStreamPlayer2D" parent="."]
+stream = ExtResource("8_iieyw")
+volume_db = -11.0
+
+[node name="AudioFade" type="AnimationPlayer" parent="AsteroidMusic"]
+libraries = {
+"": SubResource("AnimationLibrary_mw0ca")
+}
 
 [connection signal="body_exited" from="ColorRect/Area2D" to="." method="_on_area_2d_body_exited"]
 [connection signal="timeout" from="AsteroidTimer" to="." method="_on_asteroid_timer_timeout"]

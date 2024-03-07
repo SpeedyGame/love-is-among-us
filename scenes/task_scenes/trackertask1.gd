@@ -1,11 +1,15 @@
 extends Node2D
 
+@export var ptransistioner : PackedTransitioner
 
 # Called when the node enters the scene tree for the first time.
 func _ready():
 	Dialogic.start("res://dialogic_assets/timelines/tracker_task1_2.dtl")
+	Dialogic.signal_event.connect(DialogicSignal)
 
-
-# Called every frame. 'delta' is the elapsed time since the previous frame.
-#func _process(delta):
-#	pass
+func DialogicSignal(argument:String):
+	if argument == "day1_end":
+		ptransistioner.set_next_animation(true)
+		print("Something was activated!")
+	#if argument == "test":
+		#print("test test")

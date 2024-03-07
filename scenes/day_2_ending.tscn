@@ -1,0 +1,13 @@
+[gd_scene load_steps=4 format=3 uid="uid://c1tess0jecvms"]
+
+[ext_resource type="Script" path="res://scenes/day_2_ending.gd" id="1_e100i"]
+[ext_resource type="Script" path="res://addons/dialogic/Modules/Background/dialogic_background.gd" id="1_pjl7u"]
+[ext_resource type="PackedScene" uid="uid://dowwkho7oo7kr" path="res://assets/UI/packedtransitioner.tscn" id="3_2qkyd"]
+
+[node name="Day2Ending" type="Node2D"]
+script = ExtResource("1_e100i")
+
+[node name="DialogicBackground" type="Node" parent="."]
+script = ExtResource("1_pjl7u")
+
+[node name="PackedTransitioner" parent="." instance=ExtResource("3_2qkyd")]

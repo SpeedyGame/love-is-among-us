@@ -1,4 +1,5 @@
 [background arg="res://assets/Backgrounds/updated meeting room.png" fade="0.0"]
+[music path="res://assets/music/Giant Wyrm.mp3" fade="0.0" volume="-10.0"]
 join Spark 4
 join Colonel 3
 if {Day1Task} == "Spark":
@@ -97,4 +98,4 @@ Spark: *sigh* I could go check back there again, but I just got done with mainte
 	Tracker: Well, that was all I had for the meeting tonight, and I’m trying to get some sleep.
 	Colonel: Nothing here either, goodnight.
 [clear time="1.0"]
-jump day2opening/
+[signal arg="day2"]

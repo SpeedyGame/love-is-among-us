@@ -9,24 +9,22 @@ func _ready():
 	position = position.snapped(Vector2.ONE * tile_size)
 	position += Vector2.ONE * tile_size/2
 
-func _unhandled_input(event):
-	for dir in inputs.keys():
-		if event.is_action_pressed(dir):
-			move(dir)
+
+
+func _physics_process(delta):
+	if Input.is_action_pressed("right"):
+		move("right")
+	elif Input.is_action_pressed("left"):
+		move("left")
+	elif Input.is_action_pressed("up"):
+		move("up")
+	elif Input.is_action_pressed("down"):
+		move("down")
 
 func move(dir):
 	ray.target_position = inputs[dir] * tile_size
 	ray.force_raycast_update()
 	if !ray.is_colliding():
 		position += inputs[dir] * tile_size
-	#elif ray.is_colliding():
-	#	if collision_layer == 2:
-	#		print("level complete")
-	
-
-#
-# Called every frame. 'delta' is the elapsed time since the previous frame.
-#func _process(delta):
-	pass
 
 
