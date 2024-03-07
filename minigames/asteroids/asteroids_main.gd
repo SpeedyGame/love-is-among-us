@@ -13,17 +13,17 @@ var curr_day : String
 @onready var music_player : AudioStreamPlayer2D =  $AsteroidMusic 	# $ is the name of the node.
 
 func start_game():
-	game_over()
+	#game_over()
 	#print(Dialogic.VAR.Day1TaskWellness)
 	#print(Dialogic.VAR.Day2TaskWellness)
-	#curr_day = Dialogic.VAR.CurrentDay
-	#print(curr_day)
-	#score = 0
-	#$StartTimer.start()
-	#$HUD/ScoreLabel.show()
-	#$HUD/AsteroidsDestroyed.show()
-	#$HUD.update_score(score)
-	#$HUD.show_message("Get Ready...")
+	curr_day = Dialogic.VAR.CurrentDay
+	print(curr_day)
+	score = 0
+	$StartTimer.start()
+	$HUD/ScoreLabel.show()
+	$HUD/AsteroidsDestroyed.show()
+	$HUD.update_score(score)
+	$HUD.show_message("Get Ready...")
 	music_player.play(0.0)
 	
 func game_over():
