@@ -5,7 +5,7 @@ extends Node2D
 #@export var ptransitioner : PackedTransitioner
 
 var score : int
-var asteroid_count : int = 50
+var asteroid_count : int = 25
 var curr_day : String
 
 @onready var asteroid_sfx_player: AudioStreamPlayer2D = $AsteroidSFXPlayer
@@ -13,17 +13,17 @@ var curr_day : String
 @onready var music_player : AudioStreamPlayer2D =  $AsteroidMusic 	# $ is the name of the node.
 
 func start_game():
-	#game_over()
+	game_over()
 	#print(Dialogic.VAR.Day1TaskWellness)
 	#print(Dialogic.VAR.Day2TaskWellness)
-	curr_day = Dialogic.VAR.CurrentDay
-	print(curr_day)
-	score = 0
-	$StartTimer.start()
-	$HUD/ScoreLabel.show()
-	$HUD/AsteroidsDestroyed.show()
-	$HUD.update_score(score)
-	$HUD.show_message("Get Ready...")
+	#curr_day = Dialogic.VAR.CurrentDay
+	#print(curr_day)
+	#score = 0
+	#$StartTimer.start()
+	#$HUD/ScoreLabel.show()
+	#$HUD/AsteroidsDestroyed.show()
+	#$HUD.update_score(score)
+	#$HUD.show_message("Get Ready...")
 	music_player.play(0.0)
 	
 func game_over():
@@ -73,7 +73,7 @@ func _on_asteroid_timer_timeout():
 	asteroid.linear_velocity = velocity.rotated(direction)
 	
 	if (asteroid_count <= 0):
-		asteroid_count = 20
+		asteroid_count = 25
 		game_over()
 	else:
 		get_tree().root.add_child(asteroid)

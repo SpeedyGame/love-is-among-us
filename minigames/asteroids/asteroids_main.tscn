@@ -187,10 +187,11 @@ scene_to_load = ExtResource("5_grcdi")
 [node name="AsteroidSFXPlayer" type="AudioStreamPlayer2D" parent="."]
 position = Vector2(589, 489)
 stream = ExtResource("7_4x8pp")
+volume_db = -3.0
 
 [node name="AsteroidMusic" type="AudioStreamPlayer2D" parent="."]
 stream = ExtResource("8_iieyw")
-volume_db = -11.0
+volume_db = -13.0
 
 [node name="AudioFade" type="AnimationPlayer" parent="AsteroidMusic"]
 libraries = {
