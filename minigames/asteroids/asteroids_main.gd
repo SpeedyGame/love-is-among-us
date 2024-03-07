@@ -5,7 +5,7 @@ extends Node2D
 #@export var ptransitioner : PackedTransitioner
 
 var score : int
-var asteroid_count : int = 20
+var asteroid_count : int = 50
 var curr_day : String
 
 @onready var asteroid_sfx_player: AudioStreamPlayer2D = $AsteroidSFXPlayer
@@ -45,27 +45,31 @@ func _on_asteroid_timer_timeout():
 	
 	var asteroid_spawn_location = $AsteroidPath/AsteroidSpawnLocation
 	asteroid_spawn_location.progress_ratio = randf()
-	# print(asteroid_spawn_location.progress_ratio)
+	print("location: " + str(asteroid_spawn_location.progress_ratio))
 	
-	# print(asteroid_spawn_location.rotation)
+	#print(asteroid_spawn_location.rotation)
 	var direction = asteroid_spawn_location.rotation + PI / 2
 	
 	asteroid.position = asteroid_spawn_location.position
 	
-	direction += randf_range(-PI/3, PI/4)
-	# print(direction)
-	if (direction < PI/2):
-		direction = PI/2
-	elif (direction > (4 * PI) / 3):
-		direction = (4 * PI) / 3
-	elif (asteroid_spawn_location.progress_ratio > 0.75):
-		direction = (4 * PI) / 3
-	elif (asteroid_spawn_location.progress_ratio < 0.1):
+	direction += randf_range(-PI/4, PI/4)
+	print(str(direction) + "\n")
+	#if (direction < PI/2):
+		#direction = PI/2
+	#elif (direction > (4 * PI) / 3):
+		#direction = (4 * PI) / 3
+	if (asteroid_spawn_location.progress_ratio > 0.9):
 		direction = PI/4
+	elif (asteroid_spawn_location.progress_ratio < 0.8 && asteroid_spawn_location.progress_ratio > 0.7):
+		direction = (7 * PI)/4
+	elif (asteroid_spawn_location.progress_ratio < 0.3 && asteroid_spawn_location.progress_ratio > 0.1):
+		direction = (3 * PI)/4
+	elif (asteroid_spawn_location.progress_ratio < 0.55 && asteroid_spawn_location.progress_ratio > 0.45):
+		direction = (5 * PI)/4
 		
 	asteroid.rotation = direction
 	
-	var velocity = Vector2(randf_range(225.0, 400.0), 0.0)
+	var velocity = Vector2(randf_range(225.0, 350.0), 0.0)
 	asteroid.linear_velocity = velocity.rotated(direction)
 	
 	if (asteroid_count <= 0):

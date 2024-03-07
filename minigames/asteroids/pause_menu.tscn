@@ -1,0 +1,31 @@
+[gd_scene load_steps=3 format=3 uid="uid://dd1vi6tqxqo3d"]
+
+[ext_resource type="Script" path="res://minigames/asteroids/pause_menu.gd" id="1_0bap4"]
+[ext_resource type="FontFile" uid="uid://dxiinqp42sq15" path="res://assets/fonts/COMIC.TTF" id="2_0tbdr"]
+
+[node name="PauseMenu" type="Node2D"]
+process_mode = 3
+visible = false
+script = ExtResource("1_0bap4")
+
+[node name="ColorRect" type="ColorRect" parent="."]
+offset_right = 1280.0
+offset_bottom = 720.0
+color = Color(0.196078, 0.196078, 0.196078, 0.52549)
+
+[node name="PauseLabel" type="Label" parent="."]
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = 568.0
+offset_top = 360.0
+offset_right = 708.0
+offset_bottom = 415.0
+grow_horizontal = 2
+grow_vertical = 2
+size_flags_horizontal = 0
+theme_override_fonts/font = ExtResource("2_0tbdr")
+theme_override_font_sizes/font_size = 40
+text = "Paused (you can also press 'P' to pause!)"
