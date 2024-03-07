@@ -80,6 +80,8 @@ wait_time = 2.0
 one_shot = true
 
 [node name="AsteroidPath" type="Path2D" parent="."]
+position = Vector2(12.4444, 7)
+scale = Vector2(0.98, 0.98)
 curve = SubResource("Curve2D_q4six")
 
 [node name="AsteroidSpawnLocation" type="PathFollow2D" parent="AsteroidPath"]
