@@ -5,7 +5,7 @@ extends Node2D
 #@export var ptransitioner : PackedTransitioner
 
 var score : int
-var asteroid_count : int = 50
+var asteroid_count : int = 25
 var curr_day : String
 
 @onready var asteroid_sfx_player: AudioStreamPlayer2D = $AsteroidSFXPlayer
@@ -73,7 +73,7 @@ func _on_asteroid_timer_timeout():
 	asteroid.linear_velocity = velocity.rotated(direction)
 	
 	if (asteroid_count <= 0):
-		asteroid_count = 20
+		asteroid_count = 25
 		game_over()
 	else:
 		get_tree().root.add_child(asteroid)
