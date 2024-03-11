@@ -1,0 +1,17 @@
+[gd_scene load_steps=3 format=3 uid="uid://382xjkqr45ko"]
+
+[ext_resource type="Texture2D" uid="uid://d0lemkfim5nmh" path="res://assets/nav assets/win.png" id="1_ntvkl"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_ka57g"]
+
+[node name="Pushable" type="RigidBody2D"]
+mass = 0.01
+gravity_scale = 0.0
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+scale = Vector2(2.5, 2.5)
+shape = SubResource("RectangleShape2D_ka57g")
+
+[node name="Sprite2D" type="Sprite2D" parent="."]
+scale = Vector2(0.5, 0.5)
+texture = ExtResource("1_ntvkl")
