@@ -26,6 +26,9 @@ func _on_area_exited(area):
 	if inside == 1:
 		inside-=1
 
+func _on_timer_timeout():
+	back_to_timeline()
+
 
 func back_to_timeline():
 	Dialogic.VAR.Day1TaskWellness = str("True")

@@ -1,12 +1,13 @@
-[gd_scene load_steps=13 format=3 uid="uid://7cxc1bteagha"]
+[gd_scene load_steps=14 format=3 uid="uid://7cxc1bteagha"]
 
 [ext_resource type="Texture2D" uid="uid://mva18ae5lrx" path="res://assets/nav assets/tile.png" id="1_j7uc5"]
 [ext_resource type="PackedScene" uid="uid://ccqu3swo2jrr7" path="res://assets/UI/transitioner.tscn" id="1_vr8ts"]
 [ext_resource type="Texture2D" uid="uid://cg3tnlcg1h8w6" path="res://assets/nav assets/obst.png" id="4_8e0gk"]
+[ext_resource type="Texture2D" uid="uid://djoumay3qc6f7" path="res://assets/nav assets/player.png" id="5_3p6do"]
 [ext_resource type="Script" path="res://minigames/electrical game/person.gd" id="5_ukjv5"]
-[ext_resource type="Texture2D" uid="uid://bv2lp447rfaf2" path="res://icon.svg" id="6_xre2a"]
 [ext_resource type="Texture2D" uid="uid://d0lemkfim5nmh" path="res://assets/nav assets/win.png" id="7_1qqyh"]
 [ext_resource type="Script" path="res://minigames/electrical game/Area2D3.gd" id="7_vykes"]
+[ext_resource type="Script" path="res://minigames/electrical game/timermaker.gd" id="8_wdsqr"]
 
 [sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_yr6wk"]
 texture = ExtResource("1_j7uc5")
@@ -78,7 +79,7 @@ script = ExtResource("5_ukjv5")
 
 [node name="Sprite2D" type="Sprite2D" parent="Area2D"]
 scale = Vector2(0.35, 0.35)
-texture = ExtResource("6_xre2a")
+texture = ExtResource("5_3p6do")
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="Area2D"]
 position = Vector2(-1, 0)
@@ -93,7 +94,7 @@ script = ExtResource("5_ukjv5")
 
 [node name="Sprite2D" type="Sprite2D" parent="Area2D2"]
 scale = Vector2(0.35, 0.35)
-texture = ExtResource("6_xre2a")
+texture = ExtResource("5_3p6do")
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="Area2D2"]
 position = Vector2(-1, 0)
@@ -113,6 +114,29 @@ shape = SubResource("RectangleShape2D_7nkkg")
 [node name="Sprite2D" type="Sprite2D" parent="Area2D3"]
 scale = Vector2(0.5, 0.5)
 texture = ExtResource("7_1qqyh")
+
+[node name="Label" type="Label" parent="."]
+offset_left = 196.0
+offset_top = -2.0
+offset_right = 381.0
+offset_bottom = 74.0
+text = "Get both squares into the green object in 30 seconds 
+using wasd for movement"
+
+[node name="Timer" type="Timer" parent="."]
+
+[node name="Panel" type="Panel" parent="."]
+offset_left = 687.0
+offset_top = -120.0
+offset_right = 727.0
+offset_bottom = -80.0
+script = ExtResource("8_wdsqr")
+
+[node name="time" type="Label" parent="Panel"]
+layout_mode = 0
+offset_top = 453.0
+offset_right = 67.0
+offset_bottom = 537.0
 
 [connection signal="area_entered" from="Area2D3" to="Area2D3" method="_on_area_entered"]
 [connection signal="area_exited" from="Area2D3" to="Area2D3" method="_on_area_exited"]
