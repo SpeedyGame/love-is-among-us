@@ -11,7 +11,7 @@ func _ready():
 # Called every frame. 'delta' is the elapsed time since the previous frame.
 func _process(delta):
 	time += delta
-	seconds = fmod(time, 60)
+	seconds = fmod(time, 30)
 	$time.text = "%02d" % seconds
 
 func stop():
