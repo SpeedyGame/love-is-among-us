@@ -5,7 +5,7 @@
 [ext_resource type="Texture2D" uid="uid://f3etwlolsr6i" path="res://assets/Backgrounds/Space Background.png" id="2_crrpk"]
 [ext_resource type="PackedScene" uid="uid://ccqu3swo2jrr7" path="res://assets/UI/transitioner.tscn" id="4_0xa0v"]
 [ext_resource type="PackedScene" uid="uid://dowwkho7oo7kr" path="res://assets/UI/packedtransitioner.tscn" id="4_4evun"]
-[ext_resource type="Texture2D" uid="uid://bpipk034g0jlj" path="res://assets/UI/start_hover.png" id="4_5j88q"]
+[ext_resource type="Texture2D" uid="uid://lclu65ycuofm" path="res://assets/UI/start_murdered.png" id="4_nc6nc"]
 [ext_resource type="PackedScene" uid="uid://vfd0ydydf8fc" path="res://scenes/day_1_opening.tscn" id="5_s66w7"]
 [ext_resource type="AudioStream" uid="uid://yd5wy40osyhr" path="res://assets/music/Smooth Lovin.mp3" id="6_qytx4"]
 [ext_resource type="Texture2D" uid="uid://d3ptubdefr6ad" path="res://assets/UI/start_default.png" id="7_ugnn6"]
@@ -70,11 +70,11 @@ text = "Start"
 
 [node name="StartButton" type="TextureButton" parent="UI"]
 offset_left = 484.0
-offset_top = 557.0
+offset_top = 468.0
 offset_right = 807.0
 offset_bottom = 646.0
 texture_normal = ExtResource("7_ugnn6")
-texture_hover = ExtResource("4_5j88q")
+texture_hover = ExtResource("4_nc6nc")
 ignore_texture_size = true
 stretch_mode = 0
 
@@ -87,6 +87,7 @@ anchor_right = 0.5
 anchor_bottom = 0.5
 
 [node name="PackedTransitioner" parent="UI" instance=ExtResource("4_4evun")]
+visible = false
 anchors_preset = 8
 anchor_left = 0.5
 anchor_top = 0.5
