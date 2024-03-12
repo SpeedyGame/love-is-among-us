@@ -23,6 +23,8 @@ func set_next_animation(fading_out : bool):
 		selected_task = "asteroids/asteroids_main"
 	elif (Dialogic.VAR.Day1Task == str("Tracker") || Dialogic.VAR.Day2Task == str("Tracker")):
 		selected_task = "Nav/navgame"
+	#elif (Dialogic.VAR.Day1Task == str("Spark") || Dialogic.VAR.Day2Task == str("Spark")):
+		#selected_task = "electrical game/electrical"
 	
 	scene_to_load = "res://minigames/" + selected_task + ".tscn"
 	#print(scene_to_load)

@@ -15,5 +15,8 @@ func DialogicSignal(argument:String):
 	if argument == "start_maze":
 		transistioner.set_next_animation(true)
 		
+	#if argument == "start_electrical":
+		#transistioner.set_next_animation(true)
+		
 	if argument == "normal":
 		Dialogic.Input.auto_advance.enabled_forced = false

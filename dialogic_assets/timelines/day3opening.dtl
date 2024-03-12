@@ -21,14 +21,13 @@ Spark: Maybe we can get some help from the outside, or even contact Tracker if t
 - Someone is probably dead! We need to call somebody!
 	Spark: Heard you loud and clear!
 *Spark goes to comms, followed by you and Colonel*
-[sound path="res://assets/sfx/154870-AOS04763-Radio-Dial-Scan.wav" volume="-10.0"]
-[clear time="1.0" text="false" portraits="false" background="false" positions="false" style="false"]
+[sound path="res://assets/sfx/249881-Retro_Radio_Static_and_hum_with_frequency_change_05.wav" volume="-10.0"]
 *Spark sits down and looks for a signal*
 Spark: Hello?
 Spark: Hello?[pause=0.3] Can anyone hear me?
 Spark: SOS,[pause=0.3] SOS![pause=0.3] We have lost a crewmate!
 Spark: If anyone can hear this, please respond!!
-*The radio remains silent, no signal appears to get through*
+The radio remains silent, no signal appears to get through.
 Colonel: Nothing?
 Spark: Nothing.[pause=0.3] Looks like the signal got cut.
 Colonel: And right when IT goes missing.
@@ -38,7 +37,7 @@ Spark: Anyways,[pause=0.3] I can hopefully get this sorted out by tonight.
 Spark: We gotta get a hold of somebody soon.
 if {SparkFondness} >= 1:
 	Spark: If you wanna stick around, I could use the help figuring this stuff out.
-	- For sure, Tracker showed me this stuff a couple days back. [if {Day1Task} == "Tracker"]
+	- For sure, Tracker showed me this stuff a couple days back. [if {Day1Task}  ==  "Tracker" or {Day2Task} == "Tracker"]
 		Spark: Thanks a ton. Glad you can help.
 	- Anything for you, Spark! [if {SparkFondness} >= 2]
 		Spark: I always love to have you around {PlayerName}.
@@ -48,7 +47,7 @@ if {ColonelFondness} >= 1:
 	Colonel: While Spark does that, you wanna help me out with Weapons real quick?
 	Colonel: I’ve got a lot to do in Nav now and the help would be appreciated.
 	- I’m game, gotta stay busy.
-		Colonel: Thanks![pause=0.3] Just let me know if you need anything in there. 
+		Colonel: Thanks![pause=0.3] Just let me know if you need anything in there.
 		*Colonel leaves to Nav, and you go to Weapons*
 	- If you wouldn't mind, I'd rather work with you in Nav. Two people work faster than one.
 		Colonel: I can’t say no to you, partner.
@@ -62,7 +61,7 @@ if {ColonelFondness} >= 1:
 			Spark: I guess go and sit on your ass then, leave all of this to the crew! [-1 Spark Rep]
 			*You are of your word, and go back to your room until the evening meeting.*
 Colonel: Sounds good,[pause=0.3] hey uh, {PlayerName},[pause=0.3] you mind helping someone out?
-Colonel: Spark seems like they might like some help especially. 
+Colonel: Spark seems like they might like some help especially.
 - You’re right, I’ll help Spark out. We gotta get a hold of somebody.
 	Spark: Thanks, {PlayerName}.
 - I can help you out today too.
