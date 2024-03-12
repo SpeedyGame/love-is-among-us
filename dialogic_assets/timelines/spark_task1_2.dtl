@@ -18,7 +18,7 @@ if {Day1TaskWellness} == "True":
 		- The lights could use a better power supply, I’m in.
 			Spark: I thought the same thing,[pause=0.3] see you tomorrow!
 		- Me? You need more than me to fix up this dump.
-			Spark: Dump?[pause=0.3] I’ve done damn well with what I have, and it won’t take more than me to kick you out.
+			Spark (Angry Spark): Dump?[pause=0.3] I’ve done damn well with what I have, and it won’t take more than me to kick you out.
 		- I’ll see what I can do if I’m free.
 			Spark: Appreciate it, {PlayerName}.
 elif {Day1TaskWellness} == "False":

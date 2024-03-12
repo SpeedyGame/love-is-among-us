@@ -15,9 +15,36 @@
 "nicknames": [""],
 "offset": Vector2(0, 100),
 "portraits": {
+"Angry Spark": {
+"export_overrides": {
+"image": "\"res://assets/sprites/sparky_angry.png\""
+},
+"mirror": false,
+"offset": Vector2(0, 0),
+"scale": 1,
+"scene": ""
+},
+"Loving Spark": {
+"export_overrides": {
+"image": "\"res://assets/sprites/sparky_love.png\""
+},
+"mirror": false,
+"offset": Vector2(0, 0),
+"scale": 1,
+"scene": ""
+},
 "Neutral Spark": {
 "export_overrides": {
 "image": "\"res://assets/sprites/sparky.png\""
+},
+"mirror": false,
+"offset": Vector2(0, 0),
+"scale": 1,
+"scene": ""
+},
+"Sad Spark": {
+"export_overrides": {
+"image": "\"res://assets/sprites/sparky_sad.png\""
 },
 "mirror": false,
 "offset": Vector2(0, 0),

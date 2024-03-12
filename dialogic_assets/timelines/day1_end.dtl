@@ -13,7 +13,6 @@ Tracker: Sorry for hitting the button, but we have a problem.
 Tracker: I was running a system check, and the power on the ship was barely functioning.
 Tracker: Did something happen in Electrical?
 Colonel: So that's why the lights were blinking all weird earlier.
-update Spark [ mirrored="true"]
 Spark: *sigh* I could go check back there again, but I just got done with maintenance an hour ago.
 - No, we did it right, everything was fine when we left. Unless someone else did something since then… [if {Day1Task} == "Spark"]
 	Spark: I mean normally when the power messes up, the lights just turn off, never blink.
@@ -34,7 +33,8 @@ Spark: *sigh* I could go check back there again, but I just got done with mainte
 	Spark: I guess that leaves you Colonel.
 	Spark: What did you do when I was gone?
 	update Colonel [ mirrored="true"]
-	Colonel: Woah woah, I didn’t do anything.
+	Colonel (Angry Colonel): Woah woah, I didn’t do anything.
+	update Spark [ mirrored="true"]
 	Colonel: I was just chilling in comms listening to the one radio we have.
 	Tracker: Huh, didn’t know our main link to civilization played music too.
 	Tracker: You know, I have spare laptops you can use for that.
@@ -69,16 +69,16 @@ Spark: *sigh* I could go check back there again, but I just got done with mainte
 	Tracker: That was it really, I’ve just got to send in the meeting report.
 	Tracker: Don’t worry about it, Spark getting off of my back was payment enough.
 	Colonel: I guess we should get going then, unless you had anything more for the meeting, Tracker.
-	Tracker: I think it's my turn to be scrum master this time.
+	Tracker (Loving Tracker): I think it's my turn to be scrum master this time.
 	Colonel: Alright then, See y'all tomorrow then.
 	Tracker: Goodnight everyone.
 - If it was fine when you left, why is it bugging now?
 	Spark: No idea.
-	Spark: Like I said, I haven’t been there to mess with it.
+	Spark (Angry Spark): Like I said, I haven’t been there to mess with it.
 	Colonel: I promise it wasn’t me this time! I learned my lesson with the power strips.
 	- They actually use both outlets now. [if {Day1Task} == "Colonel"]
 	- I don’t know, there were like, seven things on that one plug. [if {Day1Task} == "Colonel"]
-		Tracker: Come on Colonel, you fried my good monitor last time you did that stuff!
+		Tracker (Angry Tracker): Come on Colonel, you fried my good monitor last time you did that stuff!
 		Colonel: Hey, in my defense, I use both outlets equally now, There’s just a lot of stuff!
 	- Both outlets?
 	Tracker: Yeah, that's fair. As long as you use both of them, it shouldn’t do this to the lights.
@@ -89,7 +89,7 @@ Spark: *sigh* I could go check back there again, but I just got done with mainte
 		Tracker: I haven’t been back there since the power strip incident. Colonel?
 		Colonel: Nope, I’m just as mad as you must be about it. My whole asteroids setup is all messed up.
 	- Tracker and I were uploading reports to admin when the power flickered, I thought you had reset the power for something. [if {Day1Task} == "Tracker"]
-		Tracker: So. Much. Work. GONE!
+		Tracker (Sad Tracker): So. Much. Work. GONE!
 		Colonel: Hey, hey sometimes tech just glitches you know? Remember that time the doors would close randomly, then open again?
 	- Maybe it’s just bugged? Electrical stuff tends to break sometimes.
 	Spark: Yeah, it hasn’t happened yet to this degree. I can see the awful electrics we got finally starting to quit.

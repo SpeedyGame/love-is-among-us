@@ -15,9 +15,36 @@
 "nicknames": [""],
 "offset": Vector2(0, 100),
 "portraits": {
+"Angry Tracker": {
+"export_overrides": {
+"image": "\"res://assets/sprites/navigator_angry.png\""
+},
+"mirror": false,
+"offset": Vector2(0, 0),
+"scale": 1,
+"scene": ""
+},
+"Loving Tracker": {
+"export_overrides": {
+"image": "\"res://assets/sprites/navigator_love.png\""
+},
+"mirror": false,
+"offset": Vector2(0, 0),
+"scale": 1,
+"scene": ""
+},
 "Neutral Tracker": {
 "export_overrides": {
-"image": "\"res://assets/navigator.png\""
+"image": "\"res://assets/sprites/navigator.png\""
+},
+"mirror": false,
+"offset": Vector2(0, 0),
+"scale": 1,
+"scene": ""
+},
+"Sad Tracker": {
+"export_overrides": {
+"image": "\"res://assets/sprites/navigator_sad.png\""
 },
 "mirror": false,
 "offset": Vector2(0, 0),

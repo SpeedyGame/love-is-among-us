@@ -3,8 +3,9 @@
 join Colonel 4
 join Spark 0 [ mirrored="true"]
 if {Day2Task} == "Colonel":
+	leave --All--
 	Colonel: Did something happen?
-	Spark: I'm starting to get worried about Tracker. I haven't seen them since the meeting earlier.
+	Spark (Sad Spark): I'm starting to get worried about Tracker. I haven't seen them since the meeting earlier.
 	Spark: Have either of you seen them?
 elif {Day2Task} == "Spark":
 	Spark: What's up? Did something break?
@@ -22,7 +23,7 @@ elif {Day2Task} == "Spark":
 - I tried to find them after this morning, but they weren't in Nav like they normally are. [if {Day2Task} == "Tracker"]
 	Colonel: That’s real weird, they’re always in there typing at something.
 	Spark: Yeah, Tracker does a lot of things, but skipping work isn't usually one of them.
-	Maybe we should check on them, they must be in their room sick or something.
+	Spark: Maybe we should check on them, they must be in their room sick or something.
 - No, you think they've been in their room or something?
 	Colonel: They would have to be, nobody has seen them anywhere else all day.
 	Spark: Yeah, it’s not like there’s many places to hide on the ship, or anywhere else to go.
@@ -34,7 +35,10 @@ elif {Day2Task} == "Spark":
 	Spark: Even if they were, I think we should at least check on them.
 	Spark: They haven’t answered to the P.A. or to the meeting siren.
 	Colonel: We ouhta go and knock then at least, figure out why they weren't at the meeting.
-Dev note\: Maybe background change here and insert knock sfx?
+[wait time="1.0"]
+[background arg="res://assets/Backgrounds/Tracker_door.png" fade="0.0"]
+join Colonel 3
+join Spark 4
 [sound path="res://assets/sfx/knocking sfx edit.wav" volume="-5.0"]
 [wait time="3.0"]
 Colonel: Seems like no one's home.
@@ -43,24 +47,23 @@ Colonel: Maybe they're somewhere else onboard? We should check their station in 
 	set {SparkFondness} += 1
 	You open the door and see no one.
 - Maybe, but we need to see if Tracker’s here or not.
-	Spark: We would've seen them anywhere else. The ship's not THAT big.
+	Spark (Sad Spark): We would've seen them anywhere else. The ship's not THAT big.
 	Spark opens the door.
 	Everybody follows Spark in after a moment of silence.
 - Good point, we should go check Nav again.
 	set {ColonelFondness} += 1
-	Spark: Seriously? Fine, I'll do it then.
+	Spark (Angry Spark): Seriously? Fine, I'll do it then.
 	Spark opens the door.
-The others follow you in after a brief silence.
 The bed, the desk, and even the beanbag chairs in the corner are all clean, made up, and empty.
-Spark: They're... not here.
+Spark (Sad Spark): They're... not here.
 Colonel: Told you, Tracker always answers the door.
-Spark: Then where's Tracker then?
+Spark (Sad Spark): Then where's Tracker then?
 Colonel: Your guess is as good as mine.
 Colonel: I just thought that they would've said something to any of us by now.
 Colonel: Tracker's gotta be hiding somewhere or something.
-Spark thinks for a bit, packing around the room.
+Spark thinks for a bit, pacing around the room.
 Spark: I give it one more day. If Tracker's gone by this time tomorrow, I'm calling the Space Force.
 Colonel: Sounds good... gives them a chance to answer any of their tablets.
-Spark: Well... good night.
+Spark (Sad Spark): Well... good night.
 Colonel: ...night.
 Switch to somewhere in space where Tracker drifts aimlessly. Their suit slowly loses power, and then shuts off entirely.

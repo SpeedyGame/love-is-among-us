@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://cy6hafl1ha5he"
-path="res://.godot/imported/colonel_love.png-36fd0e24f8819824ecfee6b11a866707.ctex"
+uid="uid://bbhblt4ay7i7g"
+path="res://.godot/imported/colonel_sad.png-088d4b52eb637eb3988380b3bb866695.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://assets/colonel_love.png"
-dest_files=["res://.godot/imported/colonel_love.png-36fd0e24f8819824ecfee6b11a866707.ctex"]
+source_file="res://assets/sprites/colonel_sad.png"
+dest_files=["res://.godot/imported/colonel_sad.png-088d4b52eb637eb3988380b3bb866695.ctex"]
 
 [params]
 

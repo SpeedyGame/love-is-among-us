@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://bnususob0hc2l"
-path="res://.godot/imported/sparky_angry.png-1a4271a3816d595c052baa88b6405eec.ctex"
+uid="uid://dk37nmg8t2bg4"
+path="res://.godot/imported/colonel_angry.png-41c2b4741939e6fdf871816993761a1f.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://assets/sparky_angry.png"
-dest_files=["res://.godot/imported/sparky_angry.png-1a4271a3816d595c052baa88b6405eec.ctex"]
+source_file="res://assets/sprites/colonel_angry.png"
+dest_files=["res://.godot/imported/colonel_angry.png-41c2b4741939e6fdf871816993761a1f.ctex"]
 
 [params]
 

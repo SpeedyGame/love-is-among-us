@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://uoogmfmptr1o"
-path="res://.godot/imported/navigator_love.png-af36b564b0b5ae58ddd7c720105fd244.ctex"
+uid="uid://cageknt2mjrrl"
+path="res://.godot/imported/asteroid14.png-a42b3ef4cc4d46fa3a539ff878a1a5b1.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://assets/navigator_love.png"
-dest_files=["res://.godot/imported/navigator_love.png-af36b564b0b5ae58ddd7c720105fd244.ctex"]
+source_file="res://assets/asteroid14.png"
+dest_files=["res://.godot/imported/asteroid14.png-a42b3ef4cc4d46fa3a539ff878a1a5b1.ctex"]
 
 [params]
 

@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://bbt5y47retjyj"
-path="res://.godot/imported/sparky_sad.png-e11b87418f372ed6f0ea50f4ce2a908d.ctex"
+uid="uid://ckfofg48qedyg"
+path="res://.godot/imported/asteroid9.png-b3d11b8c379e359b41279b82fa3553d8.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://assets/sparky_sad.png"
-dest_files=["res://.godot/imported/sparky_sad.png-e11b87418f372ed6f0ea50f4ce2a908d.ctex"]
+source_file="res://assets/asteroid9.png"
+dest_files=["res://.godot/imported/asteroid9.png-b3d11b8c379e359b41279b82fa3553d8.ctex"]
 
 [params]
 

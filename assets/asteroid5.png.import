@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://bbhblt4ay7i7g"
-path="res://.godot/imported/colonel_sad.png-c8abd26ccc0ad577f7194cfbdea50ced.ctex"
+uid="uid://d376rx1cr4n00"
+path="res://.godot/imported/asteroid5.png-2a023386bf2738b66aa0c42e768eb18e.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://assets/colonel_sad.png"
-dest_files=["res://.godot/imported/colonel_sad.png-c8abd26ccc0ad577f7194cfbdea50ced.ctex"]
+source_file="res://assets/asteroid5.png"
+dest_files=["res://.godot/imported/asteroid5.png-2a023386bf2738b66aa0c42e768eb18e.ctex"]
 
 [params]
 

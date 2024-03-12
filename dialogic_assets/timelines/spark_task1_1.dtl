@@ -14,5 +14,5 @@ Spark: Hey, how’s it going?[pause=0.3] Wanna give me a hand?
 		jump spark_task1_2/
 
 - Nah, I'll pass.
-	Spark: Be that way, then.
+	Spark (Angry Spark): Be that way, then.
 	jump opening/task_selection

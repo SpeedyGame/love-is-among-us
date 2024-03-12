@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://bc6080mu7fvj"
-path="res://.godot/imported/sparky_love.png-653b60a1b0c3e26e13bf3a1cf070af48.ctex"
+uid="uid://c7x8jpnokdwif"
+path="res://.godot/imported/asteroid19.png-b1f927e332316bd34640302b28db7e16.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://assets/sparky_love.png"
-dest_files=["res://.godot/imported/sparky_love.png-653b60a1b0c3e26e13bf3a1cf070af48.ctex"]
+source_file="res://assets/asteroid19.png"
+dest_files=["res://.godot/imported/asteroid19.png-b1f927e332316bd34640302b28db7e16.ctex"]
 
 [params]
 

@@ -5,26 +5,26 @@ if {Day1TaskWellness} == "True":
 	set {TrackerFondness} += 1
 	Tracker: I really appreciate the help,[pause=0.3] this stuff can get so tedious.
 	- Don't mention it, I know how bad computer work can get sometimes.
-		Tracker: You work with computers too?[pause=0.3] What did you do before this?
+		Tracker (Loving Tracker): You work with computers too?[pause=0.3] What did you do before this?
 		- I'm studying CS in college.
 			Tracker: Good luck, I just got out of there myself.[pause=0.3] Hope to be out of here soon too.
 			Tracker: It gets lonely up in space, you know.
 		- I'm big into spreadsheets.
-			Tracker: Oh no, you have it even worse than me.
+			Tracker (Sad Tracker): Oh no, you have it even worse than me.
 			Tracker: I couldn’t imagine doing all of that serious paper-pusher stuff all day.[pause=0.3] The world needs more people that can tolerate that.
 			Tracker: Anyway, I’ll see you around.
 		- Nothing except for what we've done.
-			Tracker: Huh,[pause=0.3] lots of experience then yeah?[pause=0.3] Can’t wait to see what it can do around here.(sarcastic)
+			Tracker (Angry Tracker): Huh,[pause=0.3] lots of experience then yeah?[pause=0.3] Can’t wait to see what it can do around here.(sarcastic)
 	- I feel you, happy I could help.
 		Tracker: Then I’m happy too.[pause=0.3] Maybe you can come by again tomorrow, always more to do online.
 		- I'll be there.
 			Tracker: Thank you, see you then!
 		- I don't know, I might have other tasks tomorrow.
-			Tracker: Makes sense, everybody's busy around here.
+			Tracker (Sad Tracker): Makes sense, everybody's busy around here.
 		- I would rather scrub the toilets.
-			Tracker: Fine then, I see how it is!
+			Tracker (Angry Tracker): Fine then, I see how it is!
 	- Honestly, your whole setup is terrible, I couldn't imagine working like this all the time.
-		Tracker: This is like my one thing I do well![pause=0.3] I guess I'm not good enough for you then. *turns away to a nearby computer screen* (sad)
+		Tracker (Sad Tracker): This is like my one thing I do well![pause=0.3] I guess I'm not good enough for you then. *turns away to a nearby computer screen*
 elif {Day1TaskWellness} == "False":
 	Tracker: Something wrong?[pause=0.3] Are you having a bad time?
 	- Yeah, somethings wrong. I’m not the right one to help you with this kind of stuff.

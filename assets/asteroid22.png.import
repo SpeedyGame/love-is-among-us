@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://dk37nmg8t2bg4"
-path="res://.godot/imported/colonel_angry.png-891f2d622ad6a2da4712a98604819aae.ctex"
+uid="uid://7in7vsddgcpu"
+path="res://.godot/imported/asteroid22.png-ebf056102e79b97bca63d2517b0edc95.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://assets/colonel_angry.png"
-dest_files=["res://.godot/imported/colonel_angry.png-891f2d622ad6a2da4712a98604819aae.ctex"]
+source_file="res://assets/asteroid22.png"
+dest_files=["res://.godot/imported/asteroid22.png-ebf056102e79b97bca63d2517b0edc95.ctex"]
 
 [params]
 

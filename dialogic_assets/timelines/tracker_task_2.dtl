@@ -1,0 +1,13 @@
+[background arg="res://assets/Backgrounds/navigation.jpg" fade="0.0"]
+*You get to Navigation, but there's nobody here. Maybe Tracker went to use the bathroom?*
+label Choice
+What do you want to do?
+- Wait for Tracker
+	*You wait...[pause=1] and wait...[pause=1] and wait, but Tracker is nowhere to be found*
+	jump Choice
+- Join Spark
+	[clear time="1.0"]
+	jump spark_task2_1/
+- Join Colonel
+	[clear time="1.0"]
+	jump colonel_task2_1/

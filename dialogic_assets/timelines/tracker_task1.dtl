@@ -3,7 +3,7 @@ join Tracker 3
 Tracker: Oh, you came.[pause=0.3] Mind helping me out for a bit?
 - Yeah, let's do this!
 	set {Day1Task} = "Tracker"
-	Tracker: Thanks. *hands you a tablet (or whatever relates to the task we put in)*
+	Tracker: Thanks!
 	[clear time="1.0"]
 	[signal arg="start_maze"]
 - Nah, I'll pass.

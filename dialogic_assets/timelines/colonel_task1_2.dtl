@@ -24,8 +24,8 @@ if {Day1TaskWellness} == "True":
 			Colonel: I guess just work here for long enough, and the boss ends up giving everyone their own set of tasks and equipment.
 			Colonel: Stick around long enough and maybe you can get weapons on whatever ship you end up on in the future.
 	- There's enough Cheeto dust on here to feed a village, and what's that smell? Have you showered recently.
-		Colonel: Listen,[pause=0.3] I don’t want any smoke for how my area is cleaned.[pause=0.3] You can talk when you get your own.
-		Colonel: And I can’t smell any worse than the suit you’ve got on.[pause=0.3] How about you take it somewhere else.
+		Colonel (Angry Colonel): Listen,[pause=0.3] I don’t want any smoke for how my area is cleaned.[pause=0.3] You can talk when you get your own.
+		Colonel (Angry Colonel): And I can’t smell any worse than the suit you’ve got on.[pause=0.3] How about you take it somewhere else.
 elif {Day1TaskWellness} == "False":
 	Colonel: You alright?[pause=0.3] Are the controls messing up again?
 	- It barely even works, I'd rather not do this again.
@@ -33,6 +33,6 @@ elif {Day1TaskWellness} == "False":
 	- I'm just a little rusty with my aim, mind giving me a hand?
 		Colonel: Sure,[pause=0.3] you got this!  (insert tip on how to do the minigame, maybe then give another chance to do it well for the fondness)
 	- This has gotta be the worst game I've played in a while, to be honest.
-		Colonel: Dang, sorry you feel that way. It is a bit plain,[pause=0.3] but not that bad I thought.[pause=0.3] To each their own I guess.
+		Colonel (Sad Colonel): Dang, sorry you feel that way. It is a bit plain,[pause=0.3] but not that bad I thought.[pause=0.3] To each their own I guess.
 [clear time="1.0"]
 [signal arg="day1_end"]

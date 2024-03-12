@@ -15,9 +15,36 @@
 "nicknames": [""],
 "offset": Vector2(0, 100),
 "portraits": {
+"Angry Colonel": {
+"export_overrides": {
+"image": "\"res://assets/sprites/colonel_angry.png\""
+},
+"mirror": false,
+"offset": Vector2(0, 0),
+"scale": 1,
+"scene": ""
+},
+"Loving Colonel": {
+"export_overrides": {
+"image": "\"res://assets/sprites/colonel_love.png\""
+},
+"mirror": false,
+"offset": Vector2(0, 0),
+"scale": 1,
+"scene": ""
+},
 "Neutral Colonel": {
 "export_overrides": {
 "image": "\"res://assets/sprites/colonel.png\""
+},
+"mirror": false,
+"offset": Vector2(0, 0),
+"scale": 1,
+"scene": ""
+},
+"Sad Colonel": {
+"export_overrides": {
+"image": "\"res://assets/sprites/colonel_sad.png\""
 },
 "mirror": false,
 "offset": Vector2(0, 0),
