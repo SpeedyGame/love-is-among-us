@@ -1,8 +1,11 @@
 extends RigidBody2D
 
+@onready var _animated_sprite = $AnimatedSprite2D
+
 signal destroyed
 # Called when the node enters the scene tree for the first time.
 func _ready():
+	_animated_sprite.play("default")
 	pass
 
 #func _on_visible_on_screen_notifier_2d_screen_exited():
