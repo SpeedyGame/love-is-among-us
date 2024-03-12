@@ -40,6 +40,7 @@ directories/dtl_directory={
 "day1_end": "res://dialogic_assets/timelines/day1_end.dtl",
 "day2_end": "res://dialogic_assets/timelines/day2_end.dtl",
 "day2opening": "res://dialogic_assets/timelines/day2opening.dtl",
+"day3opening": "res://dialogic_assets/timelines/day3opening.dtl",
 "opening": "res://dialogic_assets/timelines/opening.dtl",
 "spark_task1": "res://dialogic_assets/timelines/spark_task1_1.dtl",
 "spark_task1_2": "res://dialogic_assets/timelines/spark_task1_2.dtl",

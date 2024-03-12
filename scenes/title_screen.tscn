@@ -1,12 +1,14 @@
-[gd_scene load_steps=11 format=3 uid="uid://c8nae2qlspxxc"]
+[gd_scene load_steps=13 format=3 uid="uid://c8nae2qlspxxc"]
 
 [ext_resource type="FontFile" uid="uid://d1j5veayfvfph" path="res://assets/fonts/mvboli.ttf" id="1_lo6p4"]
 [ext_resource type="Script" path="res://scenes/title_screen.gd" id="1_n3lbd"]
 [ext_resource type="Texture2D" uid="uid://f3etwlolsr6i" path="res://assets/Backgrounds/Space Background.png" id="2_crrpk"]
 [ext_resource type="PackedScene" uid="uid://ccqu3swo2jrr7" path="res://assets/UI/transitioner.tscn" id="4_0xa0v"]
 [ext_resource type="PackedScene" uid="uid://dowwkho7oo7kr" path="res://assets/UI/packedtransitioner.tscn" id="4_4evun"]
+[ext_resource type="Texture2D" uid="uid://bpipk034g0jlj" path="res://assets/UI/start_hover.png" id="4_5j88q"]
 [ext_resource type="PackedScene" uid="uid://vfd0ydydf8fc" path="res://scenes/day_1_opening.tscn" id="5_s66w7"]
 [ext_resource type="AudioStream" uid="uid://yd5wy40osyhr" path="res://assets/music/Smooth Lovin.mp3" id="6_qytx4"]
+[ext_resource type="Texture2D" uid="uid://d3ptubdefr6ad" path="res://assets/UI/start_default.png" id="7_ugnn6"]
 
 [sub_resource type="StyleBoxFlat" id="StyleBoxFlat_tldp0"]
 bg_color = Color(0.929412, 0.376471, 0.596078, 1)
@@ -49,14 +51,15 @@ theme_override_font_sizes/font_size = 64
 text = "Love is Among Us!"
 
 [node name="Start" type="Button" parent="UI"]
+visible = false
 anchors_preset = 7
 anchor_left = 0.5
 anchor_top = 1.0
 anchor_right = 0.5
 anchor_bottom = 1.0
-offset_left = -107.5
-offset_top = -172.0
-offset_right = 92.5
+offset_left = -117.0
+offset_top = -168.0
+offset_right = 205.0
 offset_bottom = -72.0
 grow_horizontal = 2
 grow_vertical = 0
@@ -64,6 +67,16 @@ focus_mode = 0
 theme_override_font_sizes/font_size = 50
 theme_override_styles/normal = SubResource("StyleBoxFlat_tldp0")
 text = "Start"
+
+[node name="StartButton" type="TextureButton" parent="UI"]
+offset_left = 484.0
+offset_top = 557.0
+offset_right = 807.0
+offset_bottom = 646.0
+texture_normal = ExtResource("7_ugnn6")
+texture_hover = ExtResource("4_5j88q")
+ignore_texture_size = true
+stretch_mode = 0
 
 [node name="Transitioner" parent="UI" instance=ExtResource("4_0xa0v")]
 visible = false
@@ -100,3 +113,4 @@ libraries = {
 }
 
 [connection signal="pressed" from="UI/Start" to="." method="_on_start_pressed"]
+[connection signal="pressed" from="UI/StartButton" to="." method="_on_start_pressed"]
