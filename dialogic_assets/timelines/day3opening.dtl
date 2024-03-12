@@ -60,7 +60,7 @@ if {ColonelFondness} >= 1:
 		- I’d rather take a nap actually.
 			Spark: I guess go and sit on your ass then, leave all of this to the crew! [-1 Spark Rep]
 			*You are of your word, and go back to your room until the evening meeting.*
-Colonel: Sounds good,[pause=0.3] hey uh, {PlayerName},[pause=0.3] you mind helping someone out?
+Colonel: Sounds good,[pause=0.3] hey uh {PlayerName},[pause=0.3] you mind helping someone out?
 Colonel: Spark seems like they might like some help especially.
 - You’re right, I’ll help Spark out. We gotta get a hold of somebody.
 	Spark: Thanks, {PlayerName}.
